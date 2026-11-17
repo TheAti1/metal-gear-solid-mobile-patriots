@@ -1,7 +1,6 @@
 # build output
 *.obj
 *.res
-/mgs_native/mgs_mobile.ico
 /build/
 /build-linux/
 /mgs_native/3ds/build/
