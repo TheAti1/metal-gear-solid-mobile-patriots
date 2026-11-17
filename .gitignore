@@ -1,0 +1,30 @@
+# Local packages and original game data
+/package/
+/dist/
+/build/
+**/patriots-build-output/
+**/patriots-built/
+*.sisx
+*.sis
+*.n-gage
+*.ngage
+*.dz
+*.i3d
+*.rom
+*.fpsx
+# User settings, logs and secrets
+.env
+.env.*
+!.env.example
+mgs_mobile.ini
+patriots_live.ini
+patriots_state.json
+discord_durum.json
+discord_yayindaki_etkinlik.json
+ayarlar.json
+*.log
+*.tmp
+*.obj
+*.pdb
+__pycache__/
+.vs/

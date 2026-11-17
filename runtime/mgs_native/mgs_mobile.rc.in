@@ -1,0 +1,2 @@
+// Windows executable and taskbar icon.
+1 ICON "@CMAKE_CURRENT_SOURCE_DIR@/mgs_mobile.ico"

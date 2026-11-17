@@ -1,0 +1,15 @@
+{
+  "name": "Metal Gear Solid Mobile",
+  "application_id": "1572222540884086875",
+  "details": "Bodrum 1 · Güney Koridoru",
+  "state": "Codec görüşmesi",
+  "assets": {
+    "large_image": "mp:external/E23WjM02-FdbZjuMjj-pcN9mFfZRvXsEUW4klxDM49E/https/raw.githubusercontent.com/LeithSilver/mgsm/main/header.jpg",
+    "large_text": "Metal Gear Solid Mobile · Patriots Edition",
+    "small_image": "mp:external/gEUF863JDrnsoqMGjwV3L6W_OnBd_iE2ZwIMxQ6dh8k/https/www.patriotsceviri.com.tr/logo.jpg",
+    "small_text": "Patriots Çeviri · Türkçe"
+  },
+  "timestamps": {
+    "start": 1794923714000
+  }
+}
