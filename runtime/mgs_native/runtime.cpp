@@ -1,5 +1,6 @@
 #include "runtime.h"
 #include "prompts.h"
+#include "input_policy.h"
 #include "loader.h"
 #include "audio.h"
 #include <algorithm>
@@ -577,12 +578,15 @@ static uint32_t GameHash(const char* s) {
 // State manager [0x4A0F0558]: stack array at +0x14, count at +0x18 (0x4A0AC344); state +4 = name hash.
 bool S3ERuntime::InGameplay() {
     static const uint32_t kMain = GameHash("CGameStateMain");
+    return TopStateHash()==kMain;
+}
+uint32_t S3ERuntime::TopStateHash() {
     uint32_t mgr = 0, arr = 0, count = 0, state = 0, hash = 0;
-    if (!uc_ || uc_->MemRead(G(0x4A0F0558), &mgr, 4) != Cpu::OK || !mgr) return false;
-    if (uc_->MemRead(mgr + 0x14, &arr, 4) != Cpu::OK || uc_->MemRead(mgr + 0x18, &count, 4) != Cpu::OK || !arr || !count) return false;
-    if (uc_->MemRead(arr + 4 * (count - 1), &state, 4) != Cpu::OK || !state) return false;
-    if (uc_->MemRead(state + 4, &hash, 4) != Cpu::OK) return false;
-    return hash == kMain;
+    if (!uc_ || uc_->MemRead(G(0x4A0F0558), &mgr, 4) != Cpu::OK || !mgr) return 0;
+    if (uc_->MemRead(mgr + 0x14, &arr, 4) != Cpu::OK || uc_->MemRead(mgr + 0x18, &count, 4) != Cpu::OK || !arr || !count || count>32) return 0;
+    if (uc_->MemRead(arr + 4 * (count - 1), &state, 4) != Cpu::OK || !state) return 0;
+    if (uc_->MemRead(state + 4, &hash, 4) != Cpu::OK) return 0;
+    return hash;
 }
 
 // Level select. The game changes rooms with the Lua binding RoomChange(name) = 0x4A088BB0(L) (event table at
@@ -1184,15 +1188,17 @@ void S3ERuntime::HandleSyscall(Cpu* uc, uint32_t func_idx) {
     else if (name == "s3eKeyboardGetState") {
         ret_val = 0;
         if (r0 < 256) {
+            const uint32_t key=PatriotsInput::InventoryKey(r0,input_state_hash_,invert_inventory_frame_);
             std::lock_guard<std::mutex> lock(key_mutex_);
-            ret_val = (frame_down_[r0] ? 1 : 0) | (frame_pressed_[r0] ? 2 : 0) | (frame_released_[r0] ? 4 : 0);
+            ret_val = (frame_down_[key] ? 1 : 0) | (frame_pressed_[key] ? 2 : 0) | (frame_released_[key] ? 4 : 0);
+            if(key!=r0&&ret_val&&getenv("MGS_TRACE_INVENTORY"))std::cout<<"[InventoryInput] requested="<<r0<<" source="<<key<<" bits="<<ret_val<<std::endl;
         }
     }
     else if (name == "s3eKeyboardAnyKey") {   // first key down or pressed this frame (0 = none)
         std::lock_guard<std::mutex> lock(key_mutex_);
         ret_val = 0;
         for (uint32_t k = 1; k < 256; ++k)
-            if (frame_down_[k] || frame_pressed_[k]) { ret_val = k; break; }
+            if (frame_down_[k] || frame_pressed_[k]) { ret_val = PatriotsInput::InventoryKey(k,input_state_hash_,invert_inventory_frame_); break; }
     }
     else if (name == "s3eKeyboardUpdate") {
         UpdatePhotoMode();
@@ -1200,6 +1206,9 @@ void S3ERuntime::HandleSyscall(Cpu* uc, uint32_t func_idx) {
         ApplyShowFps();
         PumpRoomChange(uc);
         PumpLua(uc);
+        input_state_hash_=TopStateHash();
+        invert_inventory_frame_=Settings::Instance().invert_inventory_scroll;
+        if(getenv("MGS_TRACE_INVENTORY")){static uint32_t previous=0;if(previous!=input_state_hash_){previous=input_state_hash_;std::cout<<"[InventoryInput] state="<<input_state_hash_<<" invert="<<invert_inventory_frame_<<std::endl;}}
         std::lock_guard<std::mutex> lock(key_mutex_);
         for (uint32_t k = 0; k < 256; ++k) {
             frame_down_[k] = phys_down_[k] && !swallowed_[k];

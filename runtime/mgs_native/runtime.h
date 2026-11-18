@@ -150,6 +150,9 @@ private:
     std::vector<uint32_t> softkey_bars_;   // CIwGuiSoftkeys objects seen (0x4A08D4B4)
     std::vector<uint32_t> softkeys_hidden_; // label/frame elements we made invisible (restored outside gameplay)
     bool InGameplay();
+    uint32_t TopStateHash(); // emulation thread only
+    uint32_t input_state_hash_ = 0;
+    bool invert_inventory_frame_ = false;
     void PumpRoomChange(Cpu* uc);   // once per frame (s3eKeyboardUpdate): start a level-select request
     int surf_w_ = 240, surf_h_ = 320;           // guest screen (s3eSurfaceGetInt WIDTH/HEIGHT)
     bool display_init_ = false;

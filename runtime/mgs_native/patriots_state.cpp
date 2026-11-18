@@ -51,6 +51,7 @@ void Tick(bool gameplay) {
         std::ifstream f(live);std::string line;while(std::getline(f,line)){size_t eq=line.find('=');if(eq==std::string::npos)continue;auto k=line.substr(0,eq),v=line.substr(eq+1);int n=atoi(v.c_str());
             if(k=="dynamic_prompts")settings.dynamic_prompts=n!=0;else if(k=="prompt_style")settings.prompt_style=(std::max)(0,(std::min)(3,n));
             else if(k=="discord_presence")settings.discord_presence=n!=0;else if(k=="discord_room")settings.discord_room=n!=0;
+            else if(k=="invert_inventory_scroll")settings.invert_inventory_scroll=n!=0;
             else for(size_t i=0;i<PhoneActions().size();i++){bool isKb=k=="kb."+std::string(PhoneActions()[i].id),isPad=k=="pad."+std::string(PhoneActions()[i].id);if(!isKb&&!isPad)continue;
                 std::vector<int> keys;std::stringstream values(v);std::string item;while(std::getline(values,item,','))if(!item.empty()){int key=atoi(item.c_str());if(isKb?(key>0&&key<256):(key>=0&&key<28&&key!=4&&key!=8))keys.push_back(key);} (isKb?kb:pad)[i]=keys;
             }

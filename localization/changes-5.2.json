@@ -1,0 +1,64 @@
+{
+  "template_version": 1,
+  "language": "pt-BR",
+  "native_name": "Português (Brasil)",
+  "culture": "pt-BR",
+  "author": "",
+  "instructions": [
+    "Reference only. Five added launcher entries since v5.1. Do not import this changes report.",
+    "Use refresh_language_json.py to preserve existing translations in the complete v5.2 template."
+  ],
+  "format": "mgs-mobile-translation-changes-v1",
+  "entries": [
+    {
+      "id": "ui_89a61a2d1f2f240f8d2e",
+      "source": "Crisp interface",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_778c392bb04893094225",
+      "source": "Keeps menu, dialogue and HUD textures crisp independently of 3D scene filtering.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_28a7c70e50b73596ef13",
+      "source": "For high-resolution gameplay, keep Original Pixel Resolution off and Crisp Interface on. Original Pixel Resolution lowers the entire scene to phone resolution.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_ca33556fa594718aec64",
+      "source": "Invert weapon / equipment menu Up and Down",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f0b4814075ae00fcbeab",
+      "source": "Reverses vertical selection only in the inventory. Applies to keyboard, D-pad and left stick; movement and other menus are unchanged.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    }
+  ]
+}

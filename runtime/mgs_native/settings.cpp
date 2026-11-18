@@ -154,6 +154,8 @@ void Settings::Load() {
         else if (k == "msaa") msaa = (n >= 8) ? 8 : (n >= 4) ? 4 : (n >= 2) ? 2 : 0;
         else if (k == "supersample") supersample = (std::max)(1, (std::min)(3, n));
         else if (k == "native_resolution") native_resolution = n != 0;
+        else if (k == "crisp_ui") crisp_ui = n != 0;
+        else if (k == "invert_inventory_scroll") invert_inventory_scroll = n != 0;
         else if (k == "hide_soft_keys") hide_soft_keys = (std::max)(0, (std::min)(2, n));
         else if (k == "fov_percent") fov_percent = (std::max)(50, (std::min)(200, n));
         else if (k == "left_stick_dpad") left_stick_dpad = n != 0;
@@ -208,6 +210,8 @@ void Settings::Save() {
     f << "msaa="<< msaa.load() << "  # 0 off, 2, 4, 8\n";
     f << "supersample=" << supersample.load() << "  # 1-3\n";
     f << "native_resolution=" << native_resolution.load() << "  # 1 = render at the phone's resolution, scaled up (pixelated)\n";
+    f << "crisp_ui=" << crisp_ui.load() << "\n";
+    f << "invert_inventory_scroll=" << invert_inventory_scroll.load() << "\n";
     f << "hide_soft_keys="<< hide_soft_keys.load() << "  # 0 show, 1 smart (gameplay only), 2 all\n";
     f << "fov_percent=" << fov_percent.load() << "\n";
     f << "left_stick_dpad=" << left_stick_dpad.load() << "\n";

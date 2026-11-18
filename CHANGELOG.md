@@ -1,5 +1,14 @@
 # Changelog
 
+## 5.2.0 — 2026-11-18
+
+- Addressed #1 with independent Crisp Interface sampling: nearest font/sprite atlas filtering and scoped 2D MSAA suppression, preserving high-resolution 3D rendering, original world filters and AA settings.
+- Added the #2 requested inventory-only vertical navigation inversion. Keyboard, D-pad and left stick share the same guest-action mapping; gameplay, Codec, pause and other menus retain their controls.
+- Exposed both settings in the launcher and native overlay, persisted them, and allowed live inventory-inversion changes.
+- Refreshed launcher templates to 299 entries with five new settings texts; all previous IDs/sources and the 1,936-record game catalogue remain unchanged.
+- Added a translation upgrade tool that carries completed text into the new full template, a non-importable changes report, old-pack compatibility checks and upgrade regression tests.
+- Added real OpenGL state restoration checks and inventory input policy checks.
+
 ## 5.1.0 — 2026-11-18
 
 - Added a Languages page with independent launcher/game JSON import, combined ZIP import and template export.

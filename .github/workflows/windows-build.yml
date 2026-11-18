@@ -31,6 +31,9 @@ jobs:
         shell: pwsh
         run: |
           python tools/check_language_templates.py
+          if($LASTEXITCODE -ne 0){throw 'Language template check failed'}
+          python tools/test_language_upgrade.py
+          if($LASTEXITCODE -ne 0){throw 'Language upgrade checks failed'}
           $launcher=Start-Process './package/Metal Gear Solid Mobile.exe' -ArgumentList '--test-language-packs' -Wait -PassThru -WindowStyle Hidden
           if($launcher.ExitCode -ne 0){throw 'Language-pack checks failed'}
       - name: Check bilingual catalogue and native prompts

@@ -292,5 +292,10 @@
   "Oyun dili": "Game language",
   "Launcher dili": "Launcher language",
   "Şablonlar": "Templates",
-  "Sadece text alanlarını çevir. id, source ve korunan işaretlere dokunma.": "Translate only text fields. Keep id, source and protected tokens unchanged."
+  "Sadece text alanlarını çevir. id, source ve korunan işaretlere dokunma.": "Translate only text fields. Keep id, source and protected tokens unchanged.",
+  "Keskin arayüz": "Crisp interface",
+  "Menü, altyazı ve HUD dokularını 3B sahnenin yumuşatmasından bağımsız, keskin gösterir.": "Keeps menu, dialogue and HUD textures crisp independently of 3D scene filtering.",
+  "Yüksek çözünürlüklü oynanış için özgün piksel çözünürlüğünü kapalı, keskin arayüzü açık tut. Özgün piksel modu tüm sahneyi telefon çözünürlüğüne indirir.": "For high-resolution gameplay, keep Original Pixel Resolution off and Crisp Interface on. Original Pixel Resolution lowers the entire scene to phone resolution.",
+  "Silah / ekipman menüsünde yukarı-aşağı tersle": "Invert weapon / equipment menu Up and Down",
+  "Yalnızca envanterde dikey seçimi ters çevirir. Klavye, yön tuşları ve sol analog için geçerlidir; hareket ve diğer menüler değişmez.": "Reverses vertical selection only in the inventory. Applies to keyboard, D-pad and left stick; movement and other menus are unchanged."
 }

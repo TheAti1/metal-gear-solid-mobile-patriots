@@ -43,6 +43,8 @@ public:
     std::atomic<int> msaa{0};                      // MSAA samples: 0 off, 2, 4, 8
     std::atomic<int> supersample{1};                // render-scale factor 1..3
     std::atomic<bool> native_resolution{false};     // GL: render at the guest screen size, nearest upscale
+    std::atomic<bool> crisp_ui{true};              // nearest atlas sampling for 2D only; preserves 3D filtering
+    std::atomic<bool> invert_inventory_scroll{false}; // reverse vertical navigation only in equipment/weapon menus
     std::atomic<int> hide_soft_keys{0};            // 0 off, 1 smart (gameplay only), 2 all soft-key labels
     std::atomic<int> fov_percent{100};              // 3D horizontal/vertical FOV scale (100 = game default)
     std::atomic<bool> left_stick_dpad{true};

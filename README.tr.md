@@ -17,6 +17,8 @@
 - Oyun içindeki tuş yazıları klavye veya kontrolcüye ve güncel atamalara göre değişir.
 - Xbox, PlayStation ve Nintendo tuş adları; oyun açıkken tuş atamalarını değiştirme.
 - Tam ekran, geniş ekran kamera, görüş alanı, kenar yumuşatma, çizim ölçeği ve doku seçenekleri.
+- **Keskin arayüz** ile menü/yazı/HUD örneklemesi 3B dokulardan bağımsızdır. Yüksek çözünürlüklü oynanış için **özgün piksel çözünürlüğünü kapalı** tutun; bu mod tüm sahneyi telefon çözünürlüğüne indirir.
+- Klavye, yön tuşları ve sol analog için **yalnızca silah/ekipman menüsünde yukarı-aşağı tersleme**; oyun açıkken de uygulanır.
 - Discord'da gerçek oda, Codec / ara sahne / duraklatma durumu, oturum süresi ve görseller.
 - İki dilde ortak kayıtlar, otomatik kayıt yedekleri ve dosya doğrulama.
 
@@ -42,7 +44,7 @@ Mevcut yerel kayıtlar iki dilde de kullanılabilir; dağıtım ZIP'i kişisel k
 
 ## Çeviriye katkı
 
-[294 metinlik Portekizce launcher şablonu](localization/launcher/pt-BR.launcher.json) ve [ayrı oyun şablonu](localization/game/pt-BR.game.json) hazır. Yalnızca `text` alanlarını çevirin, tuş işaretlerini koruyun. Bunlar henüz boş şablonlardır; tamamlanan Portekizce çeviri incelendikten sonra üçüncü resmî dil olarak eklenecek.
+[299 metinlik Portekizce launcher şablonu](localization/launcher/pt-BR.launcher.json) ve [ayrı oyun şablonu](localization/game/pt-BR.game.json) hazır. Yalnızca `text` alanlarını çevirin, tuş işaretlerini koruyun. Bunlar henüz boş şablonlardır; tamamlanan Portekizce çeviri incelendikten sonra üçüncü resmî dil olarak eklenecek.
 
 [Çeviri rehberi](docs/TRANSLATING.tr.md) kurulum ve teslim sürecini anlatır. [Sürümlerdeki](../../releases) Translation Kit, oyun tablolarını ve font araçlarını da ayrı klasörlerde sunar. Mevcut çevrilmiş DAT dosyalarını JSON'a dönüştürme aracı da dâhildir.
 

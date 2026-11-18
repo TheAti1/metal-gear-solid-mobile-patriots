@@ -392,6 +392,97 @@ const char* TypeName(uint32_t t) {
 }
 
 std::atomic<bool> g_hide_2d{false};
+std::atomic<bool> g_crisp_ui{true};
+
+// Bitmap font/sprite atlases must not inherit the world's linear filtering or
+// mipmaps: neighbouring glyphs bleed into their UV rectangles. Scope changes to
+// one screen-space draw, then restore the actual filters (including both texture
+// units and textures shared with the 3D scene). The high-resolution target stays
+// intact; native_resolution is a separate, whole-scene compatibility option.
+class CrispUiDraw {
+    struct Texture {GLint unit,id,min,mag;};
+    Texture textures_[2]{};
+    int count_=0;
+    GLint active_=GL_TEXTURE0;
+    bool enabled_=false;
+#if !defined(MGS_GLES)
+    GLboolean multisample_=GL_FALSE;
+#endif
+public:
+    explicit CrispUiDraw(bool enabled):enabled_(enabled) {
+        if(!enabled_)return;
+        glGetIntegerv(0x84E0 /*GL_ACTIVE_TEXTURE*/,&active_);
+        for(int u=0;u<2;u++){
+            if(p_glActiveTexture)p_glActiveTexture(GL_TEXTURE0+u);else if(u)break;
+            if(!glIsEnabled(GL_TEXTURE_2D))continue;
+            GLint id=0;glGetIntegerv(GL_TEXTURE_BINDING_2D,&id);
+            if(!id||(count_&&textures_[0].id==id))continue;
+            Texture& t=textures_[count_++];t.unit=GL_TEXTURE0+u;t.id=id;
+            glGetTexParameteriv(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,&t.min);
+            glGetTexParameteriv(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,&t.mag);
+            glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_NEAREST);
+            glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_NEAREST);
+        }
+        if(p_glActiveTexture)p_glActiveTexture(active_);
+#if !defined(MGS_GLES)
+        multisample_=glIsEnabled(0x809D /*GL_MULTISAMPLE*/);glDisable(0x809D);
+#endif
+    }
+    ~CrispUiDraw(){
+        if(!enabled_)return;
+        for(int i=count_-1;i>=0;i--){const auto& t=textures_[i];if(p_glActiveTexture)p_glActiveTexture(t.unit);
+            GLint binding=0;glGetIntegerv(GL_TEXTURE_BINDING_2D,&binding);glBindTexture(GL_TEXTURE_2D,t.id);
+            glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,t.min);glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,t.mag);
+            glBindTexture(GL_TEXTURE_2D,binding);
+        }
+        if(p_glActiveTexture)p_glActiveTexture(active_);
+#if !defined(MGS_GLES)
+        if(multisample_)glEnable(0x809D /*GL_MULTISAMPLE*/);
+#endif
+    }
+};
+
+#if !defined(MGS_GLES)
+// Real OpenGL state regression, opt-in only. Both independent and shared texture
+// units must restore their original 3D sampler and MSAA after a sharp UI draw.
+void CrispUiSelfTest(){
+    if(!getenv("MGS_RENDER_SELFTEST"))return;
+    static bool tested=false;if(tested)return;tested=true;
+    GLStateSave saved;
+    const GLboolean msaa=glIsEnabled(0x809D);
+    GLuint textures[2]{};glGenTextures(2,textures);
+    for(int u=0;u<2;u++){
+        if(p_glActiveTexture)p_glActiveTexture(GL_TEXTURE0+u);
+        glEnable(GL_TEXTURE_2D);glBindTexture(GL_TEXTURE_2D,textures[u]);
+        glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR_MIPMAP_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);
+    }
+    glEnable(0x809D);
+    auto require=[](bool ok){if(!ok)throw std::runtime_error("Crisp UI GPU state regression failed");};
+    for(bool shared:{false,true}){
+        if(p_glActiveTexture)p_glActiveTexture(GL_TEXTURE0+1);
+        glBindTexture(GL_TEXTURE_2D,textures[shared?0:1]);
+        {
+            CrispUiDraw ui(true);
+            require(!glIsEnabled(0x809D));
+            for(int u=0;u<2;u++){
+                if(p_glActiveTexture)p_glActiveTexture(GL_TEXTURE0+u);
+                GLint min=0,mag=0;glGetTexParameteriv(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,&min);glGetTexParameteriv(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,&mag);
+                require(min==GL_NEAREST&&mag==GL_NEAREST);
+            }
+        }
+        require(glIsEnabled(0x809D));
+        for(int u=0;u<2;u++){
+            if(p_glActiveTexture)p_glActiveTexture(GL_TEXTURE0+u);
+            GLint min=0,mag=0;glGetTexParameteriv(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,&min);glGetTexParameteriv(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,&mag);
+            require(min==GL_LINEAR_MIPMAP_LINEAR&&mag==GL_LINEAR);
+        }
+        {CrispUiDraw original(false);GLint mag=0;glGetTexParameteriv(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,&mag);require(mag==GL_LINEAR);}
+    }
+    glDeleteTextures(2,textures);if(!msaa)glDisable(0x809D);
+    std::cout<<"[CrispUI SelfTest] PASS: two distinct/shared texture units, nearest UI sampling, original 3D filters and MSAA restored"<<std::endl;
+}
+#endif
 
 // True when the host projection has no perspective (w row 0,0,0,1): IwGx's 2D / screen-space draws.
 bool Is2DProjection() {
@@ -403,6 +494,12 @@ bool Is2DProjection() {
 void Draw(Cpu* uc, uint32_t mode, uint32_t first, uint32_t count, uint32_t idx_type, uint32_t idx_ptr) {
     if (g_hide_2d && Is2DProjection()) return;
     if (!S.ok || count == 0 || !S.vertex.enabled) return;
+#if !defined(MGS_GLES)
+    CrispUiSelfTest();
+#endif
+    const bool crisp=g_crisp_ui&&Is2DProjection();
+    CrispUiDraw ui(crisp);
+    if(getenv("MGS_TRACE_UI")){static bool seen[2]{};if(!seen[crisp]){seen[crisp]=true;std::cout<<"[CrispUI] "<<(crisp?"2D nearest atlas, no MSAA":"3D/original sampling")<<" target="<<S.fbo_w<<"x"<<S.fbo_h<<std::endl;}}
 
 #ifdef MGS_3DS
     // Native backend (README.md section 6.28): guest addresses are host addresses, so the game's own arrays and
@@ -1519,6 +1616,8 @@ bool GLES::Handle(const std::string& name, Cpu* uc, const uint32_t r[4], uint32_
 }
 
 // ---- texture filtering toggle ---------------------------------------------------------------------------
+
+void GLES::SetCrispUI(bool on){g_crisp_ui=on;}
 
 // The filter actually set for a game-requested one: unchanged with filtering on; otherwise the
 // nearest-neighbour equivalent (mipmapped modes keep their mip level selection but stop blending).

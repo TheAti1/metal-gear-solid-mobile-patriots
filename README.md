@@ -31,6 +31,8 @@ A Windows PC experience with an English / Turkish launcher, importable community
 - Import launcher/game JSONs separately or together as a language-pack ZIP from **LANGUAGES**. Partial packs use English for missing text, with live input prompts and Discord still enabled.
 - Rebind keys and controller buttons while playing. The help text follows the current input device and bindings.
 - Choose borderless fullscreen, widescreen camera framing, FOV, MSAA, render scale and texture filtering.
+- **Crisp Interface** keeps bitmap text/HUD sampling sharp independently of 3D filtering. Keep Original Pixel Resolution **off** for high-resolution gameplay; it reduces the whole scene to phone resolution.
+- Optionally invert vertical navigation **only in weapon/equipment menus** for keyboard, D-pad and left stick, including live updates.
 - Show the current room, Codec conversations, cutscenes and pause state on Discord, with game art and the Patriots logo. Room sharing has its own switch.
 
 ## Getting started
@@ -46,7 +48,7 @@ Discord integration uses the desktop client's local IPC connection and the confi
 
 The **[translation guide](docs/TRANSLATING.md)** separates launcher text and game text, explains import/export, fonts and existing translated DAT conversion. Download the **Translation Kit** from [Releases](../../releases) for original tables and font references.
 
-Brazilian Portuguese contributors can start with the **[294-entry launcher JSON](localization/launcher/pt-BR.launcher.json)** and **[game JSON](localization/game/pt-BR.game.json)**. Edit `text` fields and preserve placeholders. These are blank templates; Portuguese will become a bundled official language after the completed translation is reviewed.
+Brazilian Portuguese contributors can start with the **[299-entry launcher JSON](localization/launcher/pt-BR.launcher.json)** and **[game JSON](localization/game/pt-BR.game.json)**. Edit `text` fields and preserve placeholders. These are blank templates; Portuguese will become a bundled official language after the completed translation is reviewed.
 
 ### Default controls
 

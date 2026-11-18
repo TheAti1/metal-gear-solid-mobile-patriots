@@ -64,6 +64,7 @@ The catalogue check needs no game data:
 ```powershell
 & '.\package\Metal Gear Solid Mobile.exe' --test-localization
 python tools/check_language_templates.py
+python tools/test_language_upgrade.py
 & '.\package\Metal Gear Solid Mobile.exe' --test-language-packs
 $env:MGS_PATRIOTS_SELFTEST='1'
 & '.\package\Oyun\mgs_mobile.exe'
@@ -88,9 +89,13 @@ Discord activity is validated using IPC acknowledgements, including accepted ext
 - `Language` in `Arayuz/ayarlar.json`: `tr`, `en`, or an installed community tag such as `pt-br`; the launcher's selection is authoritative.
 - `language=<tag>` in `Oyun/mgs_mobile.ini`: the resolved game language, written on launch. A launcher-only locale resolves to `en` for the game.
 - `dynamic_prompts=1`: keyboard / controller names in game text.
+- `crisp_ui=1`: default; nearest sampling and no per-draw MSAA for 2D font/sprite atlases. 3D resolution and texture filters are preserved.
+- `invert_inventory_scroll=0/1`: original/reversed vertical input in the inventory only; shared across physical devices and updated live.
 - `prompt_style=0/1/2/3`: automatic / Xbox / PlayStation / Nintendo.
 - `discord_presence=1`, `discord_room=1`: presence and room visibility.
 
 The language is fixed for a game session. Controls can be updated live through the launcher's atomic command file.
 
 See [TRANSLATING.md](TRANSLATING.md) for importable JSON, bitmap-font overlays and contributor tools. Community packs live outside shared assets and the built-in English/Turkish folders. Review and bundle a finished third translation before marking its ID official.
+
+With a prepared local game, `MGS_RENDER_SELFTEST=1` runs real OpenGL sampler/MSAA restoration checks on the first guest draw. `MGS_TRACE_UI=1` logs the first UI/world draw and render-target sizes; `MGS_TRACE_INVENTORY=1` logs state changes. These optional diagnostics are not enabled in distribution defaults.

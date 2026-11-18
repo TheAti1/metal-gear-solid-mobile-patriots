@@ -24,6 +24,7 @@
 #include "audio.h"
 #include "gamepad.h"
 #include "prompts.h"
+#include "input_policy.h"
 #include "patriots_state.h"
 #include "settings.h"
 #include "overlay.h"
@@ -231,6 +232,7 @@ static void ApplySettings() {
     S3ERuntime::Instance().SetFovPercent(s.fov_percent);
     S3ERuntime::Instance().SetHideSoftKeys(s.hide_soft_keys);
     GLES::Instance().SetTextureFiltering(s.texture_filtering);
+    GLES::Instance().SetCrispUI(s.crisp_ui);
     TexturePack::SetEnabled(s.custom_textures);
     // (the software renderer's frame is only scaled up: anti-aliasing would just cost GPU time)
     if (S3ERuntime::UseGL()) GLES::Instance().SetAntiAliasing(s.msaa, s.supersample);
@@ -540,7 +542,7 @@ int main(int argc, char** argv) {
 
     Settings& settings = Settings::Instance();
     settings.Load();
-    if(getenv("MGS_PATRIOTS_SELFTEST")){PatriotsPrompts::SelfTest();return 0;}
+    if(getenv("MGS_PATRIOTS_SELFTEST")){PatriotsPrompts::SelfTest();PatriotsInput::SelfTest();std::cout<<"[PatriotsInput] Inventory navigation policy PASS"<<std::endl;return 0;}
 #ifdef __ANDROID__
     settings.fullscreen = true;
 #endif

@@ -1,10 +1,10 @@
 # Add a language
 
-Version 5.1 imports community translations from the launcher's **LANGUAGES** page. English and Turkish are the bundled, reviewed languages. The Brazilian Portuguese files below are **untranslated templates**, ready for a contributor; they do not claim completed Portuguese support.
+Version 5.2 imports community translations from the launcher's **LANGUAGES** page. English and Turkish are the bundled, reviewed languages. The Brazilian Portuguese files below are **untranslated templates**, ready for a contributor; they do not claim completed Portuguese support.
 
 ## Files to send to a translator
 
-- [Brazilian Portuguese launcher JSON](../localization/launcher/pt-BR.launcher.json): **294** entries, including settings, messages and the language importer.
+- [Brazilian Portuguese launcher JSON](../localization/launcher/pt-BR.launcher.json): **299** entries, including settings, messages and the language importer.
 - [Brazilian Portuguese game JSON](../localization/game/pt-BR.game.json): **1,936** records. This contains 1,814 editable game strings, 48 PC runtime / Discord labels, 70 legacy phone metadata records for reference, and 4 protected technical records.
 - [English launcher template](../localization/launcher/launcher.en.json) and [English game template](../localization/game/game.en.json) for other languages.
 
@@ -70,3 +70,15 @@ Other alphabets may need additional glyphs and runtime rendering work, especiall
 ## Becoming a bundled language
 
 Community imports are available now. A new official language is bundled after the completed launcher/game translation, credits, tokens, fonts and layouts have been reviewed. Brazilian Portuguese is intended as the next language once the contributor's finished files arrive. Review and bundle those actual files before adding `pt-br` to `OfficialIds` in `launcher/LanguagePacks.cs`; never label a blank template as finished support.
+
+## Updating an existing v5.1 translation
+
+v5.2 adds **5 launcher texts** for Crisp Interface and inventory scrolling, for **299 total**. All previous IDs and English source strings remain unchanged. The game catalogue is still **1,936 records**. Existing v5.1 packs import successfully; the new labels fall back to English until translated.
+
+Keep your completed translations when upgrading to the full current template:
+
+```powershell
+python tools/refresh_language_json.py --input 'pt-BR.launcher.completed.json' --out 'pt-BR.launcher.v5.2.json'
+```
+
+From the standalone kit, also pass `--template launcher/launcher.en.json`. The tool copies translated text and contributor metadata, adds new entries with blank `text`, and refuses unexpected source/ID changes. It also supports game JSONs with the matching game template. The optional `changes-5.2.json` is a reference report, **not an importable language pack**. Submit/import the full refreshed JSON. Do not replace an existing completed translation with a blank template.

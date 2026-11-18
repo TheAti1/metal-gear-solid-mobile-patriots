@@ -396,6 +396,9 @@ void Overlay::Draw() {
             if (ImGui::Checkbox(kConsole ? "Bilinear texture filtering" : "Bilinear texture filtering  (F9)", &v)) { s.texture_filtering = v; changed = true; }
             Hint("Off matches the phone (sharp pixels).");
             if (!kConsole) {
+            v = s.crisp_ui;
+            if (ImGui::Checkbox("Crisp interface", &v)) { s.crisp_ui = v; changed = true; }
+            Hint("Keeps bitmap menus, dialogue and HUD sharp without lowering the 3D resolution. Overrides filtering for screen-space draws only.");
             v = s.native_resolution;
             if (ImGui::Checkbox("Native resolution (pixelated)", &v)) { s.native_resolution = v; changed = true; }
             Hint("Renders at the phone's resolution (240 px tall) and scales it up with sharp pixels, like the "
@@ -456,7 +459,10 @@ void Overlay::Draw() {
         }
         if (!k3DS && ImGui::BeginTabItem("Controller")) {   // (3DS: fixed buttons; the bindings didn't fit the screen)
             if (begin_page()) {
-                bool v = s.left_stick_dpad;
+                bool v = s.invert_inventory_scroll;
+                if (ImGui::Checkbox("Invert weapon / equipment menu Up and Down", &v)) { s.invert_inventory_scroll = v; changed = true; }
+                Hint("Inventory only. Keyboard, D-pad and left stick share this setting; gameplay movement and other menus are unchanged.");
+                v = s.left_stick_dpad;
                 if (ImGui::Checkbox(k3DS ? "Circle pad moves Snake" : "Left stick moves Snake", &v)) { s.left_stick_dpad = v; changed = true; }
                 if (k3DS)
                     Hint("Select opens and closes this menu. In the menu the circle pad or d-pad moves the cursor, "

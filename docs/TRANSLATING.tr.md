@@ -1,10 +1,10 @@
 # Yeni dil ekleme
 
-5.1 sürümünde başlatıcının **DİLLER → Dil paketi içe aktar** bölümünden topluluk çevirisi kurulabilir. İngilizce ve Türkçe hazır resmî dillerdir. Brezilya Portekizcesi dosyaları şu an **boş çeviri şablonudur**; tamamlanan çeviri incelendikten sonra üçüncü resmî dil olarak paketlenecek.
+5.2 sürümünde başlatıcının **DİLLER → Dil paketi içe aktar** bölümünden topluluk çevirisi kurulabilir. İngilizce ve Türkçe hazır resmî dillerdir. Brezilya Portekizcesi dosyaları şu an **boş çeviri şablonudur**; tamamlanan çeviri incelendikten sonra üçüncü resmî dil olarak paketlenecek.
 
 ## Çevirmene gönderilecekler
 
-- [Launcher JSON'u](../localization/launcher/pt-BR.launcher.json): **294 metin**. Yeni dil ekranı ve ayarlar dâhil.
+- [Launcher JSON'u](../localization/launcher/pt-BR.launcher.json): **299 metin**. Yeni dil ekranı ve ayarlar dâhil.
 - [Oyun JSON'u](../localization/game/pt-BR.game.json): **1.936 kayıt**; oyun metinleri, yükleme yazısı, PC tuşları ve Discord oda/durum metinleri.
 - Sürüm sayfasındaki **Translation Kit**: ayrı `launcher/` ve `game/` klasörleri, 14 orijinal İngilizce DAT tablosu, orijinal/genişletilmiş font grupları ve font araçları.
 
@@ -29,3 +29,15 @@ Tam oyun paketinde çevirmen dosyaları `Translations/launcher/` ve `Translation
 Ana fontlar Portekizce Latin harflerini içerir; küçük HUD/Codec fontları, uzun metinler ve satır düzeni oyun içinde ayrıca kontrol edilmelidir. Diğer alfabeler için font çizimi veya ek motor çalışması gerekebilir.
 
 Çevirmen tamamladığında **launcher JSON'unu ve oyun JSON'unu** göndersin. Varsa çevirdiği orijinal DAT dosyaları karşılaştırma için de alınabilir. Gelen gerçek çeviri test edilip onaylandıktan sonra üçüncü resmî dil olarak sürüme eklenir.
+
+## Önceki çeviriyi 5.2 şablonuna taşıma
+
+Yeni ayarlar için **5 launcher metni** eklendi; toplam **299** oldu. Önceki 294 kimlik ve İngilizce kaynak aynen korunur. Oyun JSON'u **1.936 kayıtla değişmedi**. Önceki sürümün dil paketleri çalışmaya devam eder; yeni alanlar çevrilene kadar İngilizce görünür.
+
+Tamamlanan çeviriyi kaybetmeden yeni alanları eklemek için:
+
+```powershell
+python tools/refresh_language_json.py --input 'pt-BR.launcher.completed.json' --out 'pt-BR.launcher.v5.2.json'
+```
+
+Bağımsız kitte `--template launcher/launcher.en.json` ekleyin. Araç çevrilmiş `text` alanlarını ve çevirmen bilgisini korur, yeni alanları boş ekler. `changes-5.2.json` yalnızca 5 yeni metnin referans listesidir, içe aktarılacak dil paketi değildir. Oyuna tam güncellenmiş JSON'u içe aktarın; bitmiş çevirinin üzerine boş şablon koymayın.

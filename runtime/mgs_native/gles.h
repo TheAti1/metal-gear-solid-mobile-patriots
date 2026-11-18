@@ -82,6 +82,7 @@ public:
     // Texture filtering on/off (any thread; applied on the emu thread at the next GL call). Off forces
     // nearest-neighbour sampling like the phone, regardless of what the game asks for.
     void SetTextureFiltering(bool on) { filter_wanted_ = on; }
+    void SetCrispUI(bool on);
     // Anti-aliasing (any thread; applied between frames): MSAA samples (0/2/4/8, capped by the driver) and
     // supersampling factor (1..3: render at N x the output size, downsampled linearly).
     void SetAntiAliasing(int msaa, int supersample) { aa_msaa_ = msaa; aa_ss_ = supersample; }
