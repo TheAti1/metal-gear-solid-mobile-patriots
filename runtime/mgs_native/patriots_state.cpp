@@ -15,6 +15,8 @@
 #ifdef _WIN32
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
+#else
+#include <unistd.h>
 #endif
 namespace PatriotsState {
 namespace {
@@ -75,10 +77,19 @@ void Tick(bool gameplay) {
     }
     const std::string shown=inWorld&&Settings::Instance().discord_room?roomTitle:"";
     static std::string last;
-    std::string body="{\"pid\":"+std::to_string(GetCurrentProcessId())+",\"language\":"+Q(Settings::Instance().LocaleId())+",\"state\":"+Q(state)+",\"room\":"+Q(shown)+",\"room_id\":"+Q(inWorld?room:"")+",\"state_hash\":"+std::to_string(hash)+"}";
+    #ifdef _WIN32
+    const auto pid=GetCurrentProcessId();
+    #else
+    const auto pid=getpid();
+    #endif
+    std::string body="{\"pid\":"+std::to_string(pid)+",\"language\":"+Q(Settings::Instance().LocaleId())+",\"state\":"+Q(state)+",\"room\":"+Q(shown)+",\"room_id\":"+Q(inWorld?room:"")+",\"state_hash\":"+std::to_string(hash)+"}";
     auto path=Platform::ExeDir()/"patriots_state.json",temp=Platform::ExeDir()/"patriots_state.tmp";
     {std::ofstream f(temp,std::ios::binary|std::ios::trunc);f<<body;}
+    #ifdef _WIN32
     MoveFileExW(temp.c_str(),path.c_str(),MOVEFILE_REPLACE_EXISTING|MOVEFILE_WRITE_THROUGH);
+    #else
+    std::error_code renameError;std::filesystem::rename(temp,path,renameError);
+    #endif
     if(body!=last){if(getenv("MGS_TRACE_PRESENCE"))std::cout<<"[PresenceState] "<<body<<std::endl;last=body;}
 }
 }

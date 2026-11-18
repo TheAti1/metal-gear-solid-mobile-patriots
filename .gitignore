@@ -28,3 +28,12 @@ ayarlar.json
 *.pdb
 __pycache__/
 .vs/
+
+# Android signing material is private and stable across upgrades.
+*.jks
+*.keystore
+keystore.properties
+release-password.txt
+*.apk
+*.idsig
+/android-patriots/__pycache__/

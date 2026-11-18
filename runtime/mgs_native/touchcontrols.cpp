@@ -175,6 +175,11 @@ void TouchControls::Update() {   // mutex_ held
         {B_OK, PhoneKey("ok")}, {B_A, PhoneKey("a")}, {B_B, PhoneKey("b")}, {B_LSK, PhoneKey("lsk")}, {B_RSK, PhoneKey("rsk")} };
     bool keys[256] = {};
     for (const auto& m : map) if (bits & m.bit) keys[m.key] = true;
+#ifdef __ANDROID__
+    // The on-screen action button also confirms menus/cutscenes. Gameplay keeps
+    // the original A action, while the D-pad centre remains a dedicated OK key.
+    if(menu_available_ && (bits & B_A))keys[PhoneKey("ok")]=true;
+#endif
     keys_cb_(keys);
 }
 

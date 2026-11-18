@@ -879,7 +879,13 @@ GLES& GLES::Instance() {
 }
 
 void GLES::SetHost(Host host) { g_host = std::move(host); }
-void* GLES::Proc(const char* name) { return g_host.get_proc ? g_host.get_proc(name) : nullptr; }
+void* GLES::Proc(const char* name) {
+#ifdef __ANDROID__
+    if(!std::strcmp(name,"glActiveTexture"))return reinterpret_cast<void*>(&MgsGL::ActiveTexture);
+    if(!std::strcmp(name,"glClientActiveTexture"))return reinterpret_cast<void*>(&MgsGL::ClientActiveTexture);
+#endif
+    return g_host.get_proc ? g_host.get_proc(name) : nullptr;
+}
 
 uint32_t GLES::GuestString(const std::string& s) {
     auto it = S.strings.find(s);
@@ -896,6 +902,18 @@ bool GLES::EnsureContext() {
     S.tried = true;
     if (!g_host.make_current || !g_host.make_current()) { WarnOnce("no GL context (the platform layer could not make one current)"); return false; }
 
+#if defined(__ANDROID__)
+    // Use GLES 1 entry points and OES names for the fixed-pipeline context.
+    p_glActiveTexture = &glActiveTexture;
+    p_glClientActiveTexture = &glClientActiveTexture;
+    p_glGenFramebuffers = LoadGL<PFN_GenFramebuffers>("glGenFramebuffersOES");
+    p_glBindFramebuffer = LoadGL<PFN_BindFramebuffer>("glBindFramebufferOES");
+    p_glGenRenderbuffers = LoadGL<PFN_GenRenderbuffers>("glGenRenderbuffersOES");
+    p_glBindRenderbuffer = LoadGL<PFN_BindRenderbuffer>("glBindRenderbufferOES");
+    p_glRenderbufferStorage = LoadGL<PFN_RenderbufferStorage>("glRenderbufferStorageOES");
+    p_glFramebufferRenderbuffer = LoadGL<PFN_FramebufferRenderbuffer>("glFramebufferRenderbufferOES");
+    p_glCheckFramebufferStatus = LoadGL<PFN_CheckFramebufferStatus>("glCheckFramebufferStatusOES");
+#else
     p_glActiveTexture          = LoadGL<PFN_ActiveTexture>("glActiveTexture", "glActiveTextureARB");
     p_glClientActiveTexture    = LoadGL<PFN_ActiveTexture>("glClientActiveTexture", "glClientActiveTextureARB");
     p_glGenFramebuffers        = LoadGL<PFN_GenFramebuffers>("glGenFramebuffers", "glGenFramebuffersEXT", "glGenFramebuffersOES");
@@ -905,6 +923,7 @@ bool GLES::EnsureContext() {
     p_glRenderbufferStorage    = LoadGL<PFN_RenderbufferStorage>("glRenderbufferStorage", "glRenderbufferStorageEXT", "glRenderbufferStorageOES");
     p_glFramebufferRenderbuffer = LoadGL<PFN_FramebufferRenderbuffer>("glFramebufferRenderbuffer", "glFramebufferRenderbufferEXT", "glFramebufferRenderbufferOES");
     p_glCheckFramebufferStatus = LoadGL<PFN_CheckFramebufferStatus>("glCheckFramebufferStatus", "glCheckFramebufferStatusEXT", "glCheckFramebufferStatusOES");
+#endif
 #if !defined(MGS_GLES) || defined(MGS_VITA)   // (ES 1.1: no blits, so no MSAA, supersampling or native resolution yet; vitaGL has them)
     p_glRenderbufferStorageMultisample = LoadGL<PFN_RenderbufferStorageMultisample>("glRenderbufferStorageMultisample", "glRenderbufferStorageMultisampleEXT");
     p_glBlitFramebuffer        = LoadGL<PFN_BlitFramebuffer>("glBlitFramebuffer", "glBlitFramebufferEXT");
@@ -1454,8 +1473,12 @@ bool GLES::Handle(const std::string& name, Cpu* uc, const uint32_t r[4], uint32_
             }
             return true;
         }
-        case G_ClientActiveTexture: S.client_unit = r[0] - GL_TEXTURE0; if (p_glClientActiveTexture) p_glClientActiveTexture(r[0]); return true;
-        case G_ActiveTexture: if (p_glActiveTexture) p_glActiveTexture(r[0]); return true;
+        case G_ClientActiveTexture:
+            if(r[0] < GL_TEXTURE0 || r[0] >= GL_TEXTURE0 + 2) { WarnOnce("guest selected an invalid client texture unit"); return true; }
+            S.client_unit = r[0] - GL_TEXTURE0; if (p_glClientActiveTexture) p_glClientActiveTexture(r[0]); return true;
+        case G_ActiveTexture:
+            if(r[0] < GL_TEXTURE0 || r[0] >= GL_TEXTURE0 + 2) { WarnOnce("guest selected an invalid texture unit"); return true; }
+            if (p_glActiveTexture) p_glActiveTexture(r[0]); return true;
         case G_DrawArrays: Draw(uc, r[0], r[1], r[2], 0, 0); return true;
         case G_DrawElements: Draw(uc, r[0], 0, r[1], r[2] ? r[2] : GL_UNSIGNED_SHORT, r[3]); return true;
 

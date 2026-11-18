@@ -10,6 +10,13 @@
 <img src="docs/screenshots/tr/home.png" width="960" alt="Türkçe Patriots başlatıcısı">
 </div>
 
+## Android
+
+**[Download Android APK](https://github.com/TheAti1/metal-gear-solid-mobile-patriots/releases/tag/android-v1.0.0) · [Android build / update guide](android-patriots/README.md)**
+
+Android 9+, ARM64 / ARMv7 / x86_64; oyun dosyaları APK içinde, Türkçe / İngilizce seçimi ve açılışta güncelleme kontrolü. Android sürümleri PC sürümlerinden ayrı bir kanalda yayımlanır.
+
+
 ## Neler var?
 
 - Başlatıcının sağ üstünden **Türkçe / English** seçimi. Arayüz hemen değişir; oyun seçilen dilde bir sonraki açılışta başlar.

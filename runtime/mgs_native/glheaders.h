@@ -5,6 +5,9 @@
 #ifdef MGS_GLES
 #include <GLES/gl.h>
 #include <GLES/glext.h>
+#ifdef __ANDROID__
+#include "android_gl_state.h"
+#endif
 #ifndef APIENTRY
 #define APIENTRY GL_APIENTRY
 #endif

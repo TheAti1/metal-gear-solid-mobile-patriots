@@ -1,5 +1,12 @@
 # Changelog
 
+## Android 1.0.0 · 2026-11-18
+
+- Standalone Android 9+ universal APK for ARM64, ARMv7 and x86_64, with bundled game data and Turkish / English selection.
+- Startup/manual release checks, ranged downloads with retry, SHA256/package/signature checks and Android installer handoff.
+- Native game lifetime isolated from the launcher, with save data kept separate from immutable assets.
+
+
 ## 5.2.0 — 2026-11-18
 
 - Addressed #1 with independent Crisp Interface sampling: nearest font/sprite atlas filtering and scoped 2D MSAA suppression, preserving high-resolution 3D rendering, original world filters and AA settings.
