@@ -1,5 +1,14 @@
 # Changelog
 
+## 5.1.0 — 2026-11-18
+
+- Added a Languages page with independent launcher/game JSON import, combined ZIP import and template export.
+- Added discovered community locale IDs, English fallback for partial packs, component coverage and transactional installation.
+- Separated 294 launcher strings and 1,936 game/reference/runtime records into translation catalogues with stable IDs and protected PC-button tokens.
+- Preserved live keyboard/gamepad prompts and room/status Discord telemetry in imported languages; added per-language bitmap font overlays.
+- Added a Brazilian Portuguese contributor kit, existing DAT-to-JSON converter and English/Turkish translation guides. Portuguese templates are untranslated; official support awaits completed and reviewed files.
+- Added isolated importer tests and CI validation for templates, UTF-8 DAT rebuilding, combined packs, token protection, fallback and rollback.
+
 ## 5.0.0 — 2026-11-17
 
 - Added persistent English / Turkish selection to the launcher.

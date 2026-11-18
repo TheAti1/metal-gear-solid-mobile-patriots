@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 #include "prompts.h"
+#include "patriots_locale.h"
 #include "runtime.h"
 #include "settings.h"
 #include "loader.h"
@@ -20,7 +21,7 @@
 namespace PatriotsPrompts {
 namespace {
 std::atomic<int> active{0}, family{1}; // 0 keyboard, 1 controller; Xbox / PlayStation / Nintendo
-const char* L(const char* tr,const char* en){return Settings::Instance().language?en:tr;}
+const char* L(const char* tr,const char* en){return PatriotsLocale::Text(tr,en);}
 std::string Key(int vk) {
     switch(vk) { case 32:return "Space";case 38:return L("Yukarı","Up");case 40:return L("Aşağı","Down");case 37:return L("Sol","Left");case 39:return L("Sağ","Right"); }
 #ifdef _WIN32
@@ -76,7 +77,7 @@ void Draw(Cpu* cpu,uint64_t,uint32_t,void*) {
             else if(original=="A")text=Label("a");else if(original=="B")text=Label("b");
             else if(original=="*"||(original=="Tuş *"||original=="Key *"))text=Label("star");
         }
-        auto r=rows.find(original);if(r!=rows.end())row=r->second;
+        auto r=rows.find(original);if(r==rows.end())for(auto i=rows.begin();i!=rows.end();++i)if(original==PatriotsLocale::Text(i->first.c_str(),i->first.c_str())){r=i;break;}if(r!=rows.end())row=r->second;
         else if(page==1&&!row.empty()&&(w[14]&0xFF)==1&&((original.compare(0,5,"Tuş ")==0||original.compare(0,4,"Key ")==0)||original=="A"||original=="B")){text=Label(row);row.clear();}
     }
     if(text==original||text.size()>8191)return;
@@ -128,10 +129,12 @@ std::string Label(const std::string& action) {
 }
 std::string Rewrite(const std::string& text) {
     if(text=="Loading...")return L("Yükleniyor...","Loading...");
-    if(!Settings::Instance().dynamic_prompts)return text;
+    // Imported packs contain explicit action tokens, which remain meaningful
+    // even when legacy phone-phrase rewriting is disabled in the settings.
+    if(!Settings::Instance().dynamic_prompts&&text.find("{pc:")==std::string::npos)return text;
     if(text=="2,4,6,8")return Label("move");
     std::string s=Template(text);
-    if(s==text)return text;
+    if(s==text&&s.find("{pc:")==std::string::npos)return text;
     for(const auto& a:PhoneActions())Replace(s,"{pc:"+std::string(a.id)+"}",Label(a.id));
     Replace(s,"{pc:move}",Label("move"));return s;
 }
@@ -145,6 +148,8 @@ void SelfTest() {
     if(Rewrite("Press * to switch between camera mode and key mode.").find("[L1]")==std::string::npos)throw std::runtime_error("English star prompt");
     if(Rewrite("* Yenilikçi kamuflaj sistemi")!="* Yenilikçi kamuflaj sistemi")throw std::runtime_error("bullet altered");
     if(Rewrite("Loading...")!=L("Yükleniyor...","Loading..."))throw std::runtime_error("loading translation");
+    auto tokenized=Rewrite("Use {pc:a} to fire.");if(tokenized.find("{pc:")!=std::string::npos||tokenized=="Use {pc:a} to fire.")throw std::runtime_error("community action token");
+    s.dynamic_prompts=false;if(Rewrite("Use {pc:a} to fire.").find("{pc:")!=std::string::npos)throw std::runtime_error("explicit action token with legacy rewrite off");s.dynamic_prompts=true;
     auto kb=s.KeyboardBindings();auto changed=kb;changed[4]={75};s.SetKeyboardBindings(changed);KeyboardInput(75);
     if(Rewrite("Eylem tuşuna bas.").find("[K]")!=0)throw std::runtime_error("live rebind");s.SetKeyboardBindings(kb);active=0;
     if(Rewrite("Press 1 to switch to first person view.").find("[C]")==std::string::npos)throw std::runtime_error("English first person action");

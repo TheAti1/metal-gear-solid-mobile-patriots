@@ -1,0 +1,2964 @@
+{
+  "template_version": 1,
+  "language": "pt-BR",
+  "native_name": "Português (Brasil)",
+  "culture": "pt-BR",
+  "author": "",
+  "instructions": [
+    "Translate only text fields. Empty text uses the English source.",
+    "Keep id, source, category, editable, text_id, files and required_tokens unchanged.",
+    "Set language (e.g. pt-BR), native_name, culture and author."
+  ],
+  "format": "mgs-mobile-launcher-language-v1",
+  "entries": [
+    {
+      "id": "ui_496e8babc80e557dd02b",
+      "source": "GAME",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_a7b3dd439602fbaae6a7",
+      "source": "DISPLAY",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_97072bb5f207cf55b6c6",
+      "source": "CONTROLS",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_e1b039914b217984184f",
+      "source": "AUDIO / DISCORD",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_005eda7b7f2db81e9ab7",
+      "source": "SAVES",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_04bb0ad21942c40f9ff5",
+      "source": "●  READY TO PLAY",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_38ba95ab7facb808fe20",
+      "source": "English edition · ready for the mission",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_d3b61c80b6c40085f6a7",
+      "source": "SAVE CHANGES",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_ae6cbae4582fe03be9d9",
+      "source": "PLAY     ↗",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_5606f8a7891108f15d6c",
+      "source": "PREPARING THE MISSION",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_39724d88a72ea4a626c3",
+      "source": "●  SETTINGS CHANGED",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f26349dae03811226b8b",
+      "source": "Saved display settings take effect next time you launch",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_11ebc9962bdf3513841c",
+      "source": "Save your changes or jump straight into the game",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_bbb1132f30f1770ba6e1",
+      "source": "On",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_39ce8f3878187699a4bb",
+      "source": "Off",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_20b3fb57baf8403618c3",
+      "source": "PATRIOTS  /  ENGLISH EDITION",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_e28b2fb04c1238ded8c7",
+      "source": "The mission stays the same. Play it your way.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_0d0655286feaccc474b2",
+      "source": "PC EDITION",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_3ccc8b3035e4a2f00904",
+      "source": "MISSION SETTINGS",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_d965f9a3d86e1d36a5c9",
+      "source": "DISPLAY",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_dd2215475a6e4decc402",
+      "source": "Fullscreen",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_5fa690f8b68c000ed16b",
+      "source": "Windowed",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_4ccc17d78ed0c2d54f4a",
+      "source": "QUALITY PRESET",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_04eb32d1dad72e323e05",
+      "source": "Balanced",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_17d2fe95a0a3d4fb3288",
+      "source": "High quality",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_ed87cbf0539f2eb8cc56",
+      "source": "Classic",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_744adefffd0dcc50bdad",
+      "source": "Custom settings",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_7875a02812e0899a25b3",
+      "source": "CONTROL LAYOUT",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_c4bb041f80450f1a7802",
+      "source": "Classic · arrows + Z",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_af11018536f86532c338",
+      "source": "Custom bindings",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f260702950c168fc5387",
+      "source": "GAME LANGUAGE",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_fc2f4dab65a4353bae2f",
+      "source": "Keyboard and controller",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_69740471384e5a784c2b",
+      "source": "PLAY TIME",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_0f3464db24dd04360e5d",
+      "source": " h ",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_d8217002fd2008899092",
+      "source": " min",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_1b448720e13b529bc871",
+      "source": " minutes",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_461af90e2417a674c20d",
+      "source": "Display",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_caf4350b2e0e2f0d26fe",
+      "source": "Adjust the field of view, resolution and graphics quality.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_a9621b13dd117d91f770",
+      "source": "Screen",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_539d77af55f992ad6ff8",
+      "source": "Quality",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_9590dad60d5d363439ed",
+      "source": "Gameplay",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_a3c2c982bbbe14862e68",
+      "source": "Display mode",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_4239043d3421f0b3c748",
+      "source": "Fullscreen uses a borderless window at your desktop resolution.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_ff7b13c7ee3981349455",
+      "source": "Monitor",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_eb68ac3b0e204db5bbd2",
+      "source": "The display on which the game window opens.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_dec714629f04e430c7fa",
+      "source": " · Primary display",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_e8b8d1745b4ec5710d60",
+      "source": "Window size",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_1fe05fb37312c0c99dd1",
+      "source": "The initial size in windowed mode.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_b8fd46dd5e8749629f58",
+      "source": "Widescreen",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_67811b46fd2abbdaad7f",
+      "source": "The 3D camera follows your aspect ratio. Menus keep their original layout.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_95b0253913d1beee4a8a",
+      "source": "Field of view",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_8df4fd8963213e8a1725",
+      "source": "100% is the original setting; increase it for a wider view.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": [
+        "% i"
+      ]
+    },
+    {
+      "id": "ui_d3e557f8cf6d7d4bade7",
+      "source": "Soft-key labels",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_301bac7bda4da3489b1f",
+      "source": "The left and right soft-key captions at the edge of the screen.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_44d9f1368bc6100dacd0",
+      "source": "Always show",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_8e9f868f52dd5a431770",
+      "source": "Hide during gameplay",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_183e381cfb9f1b6a41a0",
+      "source": "Always hide",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_ed3efd276ee34fe7db4b",
+      "source": "Classic appearance",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_29d358bcbeb9297b5a7b",
+      "source": "Anti-aliasing",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_8647111b58e7013d6654",
+      "source": "Multisampling smooths the edges of 3D objects.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_1c31fe783af01ce6875f",
+      "source": "Render scale",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_5a35aee672442c8a0c01",
+      "source": "Render at a higher resolution and downsample to your screen.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f8288a24ce1b0ca673c8",
+      "source": "1× · display resolution",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_ac86a90eee5f4f94bdc8",
+      "source": "2× · high quality",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_39d2c8d28014d5684c6f",
+      "source": "3× · very high quality",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_3f8cb9549da385e92306",
+      "source": "Texture filtering",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_afc8005fd763cec45e6a",
+      "source": "Turn off to preserve the original pixelated textures.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_4ff25653736d93b0a93c",
+      "source": "Original pixel resolution",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_81902a494e48db649990",
+      "source": "Render at the phone's resolution and upscale the result.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_6c90c68a7f51826ec85d",
+      "source": "Advanced options",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_48e524762aef3b0a1217",
+      "source": "Extra scene geometry",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_7635347181be3e6870d1",
+      "source": "Draw geometry hidden by the original camera; this may affect performance.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_5fb5a2be757c7cbefc84",
+      "source": "Software rendering",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_6468cdccfcded3bc6daf",
+      "source": "An alternative for graphics issues. Anti-aliasing is unavailable.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f84531cb072637c5127d",
+      "source": "Eight-way movement",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_7c279c66458fe317d131",
+      "source": "Enable diagonal directional inputs.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_683e5b242ecfcd224512",
+      "source": "Analog movement",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_667efbaf829356a6a66e",
+      "source": "Move at any angle with the left stick. Left-stick movement must also be enabled.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_5a374dd2b302d8173b4a",
+      "source": "Pause when unfocused",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_fdb183be7f1689992f40",
+      "source": "Pause the game when you switch to another window.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f7b4bcc35b9176a6676c",
+      "source": "Skip game intro logos",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_8374e63ed6ebf7358bfb",
+      "source": "Go straight to the title screen.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_994279d1adcc272eefe2",
+      "source": "Patriots intro",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_bf16ea1a5358404b8dfb",
+      "source": "Show the circular Patriots logo when launching the game.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_da15f0d81636771eab44",
+      "source": "Hide launcher while playing",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_83a707c097951756cbac",
+      "source": "Return to the launcher when the game closes.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_06e5ba0e75e1a0e46145",
+      "source": "Play directly from the EXE",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_ad27b9c2f6422f683d3e",
+      "source": "Use Ayarlar.cmd to return to the launcher.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f3c26534c70c8531827c",
+      "source": "Controls",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_9df93573f096b116c14f",
+      "source": "Set up your own layout. Keyboard and controller can be used together.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f81dd7746f9ec29850c3",
+      "source": "Live in-game prompts",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_789508c528c6f33620d0",
+      "source": "Help text follows your active input device and current bindings.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_083cc0636abbd749042e",
+      "source": "Controller button names",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_d8b6738807b80cdf7192",
+      "source": "Automatic mode follows the last controller you used.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_ee1cd50e942236db79e3",
+      "source": "Automatic",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_6887c47c0499a4798182",
+      "source": "Keyboard",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_67716af0863b8aa25ee9",
+      "source": "Controller",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_37287e25972ca47da8ff",
+      "source": "PC layout",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_a73bdcd38117f856dcc1",
+      "source": "Classic layout",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_b061faaab9f0a2bc956e",
+      "source": "Click a key box and press a key to assign it. F1, F5 and F12 are reserved for game functions.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_89ea97005131748637a8",
+      "source": "GAME ACTION",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_b139f6e2e4e0b6f41cd2",
+      "source": "PRIMARY KEY",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_8966ddf7701b2e4edeb8",
+      "source": "SECONDARY KEY",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_b2ea356d714dfc4b2df3",
+      "source": "No controller found yet. Connect your device and press Refresh.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_6d25d67585a059023fbe",
+      "source": "Device to test",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_dee1d28cadf52d6c1892",
+      "source": "All connected compatible controllers can be used in-game.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_63cd725787a8e21fe7f3",
+      "source": "Refresh",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_68edb2e792f8ee2940ef",
+      "source": "Vibration test",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_4cd5d78db4aeca5e9e78",
+      "source": "Vibration command sent.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_0532464e084b41bbacc4",
+      "source": "Vibration is unavailable on this device.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f341cb37e9f53c507843",
+      "source": "Default bindings",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_162579badc0bb763f65e",
+      "source": "Left-stick movement",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_c46095ed2f8c77f7f2c3",
+      "source": "Use the left stick for movement input.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_b600adbcf9171635ca95",
+      "source": "Move according to the angle of the stick.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f799971348a128063c90",
+      "source": "Live input test",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f23be51728b5bfff74b8",
+      "source": "Back / Share and the right-stick click are reserved for in-game settings.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_416eb502d72a099d5237",
+      "source": "Waiting for input",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_839d2c0e4929f4b5c365",
+      "source": "Button bindings",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_41e26bee597fd0bdfde5",
+      "source": "Assign a key",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f5f2dbc13eded823f00d",
+      "source": "Press the key you want to assign.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_e306951c12fec8b7d6e4",
+      "source": "Clear",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_39a8d28c1c6b8f0cf127",
+      "source": "Cancel",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_8c59f942a623555a6e14",
+      "source": "This key is reserved by the game. Choose another key.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_c786f70fb1f2ba789421",
+      "source": "Connected · waiting for a button",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_ad98304fe53d9195c10a",
+      "source": "Right stick",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_11d7c96daf12f3006f2e",
+      "source": "Button ",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_a612072bbe204944ad08",
+      "source": "Waiting for a controller connection",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_fada4c529a44fd9d1bcd",
+      "source": "LEFT  {0:+0.00;-0.00;0.00} / {1:+0.00;-0.00;0.00}     RIGHT  {2:+0.00;-0.00;0.00} / {3:+0.00;-0.00;0.00}     LT {4:0.00}   RT {5:0.00}",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": [
+        "{0:+0.00;-0.00;0.00}",
+        "{1:+0.00;-0.00;0.00}",
+        "{2:+0.00;-0.00;0.00}",
+        "{3:+0.00;-0.00;0.00}",
+        "{4:0.00}",
+        "{5:0.00}"
+      ]
+    },
+    {
+      "id": "ui_7e497902e53e78997a60",
+      "source": "LEFT STICK",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_062c016938534f1716e3",
+      "source": "RIGHT STICK",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_48900c3ab14391e77c70",
+      "source": "Audio and Discord",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_94f32e9fd4d7a78ccff8",
+      "source": "Adjust the volume and the game information shown on your Discord profile.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_c03f02ecfac81b0a4b5b",
+      "source": "Master volume",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_fc76bff95f1b012387ba",
+      "source": "Applies to the game's Windows audio session.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_b282228e3debb59fd3b7",
+      "source": "Mute",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_73e05dec22c6d37adf91",
+      "source": "Your chosen volume level is kept.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_95dfdcfe10c185e449c9",
+      "source": "Show your room, game status and session time on your Discord profile.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_1e9aad2a274272e4bb4a",
+      "source": "Discord activity",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_95b00ae2a8fce3070a77",
+      "source": "Connect automatically while the Discord desktop app is running.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_a4421181b2a70ce0f867",
+      "source": "Show room information",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_dddcff57a2d06194842a",
+      "source": "When off, only your general game status is shared.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f4c8dd55b9d361cefb48",
+      "source": "In-game audio options",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_9eea3421aaa1c07ecbe3",
+      "source": "The game's own audio settings also apply. Output uses your selected Windows audio device.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_d09e12e27feb494a8a7a",
+      "source": "Saves and launcher",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_ab63aeed4503ae7ff28d",
+      "source": "Protect your saves, transfer settings and verify the game files.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_017b7b8df384598c9c76",
+      "source": "Game saves",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_e2c88dbc55eea3faf375",
+      "source": "Automatic save backup",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_7bdbda7dfc472b04726a",
+      "source": "Back up your current saves before launching the game.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_560787a39aa3ecb3cc5a",
+      "source": "Back up now",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f130067e1a20ca6a8ee3",
+      "source": "There are no game saves to back up yet.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f3cc3321084fe3d71e20",
+      "source": "Save backup created.\n",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_2d0cf3a0aff6d032d111",
+      "source": "Restore",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_d60da6a4eafd7d2f2fb6",
+      "source": "Backup folder",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_366fcd93889e95ae0441",
+      "source": "Preferences",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_3b89dcac16b8742616ad",
+      "source": "Export settings",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_340a8fc2021c39d2cb36",
+      "source": "Import settings",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_545ac68bacdb03ab4aa7",
+      "source": "Restore defaults",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_c889988a3b87e6a41671",
+      "source": "Return to this window when the game closes.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f96ec4d79b8ea21bd0c9",
+      "source": "Ayarlar.cmd always opens the launcher.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_36e14d97cfd9635641da",
+      "source": "Files",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_173457979c8a76fa1dfb",
+      "source": "Verify game files",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_532f11d3ce336b7465cd",
+      "source": "Game folder",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_7d14b0e3c65c56773b83",
+      "source": "Documentation",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_72aaa36ff5c17939eeb4",
+      "source": "Close the game before restoring a save. Your current saves are backed up first.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_349d9a920f90657e444e",
+      "source": "Close the game before performing this action.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_27f9b5c8ca4cb91d8bce",
+      "source": "MGS save backup|*.zip",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_e94df44f9639c08d62dc",
+      "source": "The selected backup will replace your current game saves. Your current saves will be backed up first. Continue?",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_77925f2fb846e3bfb82c",
+      "source": "Restore game saves",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_df0c7f79965f21d40652",
+      "source": " save files restored.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_66b1901176173ff41e33",
+      "source": "Patriots_MGS_Settings.json",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_d012d58d410f0850b8c7",
+      "source": "Settings file|*.json",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_721cdc8536999aa43d57",
+      "source": "Restore launcher and control settings to their defaults? Game saves will be kept.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_43bce2af0ad79c29c47a",
+      "source": "Reset settings",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_1bd7f91e53a68cbb2105",
+      "source": "●  VERIFYING FILES",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_818cef9ea7d310197688",
+      "source": " files verified",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_c9f4f9b5b2dfe77bac89",
+      "source": "All game files verified.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_7fde8edf0f9b4427720c",
+      "source": "Missing or modified files:\n",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_ce12bc76a51a437af371",
+      "source": "●  FILES VERIFIED",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_56fcbba2120aeacbc1d6",
+      "source": "●  VERIFICATION COMPLETE",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_a402ba3f29036499eb0e",
+      "source": "●  SETTINGS SAVED",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_3467ded54e8376d0c79f",
+      "source": "Audio and controls apply immediately; display settings apply on next launch",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_eddcdd7f39e8e388d5ab",
+      "source": "Ready for the mission · press F5 to play",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_fceed830614539845758",
+      "source": "Saved. Audio, bindings and Discord settings apply immediately. Display settings apply on next launch.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_126d2d35ed395ee8a776",
+      "source": "Settings saved.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_18c219882a816696ae3c",
+      "source": "RETURN TO GAME  ↗",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_e447c4d185a0e57ecaf2",
+      "source": "●  GAME RUNNING",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_4a8602c614ca98ebc02d",
+      "source": "Enjoy the game.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f7c7e227d6dd84c17ab6",
+      "source": "The game closed. Exit code: ",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_6c0596aa5a2faad7c6ee",
+      "source": "\nSee Oyun/mgs_mobile.log for details.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_c860e780b502478d4195",
+      "source": "Ready to return to the mission",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_59415a2ff58f9b277e29",
+      "source": "A / Cross",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_9fd92da8a0d1628caf63",
+      "source": "B / Circle",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f716349dbc97dd70465e",
+      "source": "X / Square",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_b071d8379b31c08efe2b",
+      "source": "Y / Triangle",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_20591c8c6f0547ef037a",
+      "source": "Left-stick click",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_d29ddca90171ec78b543",
+      "source": "Extra button 1",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_d2c3e1679d828bea41bf",
+      "source": "Right paddle 1",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_27cb30018d67600574a4",
+      "source": "Left paddle 1",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_b16683a882e80e62cbd9",
+      "source": "Right paddle 2",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_ded55f4559f4793a7a24",
+      "source": "Left paddle 2",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_5eb33481bcd56748ac92",
+      "source": "Touchpad",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_356966af10b6632cfe1f",
+      "source": "Extra button 2",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_130c07b7d89e85138750",
+      "source": "Extra button 3",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_1f312f64cfb8e585a227",
+      "source": "Extra button 4",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_9a618d1c4cb555ef2e38",
+      "source": "Extra button 5",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_c67fa923e3680af97662",
+      "source": "Extra button 6",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_9bca93e33b3c9f42796e",
+      "source": "Forward / up",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_679d1bf93ecdd2c6cafb",
+      "source": "Back / down",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_b7987193c43661941131",
+      "source": "Move left",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_ec2a91283552a4982c4f",
+      "source": "Move right",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_b8a646921c59cb1b23c4",
+      "source": "Action / fire / confirm",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_da02d76e329b44d2145f",
+      "source": "First-person view",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_4e67048228b1b2d7bbd0",
+      "source": "Center / confirm",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_02cda467028a37c86660",
+      "source": "Pause menu",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_8cc86239e70384f2e681",
+      "source": "Equipment / back",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_dd0ca9a77bc4867bd2c5",
+      "source": "Camera / phone *",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_79d45c20914cc0a3ad99",
+      "source": "Phone #",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_fbbda449f8a2afe67c67",
+      "source": "Delete / clear",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_74aaf6ca29cd281e1887",
+      "source": "Phone key ",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_667a8501cdba33c353a2",
+      "source": "Increase game volume",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_2f95a1f13115de5165bd",
+      "source": "Decrease game volume",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_70bbf937c31f7539c6b8",
+      "source": "This file is not an MGS Mobile save backup.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_e32800bc5cadf9076179",
+      "source": "The backup contains unexpected content.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_782d7f77168482f4d287",
+      "source": "Missing game file: ",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_8639451f8c1ebea57c9e",
+      "source": "The automated game test timed out.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_8d6497610200328ad5f4",
+      "source": "Connected",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_4bf4ac5f38374946f99d",
+      "source": "RPC error",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_85d37503fad77b2075da",
+      "source": "Discord error: ",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_82b324c788d4a7f86cfe",
+      "source": "Activity published",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_519d3dd82bc9a50bf522",
+      "source": "Activity cleared",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_1bb36dba729a6719c568",
+      "source": "Waiting for the Discord desktop app",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_5095f526cbbc781a9775",
+      "source": "Launching the game",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_9ca4f0e624d21b022972",
+      "source": "Patriots Çeviri · English edition",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_dfb14bc1b7be72c37f00",
+      "source": "Patriots Çeviri · English",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_47d96bd0f2019ecd13e8",
+      "source": "Reconnecting",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_997cd0f3aaf8087ee388",
+      "source": "Game closed · activity cleared",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_5b645a0b915ab99c715c",
+      "source": "METAL GEAR SOLID MOBILE\nPATRIOTS EDITION · 5.0\n\nTurkish localization and launcher: Patriots Çeviri\nGame runtime: LeithSilver/mgsm v0.1 + Patriots changes\nOriginal game: Konami / Ideaworks3D, 2008\n\nThe Patriots logo is from the official website.\nSource code, technical information and licenses are in Belgeler.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_78152f3fec164295eaa7",
+      "source": "Language",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_5a6bc368e4c4bb0f4849",
+      "source": "Launcher and game language",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_ee7bdcf8e43a8d28fb35",
+      "source": "The launcher changes immediately; the game changes on its next launch.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_340415ebbaae1a4c0af6",
+      "source": "●  LANGUAGE CHANGED",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_ff1033c424b91f55b2e2",
+      "source": "The selected language will apply the next time you launch the game.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_0f8b5cb2e84b210d34a4",
+      "source": "Turkish",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_861dd128f74f33e75710",
+      "source": "English",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_30b8d1b1ff45cc655bca",
+      "source": "Türkçe / English",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_489a38bb4ae9f8f64390",
+      "source": "Main menu",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_cb0070f03d6bda6347f6",
+      "source": "Cutscene",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_557787a769687de0a52a",
+      "source": "On a mission",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_ccfbfef79487ff962a92",
+      "source": "Codec conversation",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_49730237c2a76635f5ea",
+      "source": "Paused",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_b4e0f916f8b9a7af8ec6",
+      "source": "Selecting equipment",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_5dc4a03d3926625664e4",
+      "source": "Mission failed",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_b2b464d79ad6b337638e",
+      "source": "Loading...",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_a934a0f89bdedb599462",
+      "source": "Credits",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_4ea10df0fd6f382f2845",
+      "source": "METAL GEAR SOLID MOBILE\nPATRIOTS EDITION · 5.0\n\nTurkish localization and launcher: Patriots Çeviri\nGame runtime: LeithSilver/mgsm v0.1 + Patriots changes\nOriginal game: Konami / Ideaworks3D, 2008\n\nThe Patriots logo is from the official website.\nSource code, technical information and licenses are in Belgeler.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_403b302d597ca8c161b2",
+      "source": "The game is already running. Close it before launching the updated version.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_7e358a51f2d8f2d3cb87",
+      "source": "LANGUAGES",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_49b933f08989f241a5c7",
+      "source": "Languages and translation packs",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_99711f9262eba0c53c9c",
+      "source": "Import a launcher or game translation as JSON.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_dc6ea6acd8e65ae2056b",
+      "source": "Import language pack",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_db5ab4edc847ebfa4799",
+      "source": "Export translation templates",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_76e171db47aedb969671",
+      "source": "Translation folder",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_88050abef81ebe217996",
+      "source": "Installed languages",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_c840b6811cd9e5e01244",
+      "source": "Official",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_03e105ea36a7b6b7056a",
+      "source": "Community",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_22614ace1aef7766b6d6",
+      "source": "Launcher",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_934512c1d7e697977f7e",
+      "source": "Game",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_4e850d9b6528eb8f64fd",
+      "source": "English fallback",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_a5ac5e9668a034fbbb8a",
+      "source": "A launcher-only translation uses English game text. Add the game translation later using the same language code.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f771d40143cbf5998524",
+      "source": "Language pack installed.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_5cb4b62e2fd0f6174ba6",
+      "source": "Language packs|*.json;*.zip",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_06d9b28c5b2a30d94f6f",
+      "source": "Choose an export folder.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_65d16ce373ec5fdb5f0b",
+      "source": "Translation templates exported.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_3b4bee821f911714c761",
+      "source": "Brazilian Portuguese is not an official language yet. It will be added after the completed translation is reviewed.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_d1a8337aede74e7cf5ff",
+      "source": "Language pack not found.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_d3de4386ad893c3c58c1",
+      "source": "Language file is too large.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_7b7672d12a53ca535b49",
+      "source": "Invalid language file.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_cd64b058ab9f0bc06973",
+      "source": "Built-in languages cannot be overwritten; use a different language code.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_e3c5ad17de7d3583f111",
+      "source": "Unsupported language-pack format.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_6ddf0c26988233b18a28",
+      "source": "Invalid language display name.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_4bda250da26c05f26f85",
+      "source": "Invalid language culture code.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_a142521488d7c569184e",
+      "source": "Unknown or duplicate text ID.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_145e45ff70e28d9387bd",
+      "source": "Source text or protected metadata changed: ",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_64f78fe6bb862cb618bd",
+      "source": "Invalid or overly long text: ",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_384c3482c4962cb86efe",
+      "source": "Technical record cannot be translated: ",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_a5080f81f9748cf65c3a",
+      "source": "Protected text tokens changed: ",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_cc92e2ee2a433581caf0",
+      "source": "Close the game before installing a language pack.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_e0a6715b1e55710ce50b",
+      "source": "Language pack contains too many files.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_57d12c50d2ab07490f4d",
+      "source": "Disallowed language-pack file: ",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_b83cc88753a57e7b85b3",
+      "source": "Game and launcher language codes must match.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_0c838e4134c377e44530",
+      "source": "Game language",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_b546eafeb33adeaf7380",
+      "source": "Launcher language",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_7856aa3c2171808c1b16",
+      "source": "Templates",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    },
+    {
+      "id": "ui_f3f607a43c120d1cf1c0",
+      "source": "Translate only text fields. Keep id, source and protected tokens unchanged.",
+      "text": "",
+      "category": "launcher",
+      "editable": true,
+      "text_id": -1,
+      "files": [],
+      "required_tokens": []
+    }
+  ]
+}

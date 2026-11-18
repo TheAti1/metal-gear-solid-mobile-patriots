@@ -71,7 +71,7 @@ endif()
 
 # ---- the game ----------------------------------------------------------------------------------------------
 set(MGS_SOURCES
-    prompts.cpp patriots_state.cpp loader.cpp vfs.cpp runtime.cpp main.cpp gles.cpp heap.cpp audio.cpp gamepad.cpp settings.cpp overlay.cpp
+    patriots_locale.cpp prompts.cpp patriots_state.cpp loader.cpp vfs.cpp runtime.cpp main.cpp gles.cpp heap.cpp audio.cpp gamepad.cpp settings.cpp overlay.cpp
     luachunk.cpp story.cpp gametools.cpp photomode.cpp screenshot.cpp pngio.cpp textures.cpp custommodel.cpp installer.cpp
     autotest.cpp platform.cpp keys.cpp cpu_unicorn.cpp cpu_native.cpp cpu_dynarmic.cpp guest_interp.cpp touchcontrols.cpp movement.cpp assetviewer.cpp modelsandbox.cpp
     ${TP}/miniz/miniz.c ${TP}/lzma/LzmaDec.c

@@ -27,6 +27,12 @@ jobs:
       - name: Build launcher
         shell: pwsh
         run: ./launcher/build.ps1
+      - name: Check community language templates and isolated importer
+        shell: pwsh
+        run: |
+          python tools/check_language_templates.py
+          $launcher=Start-Process './package/Metal Gear Solid Mobile.exe' -ArgumentList '--test-language-packs' -Wait -PassThru -WindowStyle Hidden
+          if($launcher.ExitCode -ne 0){throw 'Language-pack checks failed'}
       - name: Check bilingual catalogue and native prompts
         shell: pwsh
         run: |

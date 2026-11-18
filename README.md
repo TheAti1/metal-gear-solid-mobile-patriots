@@ -4,13 +4,13 @@
 
 # Metal Gear Solid Mobile · Patriots Edition
 
-A Windows PC experience with an English / Turkish launcher, dynamic input prompts and live Discord activity.
+A Windows PC experience with an English / Turkish launcher, importable community languages, dynamic input prompts and live Discord activity.
 
 [![Windows](https://img.shields.io/badge/platform-Windows_10%2F11-0078D6)](#getting-started)
 [![Languages](https://img.shields.io/badge/languages-English_%7C_Türkçe-637D38)](#features)
 [![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue)](LICENSE)
 
-**[Türkçe](README.tr.md) · [Releases](../../releases) · [Build guide](docs/BUILD.md)**
+**[Türkçe](README.tr.md) · [Releases](../../releases) · [Add a language](docs/TRANSLATING.md) · [Build guide](docs/BUILD.md)**
 
 <img src="docs/screenshots/en/home.png" width="960" alt="English Patriots launcher">
 
@@ -28,6 +28,7 @@ A Windows PC experience with an English / Turkish launcher, dynamic input prompt
 | Shared saves and automatic backups | ✓ | ✓ |
 
 - Change language from the selector in the launcher header. The launcher changes immediately; the game uses the selection on its next launch.
+- Import launcher/game JSONs separately or together as a language-pack ZIP from **LANGUAGES**. Partial packs use English for missing text, with live input prompts and Discord still enabled.
 - Rebind keys and controller buttons while playing. The help text follows the current input device and bindings.
 - Choose borderless fullscreen, widescreen camera framing, FOV, MSAA, render scale and texture filtering.
 - Show the current room, Codec conversations, cutscenes and pause state on Discord, with game art and the Patriots logo. Room sharing has its own switch.
@@ -40,6 +41,12 @@ A Windows PC experience with an English / Turkish launcher, dynamic input prompt
 
 Existing local saves are shared between languages. Distribution archives start with a clean save folder.
 Discord integration uses the desktop client's local IPC connection and the configured application ID. Keep the Discord desktop app running to publish activity.
+
+### Help translate
+
+The **[translation guide](docs/TRANSLATING.md)** separates launcher text and game text, explains import/export, fonts and existing translated DAT conversion. Download the **Translation Kit** from [Releases](../../releases) for original tables and font references.
+
+Brazilian Portuguese contributors can start with the **[294-entry launcher JSON](localization/launcher/pt-BR.launcher.json)** and **[game JSON](localization/game/pt-BR.game.json)**. Edit `text` fields and preserve placeholders. These are blank templates; Portuguese will become a bundled official language after the completed translation is reviewed.
 
 ### Default controls
 
@@ -83,7 +90,7 @@ See **[docs/BUILD.md](docs/BUILD.md)** for Windows builds, dependencies and chec
 
 - `launcher/` — C# / WPF interface, embedded English catalogue, input configuration, saves and Discord IPC.
 - `runtime/` — modified mgsm source, live prompts, locale-aware VFS and room tracking.
-- `localization/` — completed Turkish translation JSON.
+- `localization/launcher/` and `localization/game/` — separate, stable translation templates; the older completed Turkish catalogue remains available in `localization/`.
 - `tools/` — archive and font tooling.
 - `docs/` — build instructions, screenshots and validation.
 

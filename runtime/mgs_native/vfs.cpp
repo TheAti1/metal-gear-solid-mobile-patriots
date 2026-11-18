@@ -94,9 +94,10 @@ std::string VirtualFileSystem::NormalisePath(const std::string& rel_path) const 
 std::string VirtualFileSystem::ResolvePath(const std::string& rel_path) {
     std::string p = NormalisePath(rel_path);
     // Locale overlays never change the shared game assets or writable save paths.
-    if(p.compare(0,13,"localisation/")==0) {
-        fs::path locale=Platform::ExeDir()/"languages"/(Settings::Instance().language?"en":"tr")/"data"/fs::u8path(p);
+    if(p.compare(0,13,"localisation/")==0||p=="common/fixed.group"||p=="common/fixed.group.bin"||p=="common/loading.group"||p=="common/loading.group.bin"||p=="common/ui/hud.group"||p=="common/ui/hud.group.bin"||p=="common/codec/codec.group"||p=="common/codec/codec.group.bin") {
+        fs::path locale=Platform::ExeDir()/"languages"/Settings::Instance().LocaleId()/"data"/fs::u8path(p);
         std::error_code ec;if(fs::is_regular_file(locale,ec))return locale.u8string();
+        if(fs::is_regular_file(locale.u8string()+".bin",ec))return locale.u8string()+".bin";
     }
     if (preloaded_) {   // every file is in the index (FindNoCase): no disk access, misses included
         if (std::string real = FindNoCase(p); !real.empty()) return real;

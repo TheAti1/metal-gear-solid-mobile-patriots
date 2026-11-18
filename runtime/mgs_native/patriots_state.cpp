@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 #include "patriots_state.h"
+#include "patriots_locale.h"
 #include "runtime.h"
 #include "settings.h"
 #include "loader.h"
@@ -25,12 +26,12 @@ const std::map<std::string,std::string> names={
 const std::map<std::string,std::string> namesEn={
 #include "room_names_en.inc"
 };
-const char* L(const char* tr,const char* en){return Settings::Instance().language?en:tr;}
+const char* L(const char* tr,const char* en){return PatriotsLocale::Text(tr,en);}
 std::string Q(const std::string& s) {
     std::string o="\"";for(unsigned char c:s){if(c=='"'||c=='\\')o+='\\';if(c=='\n'){o+="\\n";continue;}if(c=='\r')continue;if(c>=32)o+=c;}return o+'"';
 }
 std::string RoomName(const std::string& s) {
-    for(const auto& n:(Settings::Instance().language?namesEn:names))if(s==n.first||s.compare(0,n.first.size()+1,n.first+"_")==0)return n.second;
+    for(const auto& n:(Settings::Instance().language?namesEn:names))if(s==n.first||s.compare(0,n.first.size()+1,n.first+"_")==0)return L(n.second.c_str(),n.second.c_str());
     std::string result=s;for(char&c:result)if(c=='_')c=' ';return result;
 }
 uint32_t GameHash(const char* s){uint32_t h=5381;for(;*s;++s){uint8_t c=static_cast<uint8_t>(*s);if(c-'A'<26u)c+=32;h=h*33+c;}return h;}
@@ -73,7 +74,7 @@ void Tick(bool gameplay) {
     }
     const std::string shown=inWorld&&Settings::Instance().discord_room?roomTitle:"";
     static std::string last;
-    std::string body="{\"pid\":"+std::to_string(GetCurrentProcessId())+",\"language\":"+Q(Settings::Instance().language?"en":"tr")+",\"state\":"+Q(state)+",\"room\":"+Q(shown)+",\"room_id\":"+Q(inWorld?room:"")+",\"state_hash\":"+std::to_string(hash)+"}";
+    std::string body="{\"pid\":"+std::to_string(GetCurrentProcessId())+",\"language\":"+Q(Settings::Instance().LocaleId())+",\"state\":"+Q(state)+",\"room\":"+Q(shown)+",\"room_id\":"+Q(inWorld?room:"")+",\"state_hash\":"+std::to_string(hash)+"}";
     auto path=Platform::ExeDir()/"patriots_state.json",temp=Platform::ExeDir()/"patriots_state.tmp";
     {std::ofstream f(temp,std::ios::binary|std::ios::trunc);f<<body;}
     MoveFileExW(temp.c_str(),path.c_str(),MOVEFILE_REPLACE_EXISTING|MOVEFILE_WRITE_THROUGH);

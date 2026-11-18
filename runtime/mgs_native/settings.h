@@ -29,6 +29,8 @@ public:
     void ResetTouchLayout();      // default touch control placement
 
     std::atomic<int> language{0}; // 0 Turkish, 1 English; applied at process startup
+    // Full community locale ID; legacy language is the English/Turkish fallback.
+    const std::string& LocaleId() const {return locale_id_;}
     std::atomic<bool> dynamic_prompts{true}, discord_presence{true}, discord_room{true};
     std::atomic<int> prompt_style{0}; // automatic / Xbox / PlayStation / Nintendo
     std::atomic<bool> fullscreen{false};
@@ -88,6 +90,7 @@ public:
     std::string Path() const { return path_; }
 
 private:
+    std::string locale_id_="tr";
     Settings();
     void RebuildLookups();   // mutex_ held
 

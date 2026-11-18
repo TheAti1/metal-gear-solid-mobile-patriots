@@ -137,7 +137,10 @@ void Settings::Load() {
         std::string k = line.substr(0, eq), v = line.substr(eq + 1);
         while (!v.empty() && (v.back() == '\r' || v.back() == ' ')) v.pop_back();
         const int n = atoi(v.c_str());
-        if(k=="language") language=v=="en"?1:0;
+        if(k=="language") {
+            bool valid=v.size()>=2&&v.size()<=35;for(char& c:v){if(c>='A'&&c<='Z')c+=32;valid=valid&&((c>='a'&&c<='z')||(c>='0'&&c<='9')||c=='-');}
+            locale_id_=valid?v:"tr";language=locale_id_=="tr"?0:1;
+        }
         else if(k=="dynamic_prompts") dynamic_prompts=n!=0;
         else if(k=="discord_presence") discord_presence=n!=0;
         else if(k=="discord_room") discord_room=n!=0;
@@ -194,7 +197,7 @@ void Settings::Save() {
     if (!f) { std::cerr << "[Settings] Cannot write " << path_ << std::endl; return; }
     f << "# MGS Mobile native port settings (written by the F1 overlay; edit while the game is closed)\n";
     f << "[General]\n";
-    f << "language="<<(language.load()?"en":"tr")<<"\n";
+    f << "language="<<locale_id_<<"\n";
     f << "dynamic_prompts="<<dynamic_prompts.load()<<"\nprompt_style="<<prompt_style.load()<<"\ndiscord_presence="<<discord_presence.load()<<"\ndiscord_room="<<discord_room.load()<<"\n";
     f << "fullscreen=" << fullscreen.load() << "\n";
     f << "arbitrary_resolution=" << arbitrary_resolution.load() << "\n";

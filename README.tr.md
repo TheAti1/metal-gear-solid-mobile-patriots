@@ -3,9 +3,9 @@
 
 # Metal Gear Solid Mobile · Patriots Edition
 
-**Türkçe / İngilizce başlatıcı ve oyun · Canlı tuş yazıları · Discord Rich Presence**
+**Türkçe / İngilizce başlatıcı ve oyun · Yeni dil içe aktarma · Canlı tuş yazıları · Discord Rich Presence**
 
-[English](README.md) · [Sürümler](../../releases) · [Derleme rehberi](docs/BUILD.md)
+[English](README.md) · [Sürümler](../../releases) · [Yeni dil ekleme](docs/TRANSLATING.tr.md) · [Derleme rehberi](docs/BUILD.md)
 
 <img src="docs/screenshots/tr/home.png" width="960" alt="Türkçe Patriots başlatıcısı">
 </div>
@@ -13,6 +13,7 @@
 ## Neler var?
 
 - Başlatıcının sağ üstünden **Türkçe / English** seçimi. Arayüz hemen değişir; oyun seçilen dilde bir sonraki açılışta başlar.
+- **DİLLER** sekmesinden launcher/oyun JSON'unu ayrı ayrı veya birlikte ZIP olarak içe aktarma, boş metinlerde İngilizceye dönüş ve çeviri şablonu dışa aktarma.
 - Oyun içindeki tuş yazıları klavye veya kontrolcüye ve güncel atamalara göre değişir.
 - Xbox, PlayStation ve Nintendo tuş adları; oyun açıkken tuş atamalarını değiştirme.
 - Tam ekran, geniş ekran kamera, görüş alanı, kenar yumuşatma, çizim ölçeği ve doku seçenekleri.
@@ -39,10 +40,16 @@ Discord desteği için masaüstü Discord uygulaması açık olmalıdır. **Ses 
 Atamalar başlatıcıdan değiştirilebilir. **F1** motor ayarlarını, **F12** ekran görüntüsü işlevini açar.
 Mevcut yerel kayıtlar iki dilde de kullanılabilir; dağıtım ZIP'i kişisel kayıt içermez.
 
+## Çeviriye katkı
+
+[294 metinlik Portekizce launcher şablonu](localization/launcher/pt-BR.launcher.json) ve [ayrı oyun şablonu](localization/game/pt-BR.game.json) hazır. Yalnızca `text` alanlarını çevirin, tuş işaretlerini koruyun. Bunlar henüz boş şablonlardır; tamamlanan Portekizce çeviri incelendikten sonra üçüncü resmî dil olarak eklenecek.
+
+[Çeviri rehberi](docs/TRANSLATING.tr.md) kurulum ve teslim sürecini anlatır. [Sürümlerdeki](../../releases) Translation Kit, oyun tablolarını ve font araçlarını da ayrı klasörlerde sunar. Mevcut çevrilmiş DAT dosyalarını JSON'a dönüştürme aracı da dâhildir.
+
 ## Proje yapısı
 
 `launcher/`: WPF başlatıcı ve Discord bağlantısı. `runtime/`: değiştirilmiş mgsm motoru.
-`localization/`: tamamlanmış Türkçe JSON. `tools/`: arşiv ve font araçları. `docs/`: derleme ve testler.
+`localization/launcher/` ve `localization/game/`: ayrı çeviri şablonları. Önceki Türkçe JSON da korunur. `tools/`: arşiv, font ve çeviri dönüştürme araçları. `docs/`: derleme ve testler.
 
 Altyapı, özgün ARM oyun kodunu Unicorn ile çalıştırır; PC grafik, ses ve girişini mgsm sağlar.
 Kaynak kodundan derlemek için [derleme rehberini](docs/BUILD.md) kullan.

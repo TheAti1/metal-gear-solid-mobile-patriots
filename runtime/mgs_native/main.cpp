@@ -670,7 +670,7 @@ int main(int argc, char** argv) {
     const SDL_WindowFlags win_flags = SDL_WINDOW_RESIZABLE | SDL_WINDOW_HIDDEN | SDL_WINDOW_HIGH_PIXEL_DENSITY |
                                       (g_direct ? SDL_WINDOW_OPENGL : 0);
 #endif
-    g_window = SDL_CreateWindow("Metal Gear Solid Mobile", win_w, win_h, win_flags);
+    g_window = SDL_CreateWindow("Metal Gear Solid Mobile", win_w, win_h, win_flags | ((getenv("MGS_AUTOTEST")&&getenv("MGS_TEST_HIDDEN"))?SDL_WINDOW_HIDDEN:0));
     if (!g_window) {
         FatalBox((std::string("Could not create the game window: ") + SDL_GetError()).c_str());
         SDL_Quit();

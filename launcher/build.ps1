@@ -12,11 +12,14 @@ foreach($name in @('PresentationFramework','PresentationCore','WindowsBase')){$b
 $build+=('/win32icon:'+(Join-Path $release 'Arayuz\game.ico'))
 $build+=('/out:'+(Join-Path $release 'Metal Gear Solid Mobile.exe'))
 $build+=(Join-Path $PSScriptRoot 'Locale.cs')
+$build+=(Join-Path $PSScriptRoot 'LanguagePacks.cs')
+$build+=(Join-Path $PSScriptRoot 'LanguagePackChecks.cs')
+$build+=('/resource:'+(Join-Path $PSScriptRoot '..\localization\game\game.en.json')+',Patriots.game.template.json')
 $build+=('/resource:'+(Join-Path $PSScriptRoot 'launcher.en.json')+',Patriots.launcher.en.json')
 $build+=(Join-Path $PSScriptRoot 'NativeServices.cs')
 $build+=(Join-Path $PSScriptRoot 'DiscordPresence.cs')
 $build+=(Join-Path $PSScriptRoot 'PatriotsLauncher.cs')
 & (Join-Path $framework 'csc.exe') $build
 if($LASTEXITCODE -ne 0){throw 'Build failed'}
-Write-Output 'Patriots launcher 5.0 compiled.'
+Write-Output 'Patriots launcher 5.1 compiled.'
 

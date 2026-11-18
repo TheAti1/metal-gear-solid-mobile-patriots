@@ -16,7 +16,7 @@ powershell -ExecutionPolicy Bypass -File .\launcher\build.ps1
 ```
 
 This writes `package/Metal Gear Solid Mobile.exe` and copies the launcher artwork.
-The English UI catalogue is embedded in the executable. Turkish strings are the source catalogue.
+The English UI catalogue and game import template are embedded in the executable. Turkish strings are the built-in UI source catalogue. `LanguagePacks.cs` and `LanguagePackChecks.cs` are part of the build; no external translation compiler is required to import a community pack.
 
 To update a prepared local game package:
 
@@ -63,6 +63,8 @@ The catalogue check needs no game data:
 
 ```powershell
 & '.\package\Metal Gear Solid Mobile.exe' --test-localization
+python tools/check_language_templates.py
+& '.\package\Metal Gear Solid Mobile.exe' --test-language-packs
 $env:MGS_PATRIOTS_SELFTEST='1'
 & '.\package\Oyun\mgs_mobile.exe'
 Remove-Item Env:MGS_PATRIOTS_SELFTEST
@@ -78,14 +80,17 @@ Against a complete prepared package:
 ```
 
 UI preview generation exercises the actual language selector through Turkish → English → Turkish. Game automation uses the runtime's own input and framebuffer hooks.
+The language-pack check forks an isolated temporary launcher, generates synthetic English tables and tests UTF-8 compilation, separate/component ZIP imports, token/ID validation, rollback, cache reload and English fallback. It does not use or alter user game saves.
 Discord activity is validated using IPC acknowledgements, including accepted external artwork. No account token is required by the game.
 
 ## Runtime settings
 
-- `Language` in `Arayuz/ayarlar.json`: `tr` or `en`; the launcher's selection is authoritative.
-- `language=tr/en` in `Oyun/mgs_mobile.ini`: the running game's language, written on launch.
+- `Language` in `Arayuz/ayarlar.json`: `tr`, `en`, or an installed community tag such as `pt-br`; the launcher's selection is authoritative.
+- `language=<tag>` in `Oyun/mgs_mobile.ini`: the resolved game language, written on launch. A launcher-only locale resolves to `en` for the game.
 - `dynamic_prompts=1`: keyboard / controller names in game text.
 - `prompt_style=0/1/2/3`: automatic / Xbox / PlayStation / Nintendo.
 - `discord_presence=1`, `discord_room=1`: presence and room visibility.
 
 The language is fixed for a game session. Controls can be updated live through the launcher's atomic command file.
+
+See [TRANSLATING.md](TRANSLATING.md) for importable JSON, bitmap-font overlays and contributor tools. Community packs live outside shared assets and the built-in English/Turkish folders. Review and bundle a finished third translation before marking its ID official.
