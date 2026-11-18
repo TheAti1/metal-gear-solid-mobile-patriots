@@ -1,5 +1,10 @@
 # Changelog
 
+## Android 1.0.1
+
+- Correct the Android system/installer application label.
+
+
 ## Android 1.0.0 · 2026-11-18
 
 - Standalone Android 9+ universal APK for ARM64, ARMv7 and x86_64, with bundled game data and Turkish / English selection.

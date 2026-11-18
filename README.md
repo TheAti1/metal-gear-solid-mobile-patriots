@@ -18,7 +18,7 @@ A Windows PC experience with an English / Turkish launcher, importable community
 
 ## Android
 
-**[Download Android APK](https://github.com/TheAti1/metal-gear-solid-mobile-patriots/releases/tag/android-v1.0.0) · [Android build / update guide](android-patriots/README.md)**
+**[Download Android APK](https://github.com/TheAti1/metal-gear-solid-mobile-patriots/releases/tag/android-v1.0.1) · [Android build / update guide](android-patriots/README.md)**
 
 Android 9+, ARM64 / ARMv7 / x86_64; bundled game data, Turkish / English launcher and game, startup update checks and verified signed APK updates. Android releases use a separate channel from PC.
 
