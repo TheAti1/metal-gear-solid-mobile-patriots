@@ -66,13 +66,14 @@ def add_glyph(f,ch,base):
         im.putpixel((max(bbox[0],center-1),top),fg);im.putpixel((min(bbox[2]-1,center+2),top),fg)
     return im
 
-def patch_font(b,f):
-    if f['count']==197:pairs=NEW
-    elif f['name_hash']==0x1B8EB1B7:
-        pairs=[('Ç','C'),('ç','c'),('Ğ','G'),('ğ','g'),('İ','I'),('ı','i'),('Ö','O'),('ö','o'),('Ş','S'),('ş','s'),('Ü','U'),('ü','u')]
-    elif f['name_hash']==0xA2F1C022:pairs=[('Ğ','G'),('İ','I'),('Ş','S')]
-    else:raise ValueError('Unknown alphabet font')
-    images=[add_glyph(f,ch,base) for ch,base in pairs]
+def patch_font(b,f,pairs=None,images=None):
+    if pairs is None:
+        if f['count']==197:pairs=NEW
+        elif f['name_hash']==0x1B8EB1B7:
+            pairs=[('Ç','C'),('ç','c'),('Ğ','G'),('ğ','g'),('İ','I'),('ı','i'),('Ö','O'),('ö','o'),('Ş','S'),('ş','s'),('Ü','U'),('ü','u')]
+        elif f['name_hash']==0xA2F1C022:pairs=[('Ğ','G'),('İ','I'),('Ş','S')]
+        else:raise ValueError('Unknown alphabet font')
+    if images is None:images=[add_glyph(f,ch,base) for ch,base in pairs]
     old=index_image(f);new_height=f['height']
     bottom=max(xy(f,m)[1]+f['line_height'] for m in f['metrics'])
     row_y=bottom
@@ -98,12 +99,19 @@ def patch_font(b,f):
         all_images+=images;unique={};lookup=[]
         for im in all_images:
             key=(im.size,im.tobytes());unique.setdefault(key,im);lookup.append(key)
-        bins=[[] for _ in range(f['height']//f['line_height'])];used=[0]*len(bins);coords={}
+        bins=[[] for _ in range(new_height//f['line_height'])];used=[0]*len(bins);coords={}
         for key,im in sorted(unique.items(),key=lambda x:-x[1].width):
             candidates=[i for i,n in enumerate(used) if n+im.width<=f['width']]
-            assert candidates,'Atlas packing failed without sacrificing glyphs'
+            if not candidates:
+                # Locale additions may need a larger page; original glyphs and
+                # their line height are retained, including every pixel.
+                previous=len(bins);new_height*=2
+                assert new_height<=1024,'Font atlas exceeds supported size'
+                bins.extend([] for _ in range(new_height//f['line_height']-previous))
+                used.extend(0 for _ in range(len(bins)-previous))
+                candidates=list(range(previous,len(bins)))
             row=min(candidates,key=lambda i:f['width']-(used[i]+im.width));xx=used[row];yy=row*f['line_height'];coords[key]=(xx,yy);used[row]+=im.width+1
-        atlas=Image.new('L',old.size)
+        atlas=Image.new('L',(f['width'],new_height))
         for key,im in unique.items():atlas.paste(im,coords[key])
         metrics=[(m[0],m[1],*coords[key],m[4]) for m,key in zip(metrics,lookup)]
         positions=[(ch,*coords[lookup[f['count']+i]]) for i,(ch,_) in enumerate(pairs)]

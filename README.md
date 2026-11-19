@@ -4,10 +4,10 @@
 
 # Metal Gear Solid Mobile · Patriots Edition
 
-A Windows PC experience with an English / Turkish launcher, importable community languages, dynamic input prompts and live Discord activity.
+A Windows PC experience with an English / Turkish / Brazilian Portuguese launcher, importable community languages, dynamic input prompts and live Discord activity.
 
 [![Windows](https://img.shields.io/badge/platform-Windows_10%2F11-0078D6)](#getting-started)
-[![Languages](https://img.shields.io/badge/languages-English_%7C_Türkçe-637D38)](#features)
+[![Languages](https://img.shields.io/badge/languages-English_%7C_Türkçe_%7C_Português-637D38)](#features)
 [![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue)](LICENSE)
 
 **[Türkçe](README.tr.md) · [Releases](../../releases) · [Add a language](docs/TRANSLATING.md) · [Build guide](docs/BUILD.md)**
@@ -18,21 +18,21 @@ A Windows PC experience with an English / Turkish launcher, importable community
 
 ## Android
 
-**[Download Android APK](https://github.com/TheAti1/metal-gear-solid-mobile-patriots/releases/tag/android-v1.0.1) · [Android build / update guide](android-patriots/README.md)**
+**[Download Android APK](https://github.com/TheAti1/metal-gear-solid-mobile-patriots/releases/tag/android-v1.1.0) · [Android build / update guide](android-patriots/README.md)**
 
-Android 9+, ARM64 / ARMv7 / x86_64; bundled game data, Turkish / English launcher and game, startup update checks and verified signed APK updates. Android releases use a separate channel from PC.
+Android 9+, ARM64 / ARMv7 / x86_64; bundled game data, Turkish / English / Brazilian Portuguese launcher and game, startup update checks and verified signed APK updates. Android releases use a separate channel from PC.
 
 
 ## Features
 
-| Feature | English | Türkçe |
-|---|:---:|:---:|
-| Launcher, settings and messages | ✓ | ✓ |
-| Game menus and dialogue | Original English | Patriots translation |
-| Live keyboard / gamepad prompts | ✓ | ✓ |
-| Xbox / PlayStation / Nintendo button names | ✓ | ✓ |
-| Discord room, game status and session timer | ✓ | ✓ |
-| Shared saves and automatic backups | ✓ | ✓ |
+| Feature | English | Türkçe | Português (Brasil) |
+|---|:---:|:---:|:---:|
+| Launcher, settings and messages | ✓ | ✓ | ✓ |
+| Game menus and dialogue | Original English | Patriots translation | Sanju Vinho e Fumaça |
+| Live keyboard / gamepad prompts | ✓ | ✓ | ✓ |
+| Xbox / PlayStation / Nintendo button names | ✓ | ✓ | ✓ |
+| Discord room, game status and session timer | ✓ | ✓ | ✓ |
+| Shared saves and automatic backups | ✓ | ✓ | ✓ |
 
 - Change language from the selector in the launcher header. The launcher changes immediately; the game uses the selection on its next launch.
 - Import launcher/game JSONs separately or together as a language-pack ZIP from **LANGUAGES**. Partial packs use English for missing text, with live input prompts and Discord still enabled.
@@ -46,7 +46,7 @@ Android 9+, ARM64 / ARMv7 / x86_64; bundled game data, Turkish / English launche
 
 1. Download the Windows package from **[Releases](../../releases)** and extract the complete folder.
 2. Open **Metal Gear Solid Mobile.exe**.
-3. Choose **English** or **Türkçe**, configure controls if needed, then press **PLAY / OYNA**.
+3. Choose **English**, **Türkçe** or **Português (Brasil)**, configure controls if needed, then press **PLAY / OYNA**.
 
 Existing local saves are shared between languages. Distribution archives start with a clean save folder.
 Discord integration uses the desktop client's local IPC connection and the configured application ID. Keep the Discord desktop app running to publish activity.
@@ -55,7 +55,7 @@ Discord integration uses the desktop client's local IPC connection and the confi
 
 The **[translation guide](docs/TRANSLATING.md)** separates launcher text and game text, explains import/export, fonts and existing translated DAT conversion. Download the **Translation Kit** from [Releases](../../releases) for original tables and font references.
 
-Brazilian Portuguese contributors can start with the **[299-entry launcher JSON](localization/launcher/pt-BR.launcher.json)** and **[game JSON](localization/game/pt-BR.game.json)**. Edit `text` fields and preserve placeholders. These are blank templates; Portuguese will become a bundled official language after the completed translation is reviewed.
+**Brazilian Portuguese is now bundled officially.** Translation by **[(Sanju Vinho e Fumaça)](https://steamcommunity.com/id/SanjiVinsmokeBRASIL/)**: 299 launcher texts and all 1,862 active game/runtime texts. See the [Portuguese coverage and build notes](docs/PORTUGUESE.md). The `pt-BR.*.json` files are completed translations; export blank templates from the launcher for a new language.
 
 ### Default controls
 
@@ -84,7 +84,7 @@ The runtime executes the original ARM game code using **Unicorn**, with PC graph
 flowchart LR
     A[WPF launcher] --> B[Saved language and controls]
     B --> C[mgsm runtime]
-    D[English / Turkish text overlays] --> C
+    D[English / Turkish / Portuguese text overlays] --> C
     E[Keyboard / SDL gamepads] --> F[Live button prompts]
     F --> C
     C --> G[Real room and game state]

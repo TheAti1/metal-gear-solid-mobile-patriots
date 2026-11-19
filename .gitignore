@@ -1,6 +1,7 @@
 # Local packages and original game data
 /package/
 /dist/
+/outputs/
 /build/
 **/patriots-build-output/
 **/patriots-built/

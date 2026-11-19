@@ -1,6 +1,6 @@
 # Add a language
 
-Version 5.2 imports community translations from the launcher's **LANGUAGES** page. English and Turkish are the bundled, reviewed languages. The Brazilian Portuguese files below are **untranslated templates**, ready for a contributor; they do not claim completed Portuguese support.
+Version 5.3 imports community translations from the launcher's **LANGUAGES** page. English, Turkish and Brazilian Portuguese are bundled official languages. The `pt-BR.*.json` files are completed translations; use the English templates or the launcher export action for a new locale.
 
 ## Files to send to a translator
 
@@ -69,7 +69,7 @@ Other alphabets may need additional glyphs and runtime rendering work, especiall
 
 ## Becoming a bundled language
 
-Community imports are available now. A new official language is bundled after the completed launcher/game translation, credits, tokens, fonts and layouts have been reviewed. Brazilian Portuguese is intended as the next language once the contributor's finished files arrive. Review and bundle those actual files before adding `pt-br` to `OfficialIds` in `launcher/LanguagePacks.cs`; never label a blank template as finished support.
+Brazilian Portuguese is reviewed and bundled in PC 5.3 / Android 1.1.0. See [coverage, credits and rebuilding](PORTUGUESE.md). Additional official languages require completed launcher/game files, token/font/layout checks and contributor credit before bundling.
 
 ## Updating an existing v5.1 translation
 

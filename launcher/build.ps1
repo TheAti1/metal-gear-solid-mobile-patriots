@@ -21,5 +21,5 @@ $build+=(Join-Path $PSScriptRoot 'DiscordPresence.cs')
 $build+=(Join-Path $PSScriptRoot 'PatriotsLauncher.cs')
 & (Join-Path $framework 'csc.exe') $build
 if($LASTEXITCODE -ne 0){throw 'Build failed'}
-Write-Output 'Patriots launcher 5.2 compiled.'
+Write-Output 'Patriots launcher 5.3 compiled.'
 

@@ -1,6 +1,6 @@
 # Yeni dil ekleme
 
-5.2 sürümünde başlatıcının **DİLLER → Dil paketi içe aktar** bölümünden topluluk çevirisi kurulabilir. İngilizce ve Türkçe hazır resmî dillerdir. Brezilya Portekizcesi dosyaları şu an **boş çeviri şablonudur**; tamamlanan çeviri incelendikten sonra üçüncü resmî dil olarak paketlenecek.
+5.3 sürümünde DİLLER bölümünden topluluk çevirisi kurulabilir. İngilizce, Türkçe ve Brezilya Portekizcesi resmî dillerdir. pt-BR JSON dosyaları tamamlanmış çeviridir; yeni bir dil için İngilizce şablonları veya başlatıcının dışa aktarma işlevini kullanın.
 
 ## Çevirmene gönderilecekler
 
@@ -28,7 +28,7 @@ Tam oyun paketinde çevirmen dosyaları `Translations/launcher/` ve `Translation
 
 Ana fontlar Portekizce Latin harflerini içerir; küçük HUD/Codec fontları, uzun metinler ve satır düzeni oyun içinde ayrıca kontrol edilmelidir. Diğer alfabeler için font çizimi veya ek motor çalışması gerekebilir.
 
-Çevirmen tamamladığında **launcher JSON'unu ve oyun JSON'unu** göndersin. Varsa çevirdiği orijinal DAT dosyaları karşılaştırma için de alınabilir. Gelen gerçek çeviri test edilip onaylandıktan sonra üçüncü resmî dil olarak sürüme eklenir.
+Portekizce çeviri PC 5.3 ve Android 1.1.0 ile resmî dil olarak paketlendi. Yeni katkılarda tamamlanan launcher ve oyun JSON dosyalarını gönderin; kimlik, tuş işaretleri, fontlar ve arayüz kontrolünden sonra ek diller paketlenebilir. Kapsam ve çevirmen bilgisi için [Portekizce notlarına](PORTUGUESE.md) bakın.
 
 ## Önceki çeviriyi 5.2 şablonuna taşıma
 

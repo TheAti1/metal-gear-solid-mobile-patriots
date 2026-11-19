@@ -1,4 +1,11 @@
-# Android 1.0.1 validation
+# Android 1.1.0 validation
+
+- Brazilian Portuguese: all 299 submitted launcher and 1,862 active game/runtime translations retain their supplied text and credit. Protected IDs/tokens match the canonical templates.
+- The fourteen Portuguese DAT files and runtime/font overlay match the PC package; Portuguese accents are present in the two specialized HUD font overlays, with original glyph pixels unchanged.
+- Android 15 x86_64: signed 1.0.1 → 1.1.0 in-place installation retained the existing English preference and actual savedata.i3d hash (below). Selecting Português (Brasil) updated the launcher and native title text; asset version refreshed to 1001000 without changing savedata.
+- Additional Android-only launch/settings/update messages are localized in a separate Portuguese catalogue.
+
+## Existing runtime and updater checks
 
 - NDK 29 release builds for arm64-v8a, armeabi-v7a and x86_64.
 - APK v2/v3 signature verification; ZIP CRC; 16 KB ZIP and ELF LOAD alignment.

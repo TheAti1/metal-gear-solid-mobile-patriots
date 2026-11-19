@@ -38,8 +38,8 @@ public final class HomeActivity extends Activity {
     String repository(){return touch?"metal-gear-solid-touch-patriots":"metal-gear-solid-mobile-patriots";}
     String apkName(){return touch?"MGS_Touch_Patriots_Android.apk":"MGS_Mobile_Patriots_Android.apk";}
     int versionCode(){try{return (int)getPackageManager().getPackageInfo(getPackageName(),0).getLongVersionCode();}catch(Exception e){return 0;}}
-    public static String locale(android.content.Context context){return context.getSharedPreferences("patriots",MODE_PRIVATE).getString("language","tr");}
-    String t(String tr,String en){return "tr".equals(locale(this))?tr:en;}
+    public static String locale(android.content.Context context){String id=context.getSharedPreferences("patriots",MODE_PRIVATE).getString("language","tr");return "tr".equals(id)||"en".equals(id)||("pt-br".equals(id)&&!context.getPackageName().endsWith("mgstouch"))?id:"en";}
+    String t(String tr,String en){return AndroidLocale.text(this,tr,en);}
     int dp(int n){return (int)(n*getResources().getDisplayMetrics().density+.5f);}
     private TextView text(String s,int size,int color){TextView v=new TextView(this);v.setText(s);v.setTextSize(size);v.setTextColor(color);v.setPadding(0,dp(8),0,dp(8));return v;}
     private void button(String label,Runnable action,boolean primary){Button b=new Button(this);b.setText(label);b.setTextSize(15);b.setAllCaps(false);b.setTextColor(primary?background:ink);b.setBackgroundTintList(android.content.res.ColorStateList.valueOf(primary?accent:panel));LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(-1,dp(58));lp.topMargin=dp(10);content.addView(b,lp);b.setOnClickListener(v->action.run());}
@@ -52,12 +52,16 @@ public final class HomeActivity extends Activity {
         content.addView(text(t("Göreve hazır mısın?","Ready for the mission?"),17,accent));
         content.addView(text(t("Dokunmatik ekran ve oyun kumandası desteği.\nKayıtların uygulama güncellemelerinde korunur.","Touchscreen and controller support.\nYour saves are preserved when updating the app."),14,Color.rgb(155,171,158)));
         button(t("OYNA","PLAY"),this::play,true);
-        button(t("Dil: ","Language: ")+("tr".equals(locale(this))?"Türkçe":"English"),()->new AlertDialog.Builder(this).setTitle(t("Oyun dili","Game language")).setSingleChoiceItems(new String[]{"Türkçe","English"},"tr".equals(locale(this))?0:1,(d,w)->{preferences.edit().putString("language",w==0?"tr":"en").apply();d.dismiss();build();}).setNegativeButton(t("Kapat","Close"),null).show(),false);
+        final String[] languageIds=touch?new String[]{"tr","en"}:new String[]{"tr","en","pt-br"};
+        final String[] languageNames=touch?new String[]{"Türkçe","English"}:new String[]{"Türkçe","English","Português (Brasil)"};
+        final int selected=java.util.Arrays.asList(languageIds).indexOf(locale(this));
+        button(t("Dil: ","Language: ")+languageNames[selected],()->new AlertDialog.Builder(this).setTitle(t("Oyun dili","Game language")).setSingleChoiceItems(languageNames,selected,(d,w)->{preferences.edit().putString("language",languageIds[w]).apply();d.dismiss();build();}).setNegativeButton(t("Kapat","Close"),null).show(),false);
         button(t("Görüntü ve kontroller","Display and controls"),this::settings,false);
         button(t("Güncellemeleri kontrol et","Check for updates"),()->updater.check(true),false);
         Switch updates=new Switch(this);updates.setText(t("Açılışta güncelleme kontrolü","Check for updates at startup"));updates.setTextColor(ink);updates.setPadding(0,dp(20),0,dp(14));updates.setChecked(preferences.getBoolean("updates",true));updates.setOnCheckedChangeListener((b,v)->preferences.edit().putBoolean("updates",v).apply());content.addView(updates);
         content.addView(text(t("Güncelleme yüklerken Android kurulum onayı ister.","Android asks for confirmation before installing an update."),12,Color.rgb(145,160,149)));
         button("Patriots Çeviri ↗",()->startActivity(new Intent(Intent.ACTION_VIEW,android.net.Uri.parse("https://www.patriotsceviri.com.tr/"))),false);
+        if(!touch)content.addView(text("Português (Brasil)\n"+AndroidLocale.author(this),12,Color.rgb(155,171,158)));
         String version="";try{version=getPackageManager().getPackageInfo(getPackageName(),0).versionName;}catch(Exception ignored){}content.addView(text("ANDROID 9+ · "+version,11,Color.rgb(128,145,132)));
     }
     private void settings(){String[] choices={t("Kalite: Dengeli","Quality: Balanced"),t("Kalite: Yüksek","Quality: High"),touch?t("Titreşim","Vibration"):t("Sanal tuşların görünürlüğü","Touch-button opacity")};new AlertDialog.Builder(this).setTitle(t("Görüntü ve kontroller","Display and controls")).setItems(choices,(d,w)->{

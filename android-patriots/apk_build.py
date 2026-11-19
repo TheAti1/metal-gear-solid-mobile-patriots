@@ -24,9 +24,15 @@ def prepare(game):
     if game=='mobile':
         source=Path(os.environ.get('PATRIOTS_PC_PACKAGE',ROOT/'package'))/'Oyun'
         with zipfile.ZipFile(assets/'gamepack.zip','w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:
-            for folder in ('game','languages/en','languages/tr'):
+            for folder in ('game','languages/en','languages/tr','languages/pt-br'):
+                if not (source/folder).is_dir():raise FileNotFoundError('Required bundled language/assets missing: '+folder)
                 for p in (source/folder).rglob('*'):
-                    if p.is_file() and 'savedata' not in p.name.lower() and not p.name.endswith(('.log','.tmp','.previous')):z.write(p,p.relative_to(source).as_posix())
+                    if p.is_file() and 'savedata' not in p.name.lower() and not p.name.endswith(('.log','.tmp','.previous','.png')) and p.name!='font-verification.json':z.write(p,p.relative_to(source).as_posix())
+        ui=json.loads((repo/'localization/launcher/pt-BR.launcher.json').read_text(encoding='utf-8'))
+        strings={e['source']:e['text'] for e in ui['entries'] if e.get('text')}
+        strings.update(json.loads((repo/'localization/android/pt-BR.android.json').read_text(encoding='utf-8'))['strings'])
+        locale=assets/'localization';locale.mkdir(exist_ok=True)
+        (locale/'pt-br.json').write_text(json.dumps({'language':'pt-br','author':ui['author'],'strings':strings},ensure_ascii=False),encoding='utf-8')
     else:
         source=Path(os.environ.get('PATRIOTS_PC_PACKAGE',ROOT/'package'))/'Oyun'
         for folder,dest in [('Assets/MGSTUS.app','MGSTUS.app'),('Assets/fonts','fonts'),('languages/tr','languages/tr')]:

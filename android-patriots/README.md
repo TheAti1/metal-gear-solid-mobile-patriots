@@ -1,10 +1,10 @@
 # Patriots Android · Mobile
 
-Android APK v1.0.1, Android 9/API 28 or newer. The distributed universal APK includes arm64-v8a, armeabi-v7a and an x86_64 build for emulators/compatible devices. Actual performance depends on the device and OpenGL driver.
+Android APK v1.1.0, Android 9/API 28 or newer. The distributed universal APK includes arm64-v8a, armeabi-v7a and an x86_64 build for emulators/compatible devices. Actual performance depends on the device and OpenGL driver.
 
 ## Play
 
-Install the APK and open the Patriots launcher. Choose Turkish/English and press PLAY. Game data is bundled; no emulator setup or separate ROM installation is required. Touch retains the original touch gestures/phone orientation. Mobile provides virtual controls and its native settings overlay. Saves are stored separately from immutable game assets.
+Install the APK and open the Patriots launcher. Choose Turkish/English/Brazilian Portuguese and press PLAY. Game data is bundled; no emulator setup or separate ROM installation is required. Touch retains the original touch gestures/phone orientation. Mobile provides virtual controls and its native settings overlay. Saves are stored separately from immutable game assets.
 
 The launcher checks GitHub Releases on startup (can be disabled) and has a manual check button. A newer **android-vMAJOR.MINOR.PATCH** release with the correctly named APK triggers a download prompt. The app verifies the asset SHA256, app package, increasing versionCode and signing certificate before opening Android's installer. Android installation permission/confirmation still belongs to the user. Offline/check errors do not block PLAY.
 
@@ -26,15 +26,15 @@ $env:ANDROID_HOME='D:\Patriots_Android\sdk'
 $env:PATRIOTS_ANDROID_WORK='D:\Patriots_Android'
 $env:PATRIOTS_PC_PACKAGE='C:\Games\MGS Mobile'
 $env:PATRIOTS_ANDROID_ABIS='arm64-v8a,armeabi-v7a,x86_64'
-python android-patriots/build.py 1.0.1
+python android-patriots/build.py 1.1.0
 ```
 
 The builder writes the APK and SHA256 to `outputs/Android/`, verifies APK signatures and 16 KB native-library alignment, and uses the stable private key in the work folder's `signing/`. **Back up that folder privately. Do not upload it.** The Android launcher/updater is MIT-licensed; native runtime component licenses remain as documented in the repository.
 
 ## Publish an update
 
-1. Build a higher version, e.g. `python android-patriots/build.py 1.0.2` using the same private key.
-2. Create a non-draft, non-prerelease GitHub release tagged `android-v1.0.2` in this repository. It need not become the latest PC release.
+1. Build a higher version, e.g. `python android-patriots/build.py 1.1.1` using the same private key.
+2. Create a non-draft, non-prerelease GitHub release tagged `android-v1.1.1` in this repository. It need not become the latest PC release.
 3. Upload `MGS_Mobile_Patriots_Android.apk` plus its `.apk.sha256` sidecar. Keep the filename stable between updates.
 4. On next launcher startup, installed older versions offer the new APK. Game assets may be refreshed but personal save files/settings are not part of the update payload.
 
@@ -45,3 +45,5 @@ The builder writes the APK and SHA256 to `outputs/Android/`, verifies APK signat
 The Android GLES1 renderer shadows overlay state and matrix stacks, and the touch action button confirms menus as well as performing its gameplay action. The game runs in a separate process so engine shutdown does not terminate the launcher. Large updates use checked 4 MiB ranges with bounded connection retries.
 
 Automatic checks also run when the launcher returns to the foreground, at most once per minute. Returning from installation permission settings resumes the pending install without showing another update offer.
+
+Brazilian Portuguese uses the reviewed PC translation and locale-specific font overlay. See [coverage and contributor credit](../docs/PORTUGUESE.md). The Android launcher catalogue combines that JSON with localization/android/pt-BR.android.json; packaging refuses a missing Portuguese data folder.

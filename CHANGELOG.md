@@ -1,5 +1,13 @@
 # Changelog
 
+## PC 5.3.0 / Android 1.1.0 — 2026-11-19
+
+- Bundle reviewed Brazilian Portuguese as the third official launcher/game language: 299 UI and 1,862 active game/runtime texts. Preserve contributor text and Steam credit.
+- Add Portuguese accent glyphs to two locale-specific HUD fonts with all original glyph pixels verified unchanged.
+- Preserve dynamic controls, loading text and PC Discord telemetry in Portuguese; make the native pad-label self-test locale-aware.
+- Add Portuguese Android settings/updater messages and bundle all fourteen DAT tables, font overlay and runtime catalogue in the universal signed APK.
+- Ship a PC update archive without personal settings/saves and a higher Android version on the existing verified update channel.
+
 ## Android 1.0.1
 
 - Correct the Android system/installer application label.

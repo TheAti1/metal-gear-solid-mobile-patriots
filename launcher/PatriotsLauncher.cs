@@ -21,8 +21,8 @@ using Microsoft.Win32;
 
 [assembly:AssemblyTitle("Metal Gear Solid Mobile · Patriots")]
 [assembly:AssemblyProduct("Patriots MGS Mobile PC")]
-[assembly:AssemblyVersion("5.2.0.0")]
-[assembly:AssemblyFileVersion("5.2.0.0")]
+[assembly:AssemblyVersion("5.3.0.0")]
+[assembly:AssemblyFileVersion("5.3.0.0")]
 
 internal static class Program
 {
@@ -169,6 +169,7 @@ public sealed class PatriotsWindow:Window
         Section(p,Loc.T("Kurulu diller"));
         foreach(var lang in LanguagePacks.Available()){
             string details=Loc.T(lang.official?"Resmî":"Topluluk")+" · "+Loc.T("Launcher")+": "+(lang.official?Loc.T("Açık"):lang.launcher?lang.launcherTranslated+" / "+lang.launcherTotal:Loc.T("İngilizce yedek dil"))+" · "+Loc.T("Oyun")+": "+(lang.official?Loc.T("Açık"):lang.game?lang.gameTranslated+" / "+lang.gameTotal:Loc.T("İngilizce yedek dil"));
+            if(!String.IsNullOrWhiteSpace(lang.author))details+="\n"+lang.author;
             Field(p,lang.native_name+"  ("+lang.id+")",details,Button(Loc.T("Dil"),()=>ChangeLanguage(lang.id,true)));
         }
         p.Children.Add(T(Loc.T("Yalnızca launcher çevirisi kurulduysa oyun İngilizce açılır. Oyun çevirisini aynı dil koduyla daha sonra ekleyebilirsin."),12,Muted));
@@ -182,7 +183,7 @@ public sealed class PatriotsWindow:Window
     private async Task Verify(){try{Stopped();state.Text=Loc.T("●  DOSYALAR DENETLENİYOR");var failures=await Task.Run(()=>Game.Verify((done,total)=>Dispatcher.BeginInvoke(new Action(()=>status.Text=done+" / "+total+Loc.T(" dosya doğrulandı")))));Notice(failures.Count==0?Loc.T("Tüm oyun dosyaları doğrulandı."):Loc.T("Eksik veya değişmiş dosyalar:\n")+String.Join("\n",failures.Take(25)));state.Text=failures.Count==0?Loc.T("●  DOSYALAR DOĞRULANDI"):Loc.T("●  DENETİM TAMAMLANDI");}catch(Exception e){Notice(e.Message,true);}}
     private bool Save(bool notify){try{if(running){model.Save();NativeConfig.WriteLiveControls(model);}else NativeConfig.Write(model);dirty=false;save.IsEnabled=false;state.Text=Loc.T("●  AYARLAR KAYDEDİLDİ");status.Text=running?Loc.T("Ses ve kontroller anında uygulanır; görüntü ayarları sonraki açılışta geçerli"):Loc.T("Göreve hazırsın · F5 ile oyna");ShowPage(active);if(notify)Notice(running?Loc.T("Kaydedildi. Ses, tuş atamaları ve Discord ayarları anında uygulanır. Görüntü ayarları sonraki açılışta geçerli."):Loc.T("Ayarlar kaydedildi."));return true;}catch(Exception e){Notice(e.Message,true);return false;}}
     private async void StartGame(){if(running||!Save(false))return;running=true;play.Content=Loc.T("OYUNA DÖN  ↗");state.Text=Loc.T("●  OYUN ÇALIŞIYOR");status.Text=Loc.T("İyi oyunlar.");pad.Dispose();try{if(model.ShowBrand){busy.Visibility=Visibility.Visible;await Task.Delay(1400);busy.Visibility=Visibility.Collapsed;}if(model.HideLauncher)Hide();int exit=await Task.Run(()=>Game.Run(model));if(exit!=0)Notice(Loc.T("Oyun kapandı. Çıkış kodu: ")+exit+Loc.T("\nAyrıntılar Oyun/mgs_mobile.log dosyasında."),true);}catch(Exception ex){Notice(ex.Message,true);}finally{running=false;busy.Visibility=Visibility.Collapsed;var latest=Preferences.Load();if(dirty){model.PlaySeconds=latest.PlaySeconds;model.LastPlayed=latest.LastPlayed;}else model=latest;pad=new PadProbe();play.Content=Loc.T("OYNA     ↗");Show();Activate();state.Text=Loc.T("●  OYUN HAZIR");status.Text=Loc.T("Tekrar göreve dönmeye hazır");ShowPage(active);}}
-    private void About(){MessageBox.Show(this,Loc.T("METAL GEAR SOLID MOBILE\nPATRIOTS TÜRKÇE SÜRÜM · 5.0\n\nTürkçe yama ve başlatıcı: Patriots Çeviri\nOyun altyapısı: LeithSilver/mgsm v0.1\nÖzgün oyun: Konami / Ideaworks3D, 2008\n\nPatriots logosu resmî siteden alınmıştır.\nTeknik bilgiler ve lisanslar Belgeler klasöründedir.").Replace("5.0","5.2"),"Patriots Çeviri",MessageBoxButton.OK,MessageBoxImage.Information);}
+    private void About(){MessageBox.Show(this,Loc.T("METAL GEAR SOLID MOBILE\nPATRIOTS TÜRKÇE SÜRÜM · 5.0\n\nTürkçe yama ve başlatıcı: Patriots Çeviri\nOyun altyapısı: LeithSilver/mgsm v0.1\nÖzgün oyun: Konami / Ideaworks3D, 2008\n\nPatriots logosu resmî siteden alınmıştır.\nTeknik bilgiler ve lisanslar Belgeler klasöründedir.").Replace("5.0","5.3"),"Patriots Çeviri",MessageBoxButton.OK,MessageBoxImage.Information);}
     private void Notice(string text,bool error=false){MessageBox.Show(this,text,"Patriots · Metal Gear Solid Mobile",MessageBoxButton.OK,error?MessageBoxImage.Error:MessageBoxImage.Information);}
     public void RenderBilingual(){var original=model.Language;foreach(var language in new[]{"tr","en","tr"}){ChangeLanguage(language,false);Loc.Check();if(model.Language!=language||Loc.Language!=language)throw new Exception("Language switch failed");RenderPreviews();}ChangeLanguage(original,false);Files.Atomic(System.IO.Path.Combine(Files.Docs,"dil_arayuz_testi.json"),"{\"passed\":true,\"switches\":[\"tr\",\"en\",\"tr\"]}");}
     public void RenderPreviews(){string folder=System.IO.Path.Combine(Files.Docs,"Onizleme",model.Language);Directory.CreateDirectory(folder);foreach(string id in new[]{"home","display","controls","sound","saves","languages"}){ShowPage(id);UpdateLayout();Render(folder,id);}displayTab="quality";ShowPage("display");UpdateLayout();Render(folder,"quality");displayTab="game";ShowPage("display");UpdateLayout();Render(folder,"gameplay");controlTab="pad";ShowPage("controls");PollPad();UpdateLayout();Render(folder,"controller");busy.Visibility=Visibility.Visible;UpdateLayout();Render(folder,"startup");busy.Visibility=Visibility.Collapsed;}

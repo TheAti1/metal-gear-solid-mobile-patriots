@@ -154,7 +154,7 @@ void SelfTest() {
     if(Rewrite("Eylem tuşuna bas.").find("[K]")!=0)throw std::runtime_error("live rebind");s.SetKeyboardBindings(kb);active=0;
     if(Rewrite("Press 1 to switch to first person view.").find("[C]")==std::string::npos)throw std::runtime_error("English first person action");
     PadInput(SDL_GAMEPAD_TYPE_PS5);auto ps=Rewrite("Press the Action key to fire.");
-    if(ps.find(Settings::Instance().language?"Cross":"Çarpı")==std::string::npos)throw std::runtime_error("localized pad labels");active=0;
+    if(ps.find(L("Çarpı","Cross"))==std::string::npos)throw std::runtime_error("localized pad labels");active=0;
     s.SetKeyboardBindings(savedKb);s.SetControllerBindings(savedPad);s.prompt_style=savedStyle;s.dynamic_prompts=savedDynamic;
     std::cout<<"[PatriotsTests] keyboard, Xbox, PS5, live rebind, loading, untouched bullets PASS"<<std::endl;
 }

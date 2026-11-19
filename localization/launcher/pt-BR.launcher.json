@@ -3,7 +3,7 @@
   "language": "pt-BR",
   "native_name": "Português (Brasil)",
   "culture": "pt-BR",
-  "author": "",
+  "author": "(Sanju Vinho e Fumaça) https://steamcommunity.com/id/SanjiVinsmokeBRASIL/",
   "instructions": [
     "Translate only text fields. Empty text uses the English source.",
     "Keep id, source, category, editable, text_id, files and required_tokens unchanged.",
@@ -14,7 +14,7 @@
     {
       "id": "ui_496e8babc80e557dd02b",
       "source": "GAME",
-      "text": "",
+      "text": "JOGO",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -24,7 +24,7 @@
     {
       "id": "ui_a7b3dd439602fbaae6a7",
       "source": "DISPLAY",
-      "text": "",
+      "text": "TELA",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -34,7 +34,7 @@
     {
       "id": "ui_97072bb5f207cf55b6c6",
       "source": "CONTROLS",
-      "text": "",
+      "text": "CONTROLES",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -44,7 +44,7 @@
     {
       "id": "ui_e1b039914b217984184f",
       "source": "AUDIO / DISCORD",
-      "text": "",
+      "text": "ÁUDIO / DISCORD",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -54,7 +54,7 @@
     {
       "id": "ui_005eda7b7f2db81e9ab7",
       "source": "SAVES",
-      "text": "",
+      "text": "SAVES",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -64,7 +64,7 @@
     {
       "id": "ui_04bb0ad21942c40f9ff5",
       "source": "●  READY TO PLAY",
-      "text": "",
+      "text": "●  PRONTO PARA JOGAR",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -74,7 +74,7 @@
     {
       "id": "ui_38ba95ab7facb808fe20",
       "source": "English edition · ready for the mission",
-      "text": "",
+      "text": "Edição em português · pronto para a missão",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -84,7 +84,7 @@
     {
       "id": "ui_d3b61c80b6c40085f6a7",
       "source": "SAVE CHANGES",
-      "text": "",
+      "text": "SALVAR ALTERAÇÕES",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -94,7 +94,7 @@
     {
       "id": "ui_ae6cbae4582fe03be9d9",
       "source": "PLAY     ↗",
-      "text": "",
+      "text": "JOGAR     ↗",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -104,7 +104,7 @@
     {
       "id": "ui_5606f8a7891108f15d6c",
       "source": "PREPARING THE MISSION",
-      "text": "",
+      "text": "PREPARANDO A MISSÃO",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -114,7 +114,7 @@
     {
       "id": "ui_39724d88a72ea4a626c3",
       "source": "●  SETTINGS CHANGED",
-      "text": "",
+      "text": "●  CONFIGURAÇÕES ALTERADAS",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -124,7 +124,7 @@
     {
       "id": "ui_f26349dae03811226b8b",
       "source": "Saved display settings take effect next time you launch",
-      "text": "",
+      "text": "As configurações de tela salvas entram em vigor na próxima vez que você iniciar",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -134,7 +134,7 @@
     {
       "id": "ui_11ebc9962bdf3513841c",
       "source": "Save your changes or jump straight into the game",
-      "text": "",
+      "text": "Salve suas alterações ou entre direto no jogo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -144,7 +144,7 @@
     {
       "id": "ui_bbb1132f30f1770ba6e1",
       "source": "On",
-      "text": "",
+      "text": "Ligado",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -154,7 +154,7 @@
     {
       "id": "ui_39ce8f3878187699a4bb",
       "source": "Off",
-      "text": "",
+      "text": "Desligado",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -164,7 +164,7 @@
     {
       "id": "ui_20b3fb57baf8403618c3",
       "source": "PATRIOTS  /  ENGLISH EDITION",
-      "text": "",
+      "text": "PATRIOTS  /  EDIÇÃO EM PORTUGUÊS",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -174,7 +174,7 @@
     {
       "id": "ui_e28b2fb04c1238ded8c7",
       "source": "The mission stays the same. Play it your way.",
-      "text": "",
+      "text": "A missão continua a mesma. Jogue do seu jeito.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -184,7 +184,7 @@
     {
       "id": "ui_0d0655286feaccc474b2",
       "source": "PC EDITION",
-      "text": "",
+      "text": "EDIÇÃO PARA PC",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -194,7 +194,7 @@
     {
       "id": "ui_3ccc8b3035e4a2f00904",
       "source": "MISSION SETTINGS",
-      "text": "",
+      "text": "CONFIGURAÇÕES DA MISSÃO",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -204,7 +204,7 @@
     {
       "id": "ui_d965f9a3d86e1d36a5c9",
       "source": "DISPLAY",
-      "text": "",
+      "text": "TELA",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -214,7 +214,7 @@
     {
       "id": "ui_dd2215475a6e4decc402",
       "source": "Fullscreen",
-      "text": "",
+      "text": "Tela cheia",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -224,7 +224,7 @@
     {
       "id": "ui_5fa690f8b68c000ed16b",
       "source": "Windowed",
-      "text": "",
+      "text": "Em janela",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -234,7 +234,7 @@
     {
       "id": "ui_4ccc17d78ed0c2d54f4a",
       "source": "QUALITY PRESET",
-      "text": "",
+      "text": "PREDEFINIÇÃO DE QUALIDADE",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -244,7 +244,7 @@
     {
       "id": "ui_04eb32d1dad72e323e05",
       "source": "Balanced",
-      "text": "",
+      "text": "Equilibrado",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -254,7 +254,7 @@
     {
       "id": "ui_17d2fe95a0a3d4fb3288",
       "source": "High quality",
-      "text": "",
+      "text": "Alta qualidade",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -264,7 +264,7 @@
     {
       "id": "ui_ed87cbf0539f2eb8cc56",
       "source": "Classic",
-      "text": "",
+      "text": "Clássico",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -274,7 +274,7 @@
     {
       "id": "ui_744adefffd0dcc50bdad",
       "source": "Custom settings",
-      "text": "",
+      "text": "Configurações personalizadas",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -284,7 +284,7 @@
     {
       "id": "ui_7875a02812e0899a25b3",
       "source": "CONTROL LAYOUT",
-      "text": "",
+      "text": "LAYOUT DE CONTROLE",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -294,7 +294,7 @@
     {
       "id": "ui_c4bb041f80450f1a7802",
       "source": "Classic · arrows + Z",
-      "text": "",
+      "text": "Clássico · setas + Z",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -304,7 +304,7 @@
     {
       "id": "ui_af11018536f86532c338",
       "source": "Custom bindings",
-      "text": "",
+      "text": "Mapeamento personalizado",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -314,7 +314,7 @@
     {
       "id": "ui_f260702950c168fc5387",
       "source": "GAME LANGUAGE",
-      "text": "",
+      "text": "IDIOMA DO JOGO",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -324,7 +324,7 @@
     {
       "id": "ui_fc2f4dab65a4353bae2f",
       "source": "Keyboard and controller",
-      "text": "",
+      "text": "Teclado e controle",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -334,7 +334,7 @@
     {
       "id": "ui_69740471384e5a784c2b",
       "source": "PLAY TIME",
-      "text": "",
+      "text": "TEMPO DE JOGO",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -344,7 +344,7 @@
     {
       "id": "ui_0f3464db24dd04360e5d",
       "source": " h ",
-      "text": "",
+      "text": " h ",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -354,7 +354,7 @@
     {
       "id": "ui_d8217002fd2008899092",
       "source": " min",
-      "text": "",
+      "text": " min",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -364,7 +364,7 @@
     {
       "id": "ui_1b448720e13b529bc871",
       "source": " minutes",
-      "text": "",
+      "text": " minutos",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -374,7 +374,7 @@
     {
       "id": "ui_461af90e2417a674c20d",
       "source": "Display",
-      "text": "",
+      "text": "Tela",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -384,7 +384,7 @@
     {
       "id": "ui_caf4350b2e0e2f0d26fe",
       "source": "Adjust the field of view, resolution and graphics quality.",
-      "text": "",
+      "text": "Ajuste o campo de visão, a resolução e a qualidade gráfica.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -394,7 +394,7 @@
     {
       "id": "ui_a9621b13dd117d91f770",
       "source": "Screen",
-      "text": "",
+      "text": "Tela",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -404,7 +404,7 @@
     {
       "id": "ui_539d77af55f992ad6ff8",
       "source": "Quality",
-      "text": "",
+      "text": "Qualidade",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -414,7 +414,7 @@
     {
       "id": "ui_9590dad60d5d363439ed",
       "source": "Gameplay",
-      "text": "",
+      "text": "Jogabilidade",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -424,7 +424,7 @@
     {
       "id": "ui_a3c2c982bbbe14862e68",
       "source": "Display mode",
-      "text": "",
+      "text": "Modo de exibição",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -434,7 +434,7 @@
     {
       "id": "ui_4239043d3421f0b3c748",
       "source": "Fullscreen uses a borderless window at your desktop resolution.",
-      "text": "",
+      "text": "O modo tela cheia usa uma janela sem bordas na resolução da sua área de trabalho.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -444,7 +444,7 @@
     {
       "id": "ui_ff7b13c7ee3981349455",
       "source": "Monitor",
-      "text": "",
+      "text": "Monitor",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -454,7 +454,7 @@
     {
       "id": "ui_eb68ac3b0e204db5bbd2",
       "source": "The display on which the game window opens.",
-      "text": "",
+      "text": "O monitor em que a janela do jogo será aberta.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -464,7 +464,7 @@
     {
       "id": "ui_dec714629f04e430c7fa",
       "source": " · Primary display",
-      "text": "",
+      "text": " · Monitor principal",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -474,7 +474,7 @@
     {
       "id": "ui_e8b8d1745b4ec5710d60",
       "source": "Window size",
-      "text": "",
+      "text": "Tamanho da janela",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -484,7 +484,7 @@
     {
       "id": "ui_1fe05fb37312c0c99dd1",
       "source": "The initial size in windowed mode.",
-      "text": "",
+      "text": "O tamanho inicial no modo em janela.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -494,7 +494,7 @@
     {
       "id": "ui_b8fd46dd5e8749629f58",
       "source": "Widescreen",
-      "text": "",
+      "text": "Tela ampla",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -504,7 +504,7 @@
     {
       "id": "ui_67811b46fd2abbdaad7f",
       "source": "The 3D camera follows your aspect ratio. Menus keep their original layout.",
-      "text": "",
+      "text": "A câmera 3D acompanha a proporção da sua tela. Os menus mantêm o layout original.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -514,7 +514,7 @@
     {
       "id": "ui_95b0253913d1beee4a8a",
       "source": "Field of view",
-      "text": "",
+      "text": "Campo de visão",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -524,7 +524,7 @@
     {
       "id": "ui_8df4fd8963213e8a1725",
       "source": "100% is the original setting; increase it for a wider view.",
-      "text": "",
+      "text": "100% igual ao original; aumente para obter um campo de visão mais amplo.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -536,7 +536,7 @@
     {
       "id": "ui_d3e557f8cf6d7d4bade7",
       "source": "Soft-key labels",
-      "text": "",
+      "text": "Rótulos das teclas de função",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -546,7 +546,7 @@
     {
       "id": "ui_301bac7bda4da3489b1f",
       "source": "The left and right soft-key captions at the edge of the screen.",
-      "text": "",
+      "text": "As legendas das teclas de função esquerda e direita na borda da tela.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -556,7 +556,7 @@
     {
       "id": "ui_44d9f1368bc6100dacd0",
       "source": "Always show",
-      "text": "",
+      "text": "Sempre mostrar",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -566,7 +566,7 @@
     {
       "id": "ui_8e9f868f52dd5a431770",
       "source": "Hide during gameplay",
-      "text": "",
+      "text": "Ocultar durante o jogo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -576,7 +576,7 @@
     {
       "id": "ui_183e381cfb9f1b6a41a0",
       "source": "Always hide",
-      "text": "",
+      "text": "Sempre ocultar",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -586,7 +586,7 @@
     {
       "id": "ui_ed3efd276ee34fe7db4b",
       "source": "Classic appearance",
-      "text": "",
+      "text": "Aparência clássica",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -596,7 +596,7 @@
     {
       "id": "ui_29d358bcbeb9297b5a7b",
       "source": "Anti-aliasing",
-      "text": "",
+      "text": "Antisserrilhado",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -606,7 +606,7 @@
     {
       "id": "ui_8647111b58e7013d6654",
       "source": "Multisampling smooths the edges of 3D objects.",
-      "text": "",
+      "text": "O multisampling suaviza as bordas dos objetos 3D.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -616,7 +616,7 @@
     {
       "id": "ui_1c31fe783af01ce6875f",
       "source": "Render scale",
-      "text": "",
+      "text": "Escala de renderização",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -626,7 +626,7 @@
     {
       "id": "ui_5a35aee672442c8a0c01",
       "source": "Render at a higher resolution and downsample to your screen.",
-      "text": "",
+      "text": "Renderiza em uma resolução maior e reduz para a resolução da sua tela.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -636,7 +636,7 @@
     {
       "id": "ui_f8288a24ce1b0ca673c8",
       "source": "1× · display resolution",
-      "text": "",
+      "text": "1× · resolução da tela",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -646,7 +646,7 @@
     {
       "id": "ui_ac86a90eee5f4f94bdc8",
       "source": "2× · high quality",
-      "text": "",
+      "text": "2× · alta qualidade",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -656,7 +656,7 @@
     {
       "id": "ui_39d2c8d28014d5684c6f",
       "source": "3× · very high quality",
-      "text": "",
+      "text": "3× · qualidade muito alta",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -666,7 +666,7 @@
     {
       "id": "ui_3f8cb9549da385e92306",
       "source": "Texture filtering",
-      "text": "",
+      "text": "Filtragem de texturas",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -676,7 +676,7 @@
     {
       "id": "ui_afc8005fd763cec45e6a",
       "source": "Turn off to preserve the original pixelated textures.",
-      "text": "",
+      "text": "Desative para preservar as texturas pixeladas originais.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -686,7 +686,7 @@
     {
       "id": "ui_4ff25653736d93b0a93c",
       "source": "Original pixel resolution",
-      "text": "",
+      "text": "Resolução de pixels original",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -696,7 +696,7 @@
     {
       "id": "ui_81902a494e48db649990",
       "source": "Render at the phone's resolution and upscale the result.",
-      "text": "",
+      "text": "Renderiza na resolução do celular e amplia o resultado.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -706,7 +706,7 @@
     {
       "id": "ui_6c90c68a7f51826ec85d",
       "source": "Advanced options",
-      "text": "",
+      "text": "Opções avançadas",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -716,7 +716,7 @@
     {
       "id": "ui_48e524762aef3b0a1217",
       "source": "Extra scene geometry",
-      "text": "",
+      "text": "Geometria extra da cena",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -726,7 +726,7 @@
     {
       "id": "ui_7635347181be3e6870d1",
       "source": "Draw geometry hidden by the original camera; this may affect performance.",
-      "text": "",
+      "text": "Desenha a geometria oculta pela câmera original; isso pode afetar o desempenho.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -736,7 +736,7 @@
     {
       "id": "ui_5fb5a2be757c7cbefc84",
       "source": "Software rendering",
-      "text": "",
+      "text": "Renderização por software",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -746,7 +746,7 @@
     {
       "id": "ui_6468cdccfcded3bc6daf",
       "source": "An alternative for graphics issues. Anti-aliasing is unavailable.",
-      "text": "",
+      "text": "Uma alternativa para problemas gráficos. O antisserrilhado fica indisponível.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -756,7 +756,7 @@
     {
       "id": "ui_f84531cb072637c5127d",
       "source": "Eight-way movement",
-      "text": "",
+      "text": "Movimento em oito direções",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -766,7 +766,7 @@
     {
       "id": "ui_7c279c66458fe317d131",
       "source": "Enable diagonal directional inputs.",
-      "text": "",
+      "text": "Ativa as entradas direcionais diagonais.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -776,7 +776,7 @@
     {
       "id": "ui_683e5b242ecfcd224512",
       "source": "Analog movement",
-      "text": "",
+      "text": "Movimento analógico",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -786,7 +786,7 @@
     {
       "id": "ui_667efbaf829356a6a66e",
       "source": "Move at any angle with the left stick. Left-stick movement must also be enabled.",
-      "text": "",
+      "text": "Mova-se em qualquer ângulo com o analógico esquerdo. O movimento pelo analógico esquerdo também precisa estar ativado.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -796,7 +796,7 @@
     {
       "id": "ui_5a374dd2b302d8173b4a",
       "source": "Pause when unfocused",
-      "text": "",
+      "text": "Pausar ao perder o foco",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -806,7 +806,7 @@
     {
       "id": "ui_fdb183be7f1689992f40",
       "source": "Pause the game when you switch to another window.",
-      "text": "",
+      "text": "Pausa o jogo quando você troca para outra janela.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -816,7 +816,7 @@
     {
       "id": "ui_f7b4bcc35b9176a6676c",
       "source": "Skip game intro logos",
-      "text": "",
+      "text": "Pular logos de abertura do jogo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -826,7 +826,7 @@
     {
       "id": "ui_8374e63ed6ebf7358bfb",
       "source": "Go straight to the title screen.",
-      "text": "",
+      "text": "Vai direto para a tela de título.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -836,7 +836,7 @@
     {
       "id": "ui_994279d1adcc272eefe2",
       "source": "Patriots intro",
-      "text": "",
+      "text": "Introdução dos Patriots",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -846,7 +846,7 @@
     {
       "id": "ui_bf16ea1a5358404b8dfb",
       "source": "Show the circular Patriots logo when launching the game.",
-      "text": "",
+      "text": "Exibe o logotipo circular dos Patriots ao iniciar o jogo.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -856,7 +856,7 @@
     {
       "id": "ui_da15f0d81636771eab44",
       "source": "Hide launcher while playing",
-      "text": "",
+      "text": "Ocultar o launcher durante o jogo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -866,7 +866,7 @@
     {
       "id": "ui_83a707c097951756cbac",
       "source": "Return to the launcher when the game closes.",
-      "text": "",
+      "text": "Volta ao launcher quando o jogo for fechado.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -876,7 +876,7 @@
     {
       "id": "ui_06e5ba0e75e1a0e46145",
       "source": "Play directly from the EXE",
-      "text": "",
+      "text": "Jogar diretamente pelo EXE",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -886,7 +886,7 @@
     {
       "id": "ui_ad27b9c2f6422f683d3e",
       "source": "Use Ayarlar.cmd to return to the launcher.",
-      "text": "",
+      "text": "Use o Ayarlar.cmd para voltar ao launcher.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -896,7 +896,7 @@
     {
       "id": "ui_f3c26534c70c8531827c",
       "source": "Controls",
-      "text": "",
+      "text": "Controles",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -906,7 +906,7 @@
     {
       "id": "ui_9df93573f096b116c14f",
       "source": "Set up your own layout. Keyboard and controller can be used together.",
-      "text": "",
+      "text": "Configure seu próprio layout. Teclado e controle podem ser usados juntos.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -916,7 +916,7 @@
     {
       "id": "ui_f81dd7746f9ec29850c3",
       "source": "Live in-game prompts",
-      "text": "",
+      "text": "Avisos dinâmicos no jogo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -926,7 +926,7 @@
     {
       "id": "ui_789508c528c6f33620d0",
       "source": "Help text follows your active input device and current bindings.",
-      "text": "",
+      "text": "O texto de ajuda acompanha o dispositivo de entrada ativo e o mapeamento atual.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -936,7 +936,7 @@
     {
       "id": "ui_083cc0636abbd749042e",
       "source": "Controller button names",
-      "text": "",
+      "text": "Nomes dos botões do controle",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -946,7 +946,7 @@
     {
       "id": "ui_d8b6738807b80cdf7192",
       "source": "Automatic mode follows the last controller you used.",
-      "text": "",
+      "text": "O modo automático segue o último controle que você usou.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -956,7 +956,7 @@
     {
       "id": "ui_ee1cd50e942236db79e3",
       "source": "Automatic",
-      "text": "",
+      "text": "Automático",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -966,7 +966,7 @@
     {
       "id": "ui_6887c47c0499a4798182",
       "source": "Keyboard",
-      "text": "",
+      "text": "Teclado",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -976,7 +976,7 @@
     {
       "id": "ui_67716af0863b8aa25ee9",
       "source": "Controller",
-      "text": "",
+      "text": "Controle",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -986,7 +986,7 @@
     {
       "id": "ui_37287e25972ca47da8ff",
       "source": "PC layout",
-      "text": "",
+      "text": "Layout de PC",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -996,7 +996,7 @@
     {
       "id": "ui_a73bdcd38117f856dcc1",
       "source": "Classic layout",
-      "text": "",
+      "text": "Layout clássico",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1006,7 +1006,7 @@
     {
       "id": "ui_b061faaab9f0a2bc956e",
       "source": "Click a key box and press a key to assign it. F1, F5 and F12 are reserved for game functions.",
-      "text": "",
+      "text": "Clique em uma caixa de tecla e pressione uma tecla para atribuí-la. F1, F5 e F12 são reservadas para funções do jogo.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1016,7 +1016,7 @@
     {
       "id": "ui_89ea97005131748637a8",
       "source": "GAME ACTION",
-      "text": "",
+      "text": "AÇÃO DO JOGO",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1026,7 +1026,7 @@
     {
       "id": "ui_b139f6e2e4e0b6f41cd2",
       "source": "PRIMARY KEY",
-      "text": "",
+      "text": "TECLA PRIMÁRIA",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1036,7 +1036,7 @@
     {
       "id": "ui_8966ddf7701b2e4edeb8",
       "source": "SECONDARY KEY",
-      "text": "",
+      "text": "TECLA SECUNDÁRIA",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1046,7 +1046,7 @@
     {
       "id": "ui_b2ea356d714dfc4b2df3",
       "source": "No controller found yet. Connect your device and press Refresh.",
-      "text": "",
+      "text": "Nenhum controle encontrado ainda. Conecte seu dispositivo e pressione Atualizar.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1056,7 +1056,7 @@
     {
       "id": "ui_6d25d67585a059023fbe",
       "source": "Device to test",
-      "text": "",
+      "text": "Dispositivo para testar",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1066,7 +1066,7 @@
     {
       "id": "ui_dee1d28cadf52d6c1892",
       "source": "All connected compatible controllers can be used in-game.",
-      "text": "",
+      "text": "Todos os controles compatíveis conectados podem ser usados no jogo.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1076,7 +1076,7 @@
     {
       "id": "ui_63cd725787a8e21fe7f3",
       "source": "Refresh",
-      "text": "",
+      "text": "Atualizar",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1086,7 +1086,7 @@
     {
       "id": "ui_68edb2e792f8ee2940ef",
       "source": "Vibration test",
-      "text": "",
+      "text": "Teste de vibração",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1096,7 +1096,7 @@
     {
       "id": "ui_4cd5d78db4aeca5e9e78",
       "source": "Vibration command sent.",
-      "text": "",
+      "text": "Comando de vibração enviado.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1106,7 +1106,7 @@
     {
       "id": "ui_0532464e084b41bbacc4",
       "source": "Vibration is unavailable on this device.",
-      "text": "",
+      "text": "A vibração não está disponível neste dispositivo.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1116,7 +1116,7 @@
     {
       "id": "ui_f341cb37e9f53c507843",
       "source": "Default bindings",
-      "text": "",
+      "text": "Mapeamento padrão",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1126,7 +1126,7 @@
     {
       "id": "ui_162579badc0bb763f65e",
       "source": "Left-stick movement",
-      "text": "",
+      "text": "Movimento pelo analógico esquerdo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1136,7 +1136,7 @@
     {
       "id": "ui_c46095ed2f8c77f7f2c3",
       "source": "Use the left stick for movement input.",
-      "text": "",
+      "text": "Usa o analógico esquerdo para controlar o movimento.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1146,7 +1146,7 @@
     {
       "id": "ui_b600adbcf9171635ca95",
       "source": "Move according to the angle of the stick.",
-      "text": "",
+      "text": "Move de acordo com o ângulo do analógico.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1156,7 +1156,7 @@
     {
       "id": "ui_f799971348a128063c90",
       "source": "Live input test",
-      "text": "",
+      "text": "Teste de entrada ao vivo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1166,7 +1166,7 @@
     {
       "id": "ui_f23be51728b5bfff74b8",
       "source": "Back / Share and the right-stick click are reserved for in-game settings.",
-      "text": "",
+      "text": "Voltar / Compartilhar e o clique do analógico direito são reservados para as configurações do jogo.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1176,7 +1176,7 @@
     {
       "id": "ui_416eb502d72a099d5237",
       "source": "Waiting for input",
-      "text": "",
+      "text": "Aguardando entrada",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1186,7 +1186,7 @@
     {
       "id": "ui_839d2c0e4929f4b5c365",
       "source": "Button bindings",
-      "text": "",
+      "text": "Mapeamento de botões",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1196,7 +1196,7 @@
     {
       "id": "ui_41e26bee597fd0bdfde5",
       "source": "Assign a key",
-      "text": "",
+      "text": "Atribuir uma tecla",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1206,7 +1206,7 @@
     {
       "id": "ui_f5f2dbc13eded823f00d",
       "source": "Press the key you want to assign.",
-      "text": "",
+      "text": "Pressione a tecla que deseja atribuir.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1216,7 +1216,7 @@
     {
       "id": "ui_e306951c12fec8b7d6e4",
       "source": "Clear",
-      "text": "",
+      "text": "Limpar",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1226,7 +1226,7 @@
     {
       "id": "ui_39a8d28c1c6b8f0cf127",
       "source": "Cancel",
-      "text": "",
+      "text": "Cancelar",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1236,7 +1236,7 @@
     {
       "id": "ui_8c59f942a623555a6e14",
       "source": "This key is reserved by the game. Choose another key.",
-      "text": "",
+      "text": "Esta tecla é reservada pelo jogo. Escolha outra tecla.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1246,7 +1246,7 @@
     {
       "id": "ui_c786f70fb1f2ba789421",
       "source": "Connected · waiting for a button",
-      "text": "",
+      "text": "Conectado · aguardando um botão",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1256,7 +1256,7 @@
     {
       "id": "ui_ad98304fe53d9195c10a",
       "source": "Right stick",
-      "text": "",
+      "text": "Analógico direito",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1266,7 +1266,7 @@
     {
       "id": "ui_11d7c96daf12f3006f2e",
       "source": "Button ",
-      "text": "",
+      "text": "Botão ",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1276,7 +1276,7 @@
     {
       "id": "ui_a612072bbe204944ad08",
       "source": "Waiting for a controller connection",
-      "text": "",
+      "text": "Aguardando a conexão de um controle",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1286,7 +1286,7 @@
     {
       "id": "ui_fada4c529a44fd9d1bcd",
       "source": "LEFT  {0:+0.00;-0.00;0.00} / {1:+0.00;-0.00;0.00}     RIGHT  {2:+0.00;-0.00;0.00} / {3:+0.00;-0.00;0.00}     LT {4:0.00}   RT {5:0.00}",
-      "text": "",
+      "text": "ESQUERDO  {0:+0.00;-0.00;0.00} / {1:+0.00;-0.00;0.00}     DIREITO  {2:+0.00;-0.00;0.00} / {3:+0.00;-0.00;0.00}     LT {4:0.00}   RT {5:0.00}",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1303,7 +1303,7 @@
     {
       "id": "ui_7e497902e53e78997a60",
       "source": "LEFT STICK",
-      "text": "",
+      "text": "ANALÓGICO ESQUERDO",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1313,7 +1313,7 @@
     {
       "id": "ui_062c016938534f1716e3",
       "source": "RIGHT STICK",
-      "text": "",
+      "text": "ANALÓGICO DIREITO",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1323,7 +1323,7 @@
     {
       "id": "ui_48900c3ab14391e77c70",
       "source": "Audio and Discord",
-      "text": "",
+      "text": "Áudio e Discord",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1333,7 +1333,7 @@
     {
       "id": "ui_94f32e9fd4d7a78ccff8",
       "source": "Adjust the volume and the game information shown on your Discord profile.",
-      "text": "",
+      "text": "Ajuste o volume e as informações do jogo exibidas no seu perfil do Discord.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1343,7 +1343,7 @@
     {
       "id": "ui_c03f02ecfac81b0a4b5b",
       "source": "Master volume",
-      "text": "",
+      "text": "Volume geral",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1353,7 +1353,7 @@
     {
       "id": "ui_fc76bff95f1b012387ba",
       "source": "Applies to the game's Windows audio session.",
-      "text": "",
+      "text": "Aplica-se à sessão de áudio do jogo no Windows.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1363,7 +1363,7 @@
     {
       "id": "ui_b282228e3debb59fd3b7",
       "source": "Mute",
-      "text": "",
+      "text": "Silenciar",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1373,7 +1373,7 @@
     {
       "id": "ui_73e05dec22c6d37adf91",
       "source": "Your chosen volume level is kept.",
-      "text": "",
+      "text": "O nível de volume escolhido é mantido.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1383,7 +1383,7 @@
     {
       "id": "ui_95dfdcfe10c185e449c9",
       "source": "Show your room, game status and session time on your Discord profile.",
-      "text": "",
+      "text": "Mostra sua sala, o status do jogo e o tempo de sessão no seu perfil do Discord.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1393,7 +1393,7 @@
     {
       "id": "ui_1e9aad2a274272e4bb4a",
       "source": "Discord activity",
-      "text": "",
+      "text": "Atividade no Discord",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1403,7 +1403,7 @@
     {
       "id": "ui_95b00ae2a8fce3070a77",
       "source": "Connect automatically while the Discord desktop app is running.",
-      "text": "",
+      "text": "Conecta automaticamente enquanto o aplicativo do Discord para computador estiver aberto.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1413,7 +1413,7 @@
     {
       "id": "ui_a4421181b2a70ce0f867",
       "source": "Show room information",
-      "text": "",
+      "text": "Mostrar informações da sala",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1423,7 +1423,7 @@
     {
       "id": "ui_dddcff57a2d06194842a",
       "source": "When off, only your general game status is shared.",
-      "text": "",
+      "text": "Quando desligado, apenas o status geral do jogo é compartilhado.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1433,7 +1433,7 @@
     {
       "id": "ui_f4c8dd55b9d361cefb48",
       "source": "In-game audio options",
-      "text": "",
+      "text": "Opções de áudio do jogo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1443,7 +1443,7 @@
     {
       "id": "ui_9eea3421aaa1c07ecbe3",
       "source": "The game's own audio settings also apply. Output uses your selected Windows audio device.",
-      "text": "",
+      "text": "As configurações de áudio do próprio jogo também se aplicam. A saída usa o dispositivo de áudio selecionado no Windows.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1453,7 +1453,7 @@
     {
       "id": "ui_d09e12e27feb494a8a7a",
       "source": "Saves and launcher",
-      "text": "",
+      "text": "Saves e launcher",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1463,7 +1463,7 @@
     {
       "id": "ui_ab63aeed4503ae7ff28d",
       "source": "Protect your saves, transfer settings and verify the game files.",
-      "text": "",
+      "text": "Proteja seus saves, transfira configurações e verifique os arquivos do jogo.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1473,7 +1473,7 @@
     {
       "id": "ui_017b7b8df384598c9c76",
       "source": "Game saves",
-      "text": "",
+      "text": "Saves do jogo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1483,7 +1483,7 @@
     {
       "id": "ui_e2c88dbc55eea3faf375",
       "source": "Automatic save backup",
-      "text": "",
+      "text": "Backup automático dos saves",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1493,7 +1493,7 @@
     {
       "id": "ui_7bdbda7dfc472b04726a",
       "source": "Back up your current saves before launching the game.",
-      "text": "",
+      "text": "Faz backup dos seus saves atuais antes de iniciar o jogo.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1503,7 +1503,7 @@
     {
       "id": "ui_560787a39aa3ecb3cc5a",
       "source": "Back up now",
-      "text": "",
+      "text": "Fazer backup agora",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1513,7 +1513,7 @@
     {
       "id": "ui_f130067e1a20ca6a8ee3",
       "source": "There are no game saves to back up yet.",
-      "text": "",
+      "text": "Ainda não há saves do jogo para fazer backup.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1523,7 +1523,7 @@
     {
       "id": "ui_f3cc3321084fe3d71e20",
       "source": "Save backup created.\n",
-      "text": "",
+      "text": "Backup dos saves criado.\n",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1533,7 +1533,7 @@
     {
       "id": "ui_2d0cf3a0aff6d032d111",
       "source": "Restore",
-      "text": "",
+      "text": "Restaurar",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1543,7 +1543,7 @@
     {
       "id": "ui_d60da6a4eafd7d2f2fb6",
       "source": "Backup folder",
-      "text": "",
+      "text": "Pasta de backup",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1553,7 +1553,7 @@
     {
       "id": "ui_366fcd93889e95ae0441",
       "source": "Preferences",
-      "text": "",
+      "text": "Preferências",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1563,7 +1563,7 @@
     {
       "id": "ui_3b89dcac16b8742616ad",
       "source": "Export settings",
-      "text": "",
+      "text": "Exportar configurações",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1573,7 +1573,7 @@
     {
       "id": "ui_340a8fc2021c39d2cb36",
       "source": "Import settings",
-      "text": "",
+      "text": "Importar configurações",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1583,7 +1583,7 @@
     {
       "id": "ui_545ac68bacdb03ab4aa7",
       "source": "Restore defaults",
-      "text": "",
+      "text": "Restaurar padrões",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1593,7 +1593,7 @@
     {
       "id": "ui_c889988a3b87e6a41671",
       "source": "Return to this window when the game closes.",
-      "text": "",
+      "text": "Volta a esta janela quando o jogo for fechado.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1603,7 +1603,7 @@
     {
       "id": "ui_f96ec4d79b8ea21bd0c9",
       "source": "Ayarlar.cmd always opens the launcher.",
-      "text": "",
+      "text": "O Ayarlar.cmd sempre abre o launcher.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1613,7 +1613,7 @@
     {
       "id": "ui_36e14d97cfd9635641da",
       "source": "Files",
-      "text": "",
+      "text": "Arquivos",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1623,7 +1623,7 @@
     {
       "id": "ui_173457979c8a76fa1dfb",
       "source": "Verify game files",
-      "text": "",
+      "text": "Verificar arquivos do jogo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1633,7 +1633,7 @@
     {
       "id": "ui_532f11d3ce336b7465cd",
       "source": "Game folder",
-      "text": "",
+      "text": "Pasta do jogo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1643,7 +1643,7 @@
     {
       "id": "ui_7d14b0e3c65c56773b83",
       "source": "Documentation",
-      "text": "",
+      "text": "Documentação",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1653,7 +1653,7 @@
     {
       "id": "ui_72aaa36ff5c17939eeb4",
       "source": "Close the game before restoring a save. Your current saves are backed up first.",
-      "text": "",
+      "text": "Feche o jogo antes de restaurar um save. Seus saves atuais passam por backup primeiro.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1663,7 +1663,7 @@
     {
       "id": "ui_349d9a920f90657e444e",
       "source": "Close the game before performing this action.",
-      "text": "",
+      "text": "Feche o jogo antes de executar esta ação.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1673,7 +1673,7 @@
     {
       "id": "ui_27f9b5c8ca4cb91d8bce",
       "source": "MGS save backup|*.zip",
-      "text": "",
+      "text": "Backup de save do MGS|*.zip",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1683,7 +1683,7 @@
     {
       "id": "ui_e94df44f9639c08d62dc",
       "source": "The selected backup will replace your current game saves. Your current saves will be backed up first. Continue?",
-      "text": "",
+      "text": "O backup selecionado substituirá seus saves atuais do jogo. Seus saves atuais passarão por backup primeiro. Continuar?",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1693,7 +1693,7 @@
     {
       "id": "ui_77925f2fb846e3bfb82c",
       "source": "Restore game saves",
-      "text": "",
+      "text": "Restaurar saves do jogo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1703,7 +1703,7 @@
     {
       "id": "ui_df0c7f79965f21d40652",
       "source": " save files restored.",
-      "text": "",
+      "text": " arquivos de save restaurados.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1713,7 +1713,7 @@
     {
       "id": "ui_66b1901176173ff41e33",
       "source": "Patriots_MGS_Settings.json",
-      "text": "",
+      "text": "Patriots_MGS_Settings.json",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1723,7 +1723,7 @@
     {
       "id": "ui_d012d58d410f0850b8c7",
       "source": "Settings file|*.json",
-      "text": "",
+      "text": "Arquivo de configurações|*.json",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1733,7 +1733,7 @@
     {
       "id": "ui_721cdc8536999aa43d57",
       "source": "Restore launcher and control settings to their defaults? Game saves will be kept.",
-      "text": "",
+      "text": "Restaurar as configurações do launcher e dos controles para o padrão? Os saves do jogo serão mantidos.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1743,7 +1743,7 @@
     {
       "id": "ui_43bce2af0ad79c29c47a",
       "source": "Reset settings",
-      "text": "",
+      "text": "Redefinir configurações",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1753,7 +1753,7 @@
     {
       "id": "ui_1bd7f91e53a68cbb2105",
       "source": "●  VERIFYING FILES",
-      "text": "",
+      "text": "●  VERIFICANDO ARQUIVOS",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1763,7 +1763,7 @@
     {
       "id": "ui_818cef9ea7d310197688",
       "source": " files verified",
-      "text": "",
+      "text": " arquivos verificados",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1773,7 +1773,7 @@
     {
       "id": "ui_c9f4f9b5b2dfe77bac89",
       "source": "All game files verified.",
-      "text": "",
+      "text": "Todos os arquivos do jogo foram verificados.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1783,7 +1783,7 @@
     {
       "id": "ui_7fde8edf0f9b4427720c",
       "source": "Missing or modified files:\n",
-      "text": "",
+      "text": "Arquivos ausentes ou modificados:\n",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1793,7 +1793,7 @@
     {
       "id": "ui_ce12bc76a51a437af371",
       "source": "●  FILES VERIFIED",
-      "text": "",
+      "text": "●  ARQUIVOS VERIFICADOS",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1803,7 +1803,7 @@
     {
       "id": "ui_56fcbba2120aeacbc1d6",
       "source": "●  VERIFICATION COMPLETE",
-      "text": "",
+      "text": "●  VERIFICAÇÃO CONCLUÍDA",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1813,7 +1813,7 @@
     {
       "id": "ui_a402ba3f29036499eb0e",
       "source": "●  SETTINGS SAVED",
-      "text": "",
+      "text": "●  CONFIGURAÇÕES SALVAS",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1823,7 +1823,7 @@
     {
       "id": "ui_3467ded54e8376d0c79f",
       "source": "Audio and controls apply immediately; display settings apply on next launch",
-      "text": "",
+      "text": "Áudio e controles são aplicados imediatamente; as configurações de tela são aplicadas na próxima inicialização",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1833,7 +1833,7 @@
     {
       "id": "ui_eddcdd7f39e8e388d5ab",
       "source": "Ready for the mission · press F5 to play",
-      "text": "",
+      "text": "Pronto para a missão · pressione F5 para jogar",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1843,7 +1843,7 @@
     {
       "id": "ui_fceed830614539845758",
       "source": "Saved. Audio, bindings and Discord settings apply immediately. Display settings apply on next launch.",
-      "text": "",
+      "text": "Salvo. As configurações de áudio, mapeamento e Discord são aplicadas imediatamente. As configurações de tela são aplicadas na próxima inicialização.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1853,7 +1853,7 @@
     {
       "id": "ui_126d2d35ed395ee8a776",
       "source": "Settings saved.",
-      "text": "",
+      "text": "Configurações salvas.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1863,7 +1863,7 @@
     {
       "id": "ui_18c219882a816696ae3c",
       "source": "RETURN TO GAME  ↗",
-      "text": "",
+      "text": "VOLTAR AO JOGO  ↗",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1873,7 +1873,7 @@
     {
       "id": "ui_e447c4d185a0e57ecaf2",
       "source": "●  GAME RUNNING",
-      "text": "",
+      "text": "●  JOGO EM EXECUÇÃO",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1883,7 +1883,7 @@
     {
       "id": "ui_4a8602c614ca98ebc02d",
       "source": "Enjoy the game.",
-      "text": "",
+      "text": "Aproveite o jogo.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1893,7 +1893,7 @@
     {
       "id": "ui_f7c7e227d6dd84c17ab6",
       "source": "The game closed. Exit code: ",
-      "text": "",
+      "text": "O jogo foi fechado. Código de saída: ",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1903,7 +1903,7 @@
     {
       "id": "ui_6c0596aa5a2faad7c6ee",
       "source": "\nSee Oyun/mgs_mobile.log for details.",
-      "text": "",
+      "text": "\nConsulte Oyun/mgs_mobile.log para mais detalhes.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1913,7 +1913,7 @@
     {
       "id": "ui_c860e780b502478d4195",
       "source": "Ready to return to the mission",
-      "text": "",
+      "text": "Pronto para voltar à missão",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1923,7 +1923,7 @@
     {
       "id": "ui_59415a2ff58f9b277e29",
       "source": "A / Cross",
-      "text": "",
+      "text": "A / Xis",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1933,7 +1933,7 @@
     {
       "id": "ui_9fd92da8a0d1628caf63",
       "source": "B / Circle",
-      "text": "",
+      "text": "B / Círculo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1943,7 +1943,7 @@
     {
       "id": "ui_f716349dbc97dd70465e",
       "source": "X / Square",
-      "text": "",
+      "text": "X / Quadrado",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1953,7 +1953,7 @@
     {
       "id": "ui_b071d8379b31c08efe2b",
       "source": "Y / Triangle",
-      "text": "",
+      "text": "Y / Triângulo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1963,7 +1963,7 @@
     {
       "id": "ui_20591c8c6f0547ef037a",
       "source": "Left-stick click",
-      "text": "",
+      "text": "Clique do analógico esquerdo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1973,7 +1973,7 @@
     {
       "id": "ui_d29ddca90171ec78b543",
       "source": "Extra button 1",
-      "text": "",
+      "text": "Botão extra 1",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1983,7 +1983,7 @@
     {
       "id": "ui_d2c3e1679d828bea41bf",
       "source": "Right paddle 1",
-      "text": "",
+      "text": "Paddle direito 1",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -1993,7 +1993,7 @@
     {
       "id": "ui_27cb30018d67600574a4",
       "source": "Left paddle 1",
-      "text": "",
+      "text": "Paddle esquerdo 1",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2003,7 +2003,7 @@
     {
       "id": "ui_b16683a882e80e62cbd9",
       "source": "Right paddle 2",
-      "text": "",
+      "text": "Paddle direito 2",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2013,7 +2013,7 @@
     {
       "id": "ui_ded55f4559f4793a7a24",
       "source": "Left paddle 2",
-      "text": "",
+      "text": "Paddle esquerdo 2",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2023,7 +2023,7 @@
     {
       "id": "ui_5eb33481bcd56748ac92",
       "source": "Touchpad",
-      "text": "",
+      "text": "Touchpad",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2033,7 +2033,7 @@
     {
       "id": "ui_356966af10b6632cfe1f",
       "source": "Extra button 2",
-      "text": "",
+      "text": "Botão extra 2",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2043,7 +2043,7 @@
     {
       "id": "ui_130c07b7d89e85138750",
       "source": "Extra button 3",
-      "text": "",
+      "text": "Botão extra 3",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2053,7 +2053,7 @@
     {
       "id": "ui_1f312f64cfb8e585a227",
       "source": "Extra button 4",
-      "text": "",
+      "text": "Botão extra 4",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2063,7 +2063,7 @@
     {
       "id": "ui_9a618d1c4cb555ef2e38",
       "source": "Extra button 5",
-      "text": "",
+      "text": "Botão extra 5",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2073,7 +2073,7 @@
     {
       "id": "ui_c67fa923e3680af97662",
       "source": "Extra button 6",
-      "text": "",
+      "text": "Botão extra 6",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2083,7 +2083,7 @@
     {
       "id": "ui_9bca93e33b3c9f42796e",
       "source": "Forward / up",
-      "text": "",
+      "text": "Frente / cima",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2093,7 +2093,7 @@
     {
       "id": "ui_679d1bf93ecdd2c6cafb",
       "source": "Back / down",
-      "text": "",
+      "text": "Trás / baixo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2103,7 +2103,7 @@
     {
       "id": "ui_b7987193c43661941131",
       "source": "Move left",
-      "text": "",
+      "text": "Mover para a esquerda",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2113,7 +2113,7 @@
     {
       "id": "ui_ec2a91283552a4982c4f",
       "source": "Move right",
-      "text": "",
+      "text": "Mover para a direita",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2123,7 +2123,7 @@
     {
       "id": "ui_b8a646921c59cb1b23c4",
       "source": "Action / fire / confirm",
-      "text": "",
+      "text": "Ação / atirar / confirmar",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2133,7 +2133,7 @@
     {
       "id": "ui_da02d76e329b44d2145f",
       "source": "First-person view",
-      "text": "",
+      "text": "Visão em primeira pessoa",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2143,7 +2143,7 @@
     {
       "id": "ui_4e67048228b1b2d7bbd0",
       "source": "Center / confirm",
-      "text": "",
+      "text": "Centralizar / confirmar",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2153,7 +2153,7 @@
     {
       "id": "ui_02cda467028a37c86660",
       "source": "Pause menu",
-      "text": "",
+      "text": "Menu de pausa",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2163,7 +2163,7 @@
     {
       "id": "ui_8cc86239e70384f2e681",
       "source": "Equipment / back",
-      "text": "",
+      "text": "Equipamento / voltar",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2173,7 +2173,7 @@
     {
       "id": "ui_dd0ca9a77bc4867bd2c5",
       "source": "Camera / phone *",
-      "text": "",
+      "text": "Câmera / telefone *",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2183,7 +2183,7 @@
     {
       "id": "ui_79d45c20914cc0a3ad99",
       "source": "Phone #",
-      "text": "",
+      "text": "Telefone #",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2193,7 +2193,7 @@
     {
       "id": "ui_fbbda449f8a2afe67c67",
       "source": "Delete / clear",
-      "text": "",
+      "text": "Apagar / limpar",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2203,7 +2203,7 @@
     {
       "id": "ui_74aaf6ca29cd281e1887",
       "source": "Phone key ",
-      "text": "",
+      "text": "Tecla do telefone ",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2213,7 +2213,7 @@
     {
       "id": "ui_667a8501cdba33c353a2",
       "source": "Increase game volume",
-      "text": "",
+      "text": "Aumentar o volume do jogo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2223,7 +2223,7 @@
     {
       "id": "ui_2f95a1f13115de5165bd",
       "source": "Decrease game volume",
-      "text": "",
+      "text": "Diminuir o volume do jogo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2233,7 +2233,7 @@
     {
       "id": "ui_70bbf937c31f7539c6b8",
       "source": "This file is not an MGS Mobile save backup.",
-      "text": "",
+      "text": "Este arquivo não é um backup de save do MGS Mobile.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2243,7 +2243,7 @@
     {
       "id": "ui_e32800bc5cadf9076179",
       "source": "The backup contains unexpected content.",
-      "text": "",
+      "text": "O backup contém conteúdo inesperado.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2253,7 +2253,7 @@
     {
       "id": "ui_782d7f77168482f4d287",
       "source": "Missing game file: ",
-      "text": "",
+      "text": "Arquivo do jogo ausente: ",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2263,7 +2263,7 @@
     {
       "id": "ui_8639451f8c1ebea57c9e",
       "source": "The automated game test timed out.",
-      "text": "",
+      "text": "O teste automatizado do jogo excedeu o tempo limite.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2273,7 +2273,7 @@
     {
       "id": "ui_8d6497610200328ad5f4",
       "source": "Connected",
-      "text": "",
+      "text": "Conectado",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2283,7 +2283,7 @@
     {
       "id": "ui_4bf4ac5f38374946f99d",
       "source": "RPC error",
-      "text": "",
+      "text": "Erro de RPC",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2293,7 +2293,7 @@
     {
       "id": "ui_85d37503fad77b2075da",
       "source": "Discord error: ",
-      "text": "",
+      "text": "Erro do Discord: ",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2303,7 +2303,7 @@
     {
       "id": "ui_82b324c788d4a7f86cfe",
       "source": "Activity published",
-      "text": "",
+      "text": "Atividade publicada",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2313,7 +2313,7 @@
     {
       "id": "ui_519d3dd82bc9a50bf522",
       "source": "Activity cleared",
-      "text": "",
+      "text": "Atividade removida",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2323,7 +2323,7 @@
     {
       "id": "ui_1bb36dba729a6719c568",
       "source": "Waiting for the Discord desktop app",
-      "text": "",
+      "text": "Aguardando o aplicativo do Discord para computador",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2333,7 +2333,7 @@
     {
       "id": "ui_5095f526cbbc781a9775",
       "source": "Launching the game",
-      "text": "",
+      "text": "Iniciando o jogo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2343,7 +2343,7 @@
     {
       "id": "ui_9ca4f0e624d21b022972",
       "source": "Patriots Çeviri · English edition",
-      "text": "",
+      "text": "Patriots Çeviri · Edição em português",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2353,7 +2353,7 @@
     {
       "id": "ui_dfb14bc1b7be72c37f00",
       "source": "Patriots Çeviri · English",
-      "text": "",
+      "text": "Patriots Çeviri · Português",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2363,7 +2363,7 @@
     {
       "id": "ui_47d96bd0f2019ecd13e8",
       "source": "Reconnecting",
-      "text": "",
+      "text": "Reconectando",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2373,7 +2373,7 @@
     {
       "id": "ui_997cd0f3aaf8087ee388",
       "source": "Game closed · activity cleared",
-      "text": "",
+      "text": "Jogo fechado · atividade removida",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2383,7 +2383,7 @@
     {
       "id": "ui_5b645a0b915ab99c715c",
       "source": "METAL GEAR SOLID MOBILE\nPATRIOTS EDITION · 5.0\n\nTurkish localization and launcher: Patriots Çeviri\nGame runtime: LeithSilver/mgsm v0.1 + Patriots changes\nOriginal game: Konami / Ideaworks3D, 2008\n\nThe Patriots logo is from the official website.\nSource code, technical information and licenses are in Belgeler.",
-      "text": "",
+      "text": "METAL GEAR SOLID MOBILE\nPATRIOTS EDITION · 5.0\n\nLocalização para o turco e launcher: Patriots Çeviri\nRuntime do jogo: LeithSilver/mgsm v0.1 + alterações do Patriots\nJogo original: Konami / Ideaworks3D, 2008\n\nO logotipo dos Patriots é do site oficial.\nCódigo-fonte, informações técnicas e licenças estão em Belgeler.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2393,7 +2393,7 @@
     {
       "id": "ui_78152f3fec164295eaa7",
       "source": "Language",
-      "text": "",
+      "text": "Idioma",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2403,7 +2403,7 @@
     {
       "id": "ui_5a6bc368e4c4bb0f4849",
       "source": "Launcher and game language",
-      "text": "",
+      "text": "Idioma do launcher e do jogo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2413,7 +2413,7 @@
     {
       "id": "ui_ee7bdcf8e43a8d28fb35",
       "source": "The launcher changes immediately; the game changes on its next launch.",
-      "text": "",
+      "text": "O launcher muda imediatamente; o jogo muda na próxima inicialização.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2423,7 +2423,7 @@
     {
       "id": "ui_340415ebbaae1a4c0af6",
       "source": "●  LANGUAGE CHANGED",
-      "text": "",
+      "text": "●  IDIOMA ALTERADO",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2433,7 +2433,7 @@
     {
       "id": "ui_ff1033c424b91f55b2e2",
       "source": "The selected language will apply the next time you launch the game.",
-      "text": "",
+      "text": "O idioma selecionado será aplicado na próxima vez que você iniciar o jogo.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2443,7 +2443,7 @@
     {
       "id": "ui_0f8b5cb2e84b210d34a4",
       "source": "Turkish",
-      "text": "",
+      "text": "Turco",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2453,7 +2453,7 @@
     {
       "id": "ui_861dd128f74f33e75710",
       "source": "English",
-      "text": "",
+      "text": "Inglês",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2463,7 +2463,7 @@
     {
       "id": "ui_30b8d1b1ff45cc655bca",
       "source": "Türkçe / English",
-      "text": "",
+      "text": "Türkçe / English",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2473,7 +2473,7 @@
     {
       "id": "ui_489a38bb4ae9f8f64390",
       "source": "Main menu",
-      "text": "",
+      "text": "Menu principal",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2483,7 +2483,7 @@
     {
       "id": "ui_cb0070f03d6bda6347f6",
       "source": "Cutscene",
-      "text": "",
+      "text": "Cinemática",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2493,7 +2493,7 @@
     {
       "id": "ui_557787a769687de0a52a",
       "source": "On a mission",
-      "text": "",
+      "text": "Em missão",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2503,7 +2503,7 @@
     {
       "id": "ui_ccfbfef79487ff962a92",
       "source": "Codec conversation",
-      "text": "",
+      "text": "Conversa por Codec",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2513,7 +2513,7 @@
     {
       "id": "ui_49730237c2a76635f5ea",
       "source": "Paused",
-      "text": "",
+      "text": "Pausado",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2523,7 +2523,7 @@
     {
       "id": "ui_b4e0f916f8b9a7af8ec6",
       "source": "Selecting equipment",
-      "text": "",
+      "text": "Selecionando equipamento",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2533,7 +2533,7 @@
     {
       "id": "ui_5dc4a03d3926625664e4",
       "source": "Mission failed",
-      "text": "",
+      "text": "Missão fracassada",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2543,7 +2543,7 @@
     {
       "id": "ui_b2b464d79ad6b337638e",
       "source": "Loading...",
-      "text": "",
+      "text": "Carregando...",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2553,7 +2553,7 @@
     {
       "id": "ui_a934a0f89bdedb599462",
       "source": "Credits",
-      "text": "",
+      "text": "Créditos",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2563,7 +2563,7 @@
     {
       "id": "ui_4ea10df0fd6f382f2845",
       "source": "METAL GEAR SOLID MOBILE\nPATRIOTS EDITION · 5.0\n\nTurkish localization and launcher: Patriots Çeviri\nGame runtime: LeithSilver/mgsm v0.1 + Patriots changes\nOriginal game: Konami / Ideaworks3D, 2008\n\nThe Patriots logo is from the official website.\nSource code, technical information and licenses are in Belgeler.",
-      "text": "",
+      "text": "METAL GEAR SOLID MOBILE\nPATRIOTS EDITION · 5.0\n\nLocalização para o turco e launcher: Patriots Çeviri\nRuntime do jogo: LeithSilver/mgsm v0.1 + alterações do Patriots\nJogo original: Konami / Ideaworks3D, 2008\n\nO logotipo dos Patriots é do site oficial.\nCódigo-fonte, informações técnicas e licenças estão em Belgeler.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2573,7 +2573,7 @@
     {
       "id": "ui_403b302d597ca8c161b2",
       "source": "The game is already running. Close it before launching the updated version.",
-      "text": "",
+      "text": "O jogo já está em execução. Feche-o antes de iniciar a versão atualizada.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2583,7 +2583,7 @@
     {
       "id": "ui_7e358a51f2d8f2d3cb87",
       "source": "LANGUAGES",
-      "text": "",
+      "text": "IDIOMAS",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2593,7 +2593,7 @@
     {
       "id": "ui_49b933f08989f241a5c7",
       "source": "Languages and translation packs",
-      "text": "",
+      "text": "Idiomas e pacotes de tradução",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2603,7 +2603,7 @@
     {
       "id": "ui_99711f9262eba0c53c9c",
       "source": "Import a launcher or game translation as JSON.",
-      "text": "",
+      "text": "Importe uma tradução do launcher ou do jogo em JSON.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2613,7 +2613,7 @@
     {
       "id": "ui_dc6ea6acd8e65ae2056b",
       "source": "Import language pack",
-      "text": "",
+      "text": "Importar pacote de idioma",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2623,7 +2623,7 @@
     {
       "id": "ui_db5ab4edc847ebfa4799",
       "source": "Export translation templates",
-      "text": "",
+      "text": "Exportar modelos de tradução",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2633,7 +2633,7 @@
     {
       "id": "ui_76e171db47aedb969671",
       "source": "Translation folder",
-      "text": "",
+      "text": "Pasta de traduções",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2643,7 +2643,7 @@
     {
       "id": "ui_88050abef81ebe217996",
       "source": "Installed languages",
-      "text": "",
+      "text": "Idiomas instalados",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2653,7 +2653,7 @@
     {
       "id": "ui_c840b6811cd9e5e01244",
       "source": "Official",
-      "text": "",
+      "text": "Oficial",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2663,7 +2663,7 @@
     {
       "id": "ui_03e105ea36a7b6b7056a",
       "source": "Community",
-      "text": "",
+      "text": "Comunidade",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2673,7 +2673,7 @@
     {
       "id": "ui_22614ace1aef7766b6d6",
       "source": "Launcher",
-      "text": "",
+      "text": "Launcher",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2683,7 +2683,7 @@
     {
       "id": "ui_934512c1d7e697977f7e",
       "source": "Game",
-      "text": "",
+      "text": "Jogo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2693,7 +2693,7 @@
     {
       "id": "ui_4e850d9b6528eb8f64fd",
       "source": "English fallback",
-      "text": "",
+      "text": "Em português",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2703,7 +2703,7 @@
     {
       "id": "ui_a5ac5e9668a034fbbb8a",
       "source": "A launcher-only translation uses English game text. Add the game translation later using the same language code.",
-      "text": "",
+      "text": "Uma tradução somente do launcher usa o texto do jogo em inglês. Adicione a tradução do jogo depois, usando o mesmo código de idioma.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2713,7 +2713,7 @@
     {
       "id": "ui_f771d40143cbf5998524",
       "source": "Language pack installed.",
-      "text": "",
+      "text": "Pacote de idioma instalado.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2723,7 +2723,7 @@
     {
       "id": "ui_5cb4b62e2fd0f6174ba6",
       "source": "Language packs|*.json;*.zip",
-      "text": "",
+      "text": "Pacotes de idioma|*.json;*.zip",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2733,7 +2733,7 @@
     {
       "id": "ui_06d9b28c5b2a30d94f6f",
       "source": "Choose an export folder.",
-      "text": "",
+      "text": "Escolha uma pasta de exportação.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2743,7 +2743,7 @@
     {
       "id": "ui_65d16ce373ec5fdb5f0b",
       "source": "Translation templates exported.",
-      "text": "",
+      "text": "Modelos de tradução exportados.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2753,7 +2753,7 @@
     {
       "id": "ui_3b4bee821f911714c761",
       "source": "Brazilian Portuguese is not an official language yet. It will be added after the completed translation is reviewed.",
-      "text": "",
+      "text": "O português do Brasil ainda não é um idioma oficial. Ele será adicionado depois que a tradução concluída for revisada.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2763,7 +2763,7 @@
     {
       "id": "ui_d1a8337aede74e7cf5ff",
       "source": "Language pack not found.",
-      "text": "",
+      "text": "Pacote de idioma não encontrado.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2773,7 +2773,7 @@
     {
       "id": "ui_d3de4386ad893c3c58c1",
       "source": "Language file is too large.",
-      "text": "",
+      "text": "O arquivo de idioma é grande demais.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2783,7 +2783,7 @@
     {
       "id": "ui_7b7672d12a53ca535b49",
       "source": "Invalid language file.",
-      "text": "",
+      "text": "Arquivo de idioma inválido.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2793,7 +2793,7 @@
     {
       "id": "ui_cd64b058ab9f0bc06973",
       "source": "Built-in languages cannot be overwritten; use a different language code.",
-      "text": "",
+      "text": "Idiomas integrados não podem ser sobrescritos; use outro código de idioma.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2803,7 +2803,7 @@
     {
       "id": "ui_e3c5ad17de7d3583f111",
       "source": "Unsupported language-pack format.",
-      "text": "",
+      "text": "Formato de pacote de idioma não compatível.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2813,7 +2813,7 @@
     {
       "id": "ui_6ddf0c26988233b18a28",
       "source": "Invalid language display name.",
-      "text": "",
+      "text": "Nome de exibição do idioma inválido.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2823,7 +2823,7 @@
     {
       "id": "ui_4bda250da26c05f26f85",
       "source": "Invalid language culture code.",
-      "text": "",
+      "text": "Código de cultura do idioma inválido.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2833,7 +2833,7 @@
     {
       "id": "ui_a142521488d7c569184e",
       "source": "Unknown or duplicate text ID.",
-      "text": "",
+      "text": "ID de texto desconhecido ou duplicado.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2843,7 +2843,7 @@
     {
       "id": "ui_145e45ff70e28d9387bd",
       "source": "Source text or protected metadata changed: ",
-      "text": "",
+      "text": "O texto de origem ou os metadados protegidos foram alterados: ",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2853,7 +2853,7 @@
     {
       "id": "ui_64f78fe6bb862cb618bd",
       "source": "Invalid or overly long text: ",
-      "text": "",
+      "text": "Texto inválido ou longo demais: ",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2863,7 +2863,7 @@
     {
       "id": "ui_384c3482c4962cb86efe",
       "source": "Technical record cannot be translated: ",
-      "text": "",
+      "text": "O registro técnico não pode ser traduzido: ",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2873,7 +2873,7 @@
     {
       "id": "ui_a5080f81f9748cf65c3a",
       "source": "Protected text tokens changed: ",
-      "text": "",
+      "text": "Os tokens de texto protegidos foram alterados: ",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2883,7 +2883,7 @@
     {
       "id": "ui_cc92e2ee2a433581caf0",
       "source": "Close the game before installing a language pack.",
-      "text": "",
+      "text": "Feche o jogo antes de instalar um pacote de idioma.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2893,7 +2893,7 @@
     {
       "id": "ui_e0a6715b1e55710ce50b",
       "source": "Language pack contains too many files.",
-      "text": "",
+      "text": "O pacote de idioma contém arquivos demais.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2903,7 +2903,7 @@
     {
       "id": "ui_57d12c50d2ab07490f4d",
       "source": "Disallowed language-pack file: ",
-      "text": "",
+      "text": "Arquivo não permitido no pacote de idioma: ",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2913,7 +2913,7 @@
     {
       "id": "ui_b83cc88753a57e7b85b3",
       "source": "Game and launcher language codes must match.",
-      "text": "",
+      "text": "Os códigos de idioma do jogo e do launcher devem ser iguais.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2923,7 +2923,7 @@
     {
       "id": "ui_0c838e4134c377e44530",
       "source": "Game language",
-      "text": "",
+      "text": "Idioma do jogo",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2933,7 +2933,7 @@
     {
       "id": "ui_b546eafeb33adeaf7380",
       "source": "Launcher language",
-      "text": "",
+      "text": "Idioma do launcher",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2943,7 +2943,7 @@
     {
       "id": "ui_7856aa3c2171808c1b16",
       "source": "Templates",
-      "text": "",
+      "text": "Modelos",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2953,7 +2953,7 @@
     {
       "id": "ui_f3f607a43c120d1cf1c0",
       "source": "Translate only text fields. Keep id, source and protected tokens unchanged.",
-      "text": "",
+      "text": "Traduza apenas os campos de texto. Mantenha id, source e tokens protegidos inalterados.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2963,7 +2963,7 @@
     {
       "id": "ui_89a61a2d1f2f240f8d2e",
       "source": "Crisp interface",
-      "text": "",
+      "text": "Interface nítida",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2973,7 +2973,7 @@
     {
       "id": "ui_778c392bb04893094225",
       "source": "Keeps menu, dialogue and HUD textures crisp independently of 3D scene filtering.",
-      "text": "",
+      "text": "Mantém as texturas de menu, diálogo e HUD nítidas, independentemente da filtragem da cena 3D.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2983,7 +2983,7 @@
     {
       "id": "ui_28a7c70e50b73596ef13",
       "source": "For high-resolution gameplay, keep Original Pixel Resolution off and Crisp Interface on. Original Pixel Resolution lowers the entire scene to phone resolution.",
-      "text": "",
+      "text": "Para jogar em alta resolução, mantenha a Resolução de pixels original desativada e a Interface nítida ativada. A Resolução de pixels original reduz a cena inteira para a resolução do celular.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -2993,7 +2993,7 @@
     {
       "id": "ui_ca33556fa594718aec64",
       "source": "Invert weapon / equipment menu Up and Down",
-      "text": "",
+      "text": "Inverter Cima e Baixo no menu de armas / equipamentos",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
@@ -3003,7 +3003,7 @@
     {
       "id": "ui_f0b4814075ae00fcbeab",
       "source": "Reverses vertical selection only in the inventory. Applies to keyboard, D-pad and left stick; movement and other menus are unchanged.",
-      "text": "",
+      "text": "Inverte a seleção vertical apenas no inventário. Vale para teclado, direcional e analógico esquerdo; o movimento e os outros menus não mudam.",
       "category": "launcher",
       "editable": true,
       "text_id": -1,
