@@ -2,6 +2,7 @@
 #include "movement.h"
 #include "settings.h"
 #include "touch_shapes.h"
+#include "touch_stick.h"
 
 #include "imgui.h"
 #include <algorithm>
@@ -43,6 +44,10 @@ const char* TouchControls::Label(int c) {
 // the artwork (scaled with A, for a 4:3 frame). Centre x / y as fractions of the frame, size as a fraction of
 // its height.
 void TouchControls::DefaultPlace(int c, float& x, float& y, float& size) {
+#if defined(__ANDROID__) || defined(PATRIOTS_TOUCH_ANDROID_TEST)
+    static const float places[COUNT][3]={{.15f,.76f,.34f},{.89f,.78f,.17f},{.94f,.10f,.09f},{.77f,.55f,.115f},{.91f,.53f,.115f}};
+    x=places[c][0];y=places[c][1];size=places[c][2];return;
+#endif
     if (c == DPAD) { x = 0.17f; y = 0.72f; size = 0.40f; return; }
     const TouchShapes::Shape& a = TouchShapes::a;
     const TouchShapes::Shape& sh = *kShapes[c];
@@ -63,12 +68,22 @@ TouchControls::Rect TouchControls::Place(int c, int fw, int fh, float* scale) {
     const float k = s.touch_size[c].load() * fh / sh.h;
     const float cx = s.touch_x[c].load() * fw, cy = s.touch_y[c].load() * fh;
     if (scale) *scale = k;
+#if defined(__ANDROID__) || defined(PATRIOTS_TOUCH_ANDROID_TEST)
+    const float radius=s.touch_size[c].load()*fh*.5f;
+    return {cx-radius,cy-radius,cx+radius,cy+radius};
+#endif
     return { cx - sh.w * k / 2, cy - sh.h * k / 2, cx + sh.w * k / 2, cy + sh.h * k / 2 };
 }
 
 TouchControls::Rect TouchControls::MenuRect(int fw, int fh) {
     const float w = 0.12f * fh, h = 0.075f * fh, top = 0.015f * fh;
     return { fw / 2.0f - w / 2, top, fw / 2.0f + w / 2, top + h };
+}
+
+TouchControls::Rect TouchControls::ConfirmRect(int fw,int fh){
+    const Rect a=Place(A,fw,fh);const float r=.060f*fh;
+    const float x=(a.x0+a.x1)*.5f-.22f*fh,y=(a.y0+a.y1)*.5f+.02f*fh;
+    return {x-r,y-r,x+r,y+r};
 }
 
 bool TouchControls::Enabled() const { return Settings::Instance().touch_mode != 0; }
@@ -82,10 +97,15 @@ void TouchControls::OtherInput() {
 }
 
 // D-pad: the centre button, else up to two directions (8-way, 45 degree sectors) around a small dead zone.
-uint32_t TouchControls::DpadBits(float x, float y, int fw, int fh, float* vx, float* vy) const {
+uint32_t TouchControls::DpadBits(float x, float y, int fw, int fh, float* vx, float* vy,bool* held) const {
     if (vx) *vx = *vy = 0;
     float k = 1;
     const Rect r = Place(DPAD, fw, fh, &k);
+#if defined(__ANDROID__) || defined(PATRIOTS_TOUCH_ANDROID_TEST)
+    const float radius=(r.x1-r.x0)*.5f*.65f;
+    const auto sample=TouchStick::Sample((x-(r.x0+r.x1)*.5f)/radius,(y-(r.y0+r.y1)*.5f)/radius,held&&*held);
+    if(vx){*vx=sample.x;*vy=sample.y;}if(held)*held=sample.held;return sample.directions;
+#endif
     const TouchShapes::Shape& sh = TouchShapes::dpad;
     for (int i = 0; i < sh.count; ++i) {
         const TouchShapes::Path& p = sh.paths[i];
@@ -113,14 +133,29 @@ void TouchControls::FingerDown(int64_t id, float x, float y, int fw, int fh) {
     if (!Visible()) shown_ = true;   // Auto: the first touch brings them up (and counts)
     Finger f{-2, 0};
     if (menu_available_ && MenuRect(fw, fh).Contains(x, y, 0.02f * fh)) f = {-1, B_MENU};
+#if defined(__ANDROID__) || defined(PATRIOTS_TOUCH_ANDROID_TEST)
+    else if(ConfirmRect(fw,fh).Contains(x,y,.01f*fh))f={-3,B_OK};
+#endif
     else {
         for (int c : {A, LSK, RSK, B}) {
             const Rect r = Place(c, fw, fh);
-            if (r.Contains(x, y, 0.08f * (r.y1 - r.y0))) { f = {c, ButtonBit(c)}; break; }
+#if defined(__ANDROID__) || defined(PATRIOTS_TOUCH_ANDROID_TEST)
+            const bool hit=TouchStick::Contains((r.x0+r.x1)*.5f,(r.y0+r.y1)*.5f,(r.y1-r.y0)*.63f,x,y);
+#else
+            const bool hit=r.Contains(x,y,.08f*(r.y1-r.y0));
+#endif
+            if (hit) { f = {c, ButtonBit(c)}; break; }
         }
         if (f.control == -2) {
             const Rect r = Place(DPAD, fw, fh);
-            if (r.Contains(x, y, 0.1f * (r.y1 - r.y0))) { f = {DPAD, 0}; f.bits = DpadBits(x, y, fw, fh, &f.vx, &f.vy); }
+            bool free=true;
+#if defined(__ANDROID__) || defined(PATRIOTS_TOUCH_ANDROID_TEST)
+            for(const auto& pair:fingers_)if(pair.second.control==DPAD&&pair.first!=id)free=false;
+            const bool hit=TouchStick::Contains((r.x0+r.x1)*.5f,(r.y0+r.y1)*.5f,(r.y1-r.y0)*.60f,x,y);
+#else
+            const bool hit=r.Contains(x,y,.1f*(r.y1-r.y0));
+#endif
+            if(free&&hit){f={DPAD,0};f.bits=DpadBits(x,y,fw,fh,&f.vx,&f.vy,&f.held);}
         }
     }
     fingers_[id] = f;
@@ -132,7 +167,8 @@ void TouchControls::FingerMove(int64_t id, float x, float y, int fw, int fh) {
     auto it = fingers_.find(id);
     if (it == fingers_.end() || fw <= 0 || fh <= 0) return;
     Finger& f = it->second;
-    if (f.control == DPAD) f.bits = DpadBits(x, y, fw, fh, &f.vx, &f.vy);   // slides between directions, even past the edge
+    if (f.control == DPAD) f.bits = DpadBits(x, y, fw, fh, &f.vx, &f.vy,&f.held);   // slides between directions, even past the edge
+    else if(f.control==-3)f.bits=ConfirmRect(fw,fh).Contains(x,y,.025f*fh)?B_OK:0;
     else if (f.control == -1) f.bits = MenuRect(fw, fh).Contains(x, y, 0.04f * fh) ? B_MENU : 0;
     else if (f.control >= 0) {
         const Rect r = Place(f.control, fw, fh);
@@ -155,6 +191,10 @@ void TouchControls::FingerUp(int64_t id, float x, float y, int fw, int fh) {
     if (menu_tap && menu_cb_) menu_cb_();   // on release, so the tap doesn't reach the menu it opens
 }
 
+void TouchControls::FingerCancel(int64_t id){
+    std::lock_guard<std::recursive_mutex> lock(mutex_);fingers_.erase(id);Update();
+}
+
 void TouchControls::ReleaseAll() {
     std::lock_guard<std::recursive_mutex> lock(mutex_);
     fingers_.clear();
@@ -168,6 +208,13 @@ void TouchControls::Update() {   // mutex_ held
         bits |= kv.second.bits;
         if (kv.second.control == DPAD && (kv.second.bits & (B_UP | B_RIGHT | B_DOWN | B_LEFT))) { vx = kv.second.vx; vy = kv.second.vy; }
     }
+    stick_x_=0;stick_y_=0;
+    for(const auto& kv:fingers_)if(kv.second.control==DPAD){stick_x_=kv.second.vx;stick_y_=kv.second.vy;}
+#if defined(__ANDROID__) || defined(PATRIOTS_TOUCH_ANDROID_TEST)
+    // Recovered game speed comes from the animation; preserve it while passing
+    // the exact unsnapped direction. The keys decide when movement starts/stops.
+    const float length=std::sqrt(vx*vx+vy*vy);if(length>0){vx/=length;vy/=length;}
+#endif
     Movement::SetStick(Movement::TOUCH, vx, vy);
     if (bits == pressed_.exchange(bits) || !keys_cb_) return;
     static const struct { uint32_t bit; uint8_t key; } map[] = {
@@ -175,7 +222,7 @@ void TouchControls::Update() {   // mutex_ held
         {B_OK, PhoneKey("ok")}, {B_A, PhoneKey("a")}, {B_B, PhoneKey("b")}, {B_LSK, PhoneKey("lsk")}, {B_RSK, PhoneKey("rsk")} };
     bool keys[256] = {};
     for (const auto& m : map) if (bits & m.bit) keys[m.key] = true;
-#ifdef __ANDROID__
+#if defined(__ANDROID__) || defined(PATRIOTS_TOUCH_ANDROID_TEST)
     // The on-screen action button also confirms menus/cutscenes. Gameplay keeps
     // the original A action, while the D-pad centre remains a dedicated OK key.
     if(menu_available_ && (bits & B_A))keys[PhoneKey("ok")]=true;
@@ -187,6 +234,36 @@ void TouchControls::Draw(ImDrawList* dl, int fw, int fh, bool preview) {
     if (!dl || fw <= 0 || fh <= 0 || (!preview && !Visible())) return;
     const float alpha = Settings::Instance().touch_opacity / 100.0f;
     const uint32_t pressed = pressed_;
+#if defined(__ANDROID__) || defined(PATRIOTS_TOUCH_ANDROID_TEST)
+    const ImU32 idle=IM_COL32(226,235,224,255),green=IM_COL32(200,230,119,255);
+    const float stroke=std::max(1.4f,fh*.0028f);
+    auto circle=[&](float cx,float cy,float r,bool down){
+        dl->AddCircleFilled(ImVec2(cx,cy),r,WithAlpha(IM_COL32(11,20,17,255),(down?.66f:.27f)*alpha),48);
+        if(down)dl->AddCircleFilled(ImVec2(cx,cy),r,WithAlpha(green,.25f*alpha),48);
+        dl->AddCircle(ImVec2(cx,cy),r,WithAlpha(down?green:idle,alpha),48,stroke);
+    };
+    const Rect pad=Place(DPAD,fw,fh);const float cx=(pad.x0+pad.x1)*.5f,cy=(pad.y0+pad.y1)*.5f,r=(pad.x1-pad.x0)*.5f;
+    const float blend=1-std::exp(-24*std::min(.1f,ImGui::GetIO().DeltaTime));
+    drawn_x_+=(stick_x_.load()-drawn_x_)*blend;drawn_y_+=(stick_y_.load()-drawn_y_)*blend;
+    const bool moving=(pressed&15)!=0;circle(cx,cy,r,moving);
+    dl->AddCircle(ImVec2(cx,cy),r*.66f,WithAlpha(idle,.22f*alpha),48,stroke*.7f);
+    for(int i=0;i<4;i++){const float a=i*1.570796327f;dl->AddLine(ImVec2(cx+std::cos(a)*r*.86f,cy+std::sin(a)*r*.86f),ImVec2(cx+std::cos(a)*r*.94f,cy+std::sin(a)*r*.94f),WithAlpha(idle,.6f*alpha),stroke);}
+    const ImVec2 knob(cx+drawn_x_*r*.65f,cy+drawn_y_*r*.65f);circle(knob.x,knob.y,r*.35f,moving);
+    dl->AddCircleFilled(knob,r*.10f,WithAlpha(moving?green:idle,.8f*alpha),24);
+    auto icon=[&](int c,const Rect& box,bool down){
+        float x=(box.x0+box.x1)*.5f,y=(box.y0+box.y1)*.5f,r=(box.y1-box.y0)*.5f;
+        circle(x,y,r,down);ImU32 col=WithAlpha(down?green:idle,alpha);float z=r*.42f;
+        if(c==A){dl->AddCircle(ImVec2(x,y),z*.62f,col,24,stroke);dl->AddLine(ImVec2(x-z,y),ImVec2(x+z,y),col,stroke);dl->AddLine(ImVec2(x,y-z),ImVec2(x,y+z),col,stroke);}
+        else if(c==LSK){dl->AddLine(ImVec2(x-z*.5f,y-z),ImVec2(x-z*.5f,y+z),col,stroke*1.8f);dl->AddLine(ImVec2(x+z*.5f,y-z),ImVec2(x+z*.5f,y+z),col,stroke*1.8f);}
+        else if(c==B){dl->AddEllipse(ImVec2(x,y),ImVec2(z*1.2f,z*.7f),col,0,24,stroke);dl->AddCircleFilled(ImVec2(x,y),z*.28f,col,20);}
+        else if(c==RSK){dl->AddRect(ImVec2(x-z,y-z*.65f),ImVec2(x+z,y+z),col,z*.15f,0,stroke);dl->AddRect(ImVec2(x-z*.45f,y-z*1.1f),ImVec2(x+z*.45f,y-z*.65f),col,z*.1f,0,stroke);}
+        else{dl->AddLine(ImVec2(x-z,y),ImVec2(x-z*.15f,y+z*.7f),col,stroke*1.5f);dl->AddLine(ImVec2(x-z*.15f,y+z*.7f),ImVec2(x+z,y-z*.7f),col,stroke*1.5f);}
+    };
+    for(int c:{A,LSK,RSK,B})icon(c,Place(c,fw,fh),(pressed&ButtonBit(c))!=0);
+    icon(-3,ConfirmRect(fw,fh),(pressed&B_OK)!=0);
+    if(menu_available_||preview){const Rect box=MenuRect(fw,fh);const float x=(box.x0+box.x1)*.5f,y=(box.y0+box.y1)*.5f;const ImU32 col=WithAlpha(idle,alpha);dl->AddRectFilled(ImVec2(box.x0,box.y0),ImVec2(box.x1,box.y1),WithAlpha(IM_COL32(11,20,17,255),.4f*alpha),fh*.02f);for(int i=-1;i<=1;i++)dl->AddLine(ImVec2(x-fh*.022f,y+i*fh*.013f),ImVec2(x+fh*.022f,y+i*fh*.013f),col,stroke);}
+    return;
+#endif
     std::vector<ImVec2> pts;
     auto build = [&](const TouchShapes::Path& p, const Rect& r, float k) {
         pts.resize(p.count);

@@ -1,5 +1,13 @@
 # Changelog
 
+## Android 1.1.1 · 2026-11-21
+
+- Rebuild the Android launcher with the PC artwork, palette, navigation and a fixed Play footer.
+- Remove the launcher portrait lock; support full-width landscape tablets, portrait tablets, narrow windows and larger fonts.
+- Add separate display, controls, audio, language/credit, save export and update pages, preserving native preferences and save storage.
+- Replace Android phone-shaped controls with a circular virtual analog, continuous direction, separate confirm, minimal action/view/equipment/pause icons and pressed feedback.
+- Keep multi-touch ownership; release input on cancellation/focus loss/resize. Apply the requested new layout once, preserving subsequent custom placement.
+
 ## PC 5.3.0 / Android 1.1.0 — 2026-11-19
 
 - Bundle reviewed Brazilian Portuguese as the third official launcher/game language: 299 UI and 1,862 active game/runtime texts. Preserve contributor text and Steam credit.

@@ -31,6 +31,7 @@ public:
     void FingerDown(int64_t id, float x, float y, int fw, int fh);
     void FingerMove(int64_t id, float x, float y, int fw, int fh);
     void FingerUp(int64_t id, float x, float y, int fw, int fh);
+    void FingerCancel(int64_t id); // Android CANCEL releases without activating a button.
     void ReleaseAll();
     void OtherInput();   // a controller button / key was used: Auto mode hides the controls
     // Whether touches are taken (mode on or auto) and whether the controls are drawn.
@@ -48,18 +49,21 @@ private:
         return x >= x0 - margin && x <= x1 + margin && y >= y0 - margin && y <= y1 + margin; } };
     static Rect Place(int c, int fw, int fh, float* scale = nullptr);   // screen rect of a control
     static Rect MenuRect(int fw, int fh);
+    static Rect ConfirmRect(int fw,int fh);
     // Direction / centre bits for a finger; with vx / vy also its direction as a unit vector (0, 0 if none).
-    uint32_t DpadBits(float x, float y, int fw, int fh, float* vx = nullptr, float* vy = nullptr) const;
+    uint32_t DpadBits(float x, float y, int fw, int fh, float* vx = nullptr, float* vy = nullptr,bool* held=nullptr) const;
     void Update();   // pressed bits from the fingers -> keys; the D-pad finger's direction -> Movement
 
     enum Bit : uint32_t { B_UP = 1, B_RIGHT = 2, B_DOWN = 4, B_LEFT = 8, B_OK = 16, B_A = 32, B_LSK = 64, B_RSK = 128, B_MENU = 256, B_B = 512 };
     static uint32_t ButtonBit(int c);   // a button control's bit (0 for the D-pad)
-    struct Finger { int control; uint32_t bits; float vx = 0, vy = 0; };   // control -1: the menu button; -2: nothing
+    struct Finger { int control; uint32_t bits; float vx = 0, vy = 0; bool held=false; };   // -1 menu, -2 none, -3 confirm
     std::recursive_mutex mutex_;                     // fingers_ (UI thread, and OtherInput from the gamepad thread)
     std::map<int64_t, Finger> fingers_;
     std::atomic<uint32_t> pressed_{0};
     std::atomic<bool> shown_{true};                  // Auto mode: touched since the last controller / key use
     std::atomic<bool> menu_available_{false};
+    std::atomic<float> stick_x_{0},stick_y_{0};
+    float drawn_x_=0,drawn_y_=0; // render thread only: visual spring, input stays immediate
     std::function<void(const bool[256])> keys_cb_;
     std::function<void()> menu_cb_;
 };

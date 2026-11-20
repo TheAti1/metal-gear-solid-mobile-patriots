@@ -18,10 +18,12 @@ A Windows PC experience with an English / Turkish / Brazilian Portuguese launche
 
 ## Android
 
-**[Download Android APK](https://github.com/TheAti1/metal-gear-solid-mobile-patriots/releases/tag/android-v1.1.0) · [Android build / update guide](android-patriots/README.md)**
+**[Download Android APK](https://github.com/TheAti1/metal-gear-solid-mobile-patriots/releases/tag/android-v1.1.1) · [Android build / update guide](android-patriots/README.md)**
 
 Android 9+, ARM64 / ARMv7 / x86_64; bundled game data, Turkish / English / Brazilian Portuguese launcher and game, startup update checks and verified signed APK updates. Android releases use a separate channel from PC.
 
+
+PC-style Android launcher: matching artwork, colours and navigation, with a fixed PLAY button and responsive phone/tablet layouts. [Preview and checks](docs/ANDROID-LAYOUT.md).
 
 ## Features
 

@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import org.json.JSONObject;
 
-/** The reviewed Mobile catalogue, with English fallback for older/partial assets. */
+/** The reviewed Patriots catalogue, with English fallback for older/partial assets. */
 final class AndroidLocale {
     private static JSONObject portuguese;
     private static boolean loaded;

@@ -7,6 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python tools/check_android_locales.py
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -16,3 +20,11 @@ jobs:
           mkdir -p /tmp/patriots-policy
           javac -encoding UTF-8 -d /tmp/patriots-policy android-patriots/java/com/patriots/shared/UpdatePolicy.java android-patriots/java/com/patriots/shared/UpdatePolicyTest.java
           java -cp /tmp/patriots-policy com.patriots.shared.UpdatePolicyTest
+          javac -encoding UTF-8 -d /tmp/patriots-policy android-patriots/java/com/patriots/shared/AdaptiveLayout.java android-patriots/tests/AdaptiveLayoutTest.java
+          java -cp /tmp/patriots-policy com.patriots.shared.AdaptiveLayoutTest
+      - name: Android stick and multi-touch regression
+        run: |
+          native=runtime/mgs_native
+          imgui=$native/third_party/imgui
+          c++ -std=c++17 -O1 -DPATRIOTS_TOUCH_ANDROID_TEST -I$native -I$imgui $native/touchcontrols.cpp android-patriots/tests/touch_controls_test.cpp $imgui/imgui.cpp $imgui/imgui_draw.cpp $imgui/imgui_tables.cpp $imgui/imgui_widgets.cpp -o /tmp/patriots-policy/touch-test
+          /tmp/patriots-policy/touch-test

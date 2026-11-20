@@ -307,6 +307,7 @@ static void HandleTouch(int64_t id, float wx, float wy, int phase) {   // UI thr
     const float fx = static_cast<float>((wx - p.dx) / p.scale), fy = static_cast<float>((wy - p.dy) / p.scale);
     if (phase == 0) { if (!Overlay::Instance().IsOpen() && !PhotoMode::Instance().Active()) tc.FingerDown(id, fx, fy, fw, fh); }
     else if (phase == 1) tc.FingerMove(id, fx, fy, fw, fh);
+    else if(phase==3)tc.FingerCancel(id);
     else tc.FingerUp(id, fx, fy, fw, fh);
 }
 static bool MouseIsTouch(SDL_MouseID which) {   // a real mouse standing in for a finger (touch controls On)
@@ -392,6 +393,7 @@ static void HandleEvent(const SDL_Event& e, bool& running) {   // UI thread
             DrawWindow();
             return;
         case SDL_EVENT_WINDOW_PIXEL_SIZE_CHANGED:
+            TouchControls::Instance().ReleaseAll();
             if (e.window.data1 > 0 && e.window.data2 > 0) {
                 S3ERuntime::Instance().SetHostClientSize(e.window.data1, e.window.data2);
                 g_pix_w = e.window.data1; g_pix_h = e.window.data2;
@@ -431,7 +433,7 @@ static void HandleEvent(const SDL_Event& e, bool& running) {   // UI thread
         case SDL_EVENT_FINGER_CANCELED: {
             int cw = 0, ch = 0;
             SDL_GetWindowSizeInPixels(g_window, &cw, &ch);
-            const int phase = e.type == SDL_EVENT_FINGER_DOWN ? 0 : e.type == SDL_EVENT_FINGER_MOTION ? 1 : 2;
+            const int phase = e.type == SDL_EVENT_FINGER_DOWN ? 0 : e.type == SDL_EVENT_FINGER_MOTION ? 1 : e.type == SDL_EVENT_FINGER_CANCELED ? 3 : 2;
             HandleTouch(static_cast<int64_t>(e.tfinger.fingerID), e.tfinger.x * cw, e.tfinger.y * ch, phase);
             return;
         }
